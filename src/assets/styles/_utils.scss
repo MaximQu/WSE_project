@@ -3,6 +3,17 @@
   margin-inline: auto;
 }
 
+.fs-h1,
+.fs-h2,
+.fs-h3 {
+  line-height: 1.2;
+}
+
+.fs-sm,
+.fs-xs {
+  line-height: 1;
+}
+
 .fs-h1 {
   font-size: clamp(1.875rem, 1.3636rem + 2.1818vw, 3rem);
 }
@@ -15,16 +26,6 @@
   font-size: clamp(1.125rem, 0.9545rem + 0.7273vw, 1.5rem);
 }
 
-.fs-h1,
-.fs-h2,
-.fs-h3 {
-  line-height: 1.2;
-}
-
-.fs-sm,
-.fs-xs {
-  line-height: 1;
-}
 .fs-h4 {
   font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
   line-height: 1.3;
