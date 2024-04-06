@@ -2,7 +2,7 @@ import { ButtonOrLink } from "@/ui";
 import st from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import { LogoIcon } from "@/ui/icons";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { BurgerMenu } from "@/components";
 
 const Header = () => {
 	return (
