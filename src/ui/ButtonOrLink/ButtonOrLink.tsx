@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Link, LinkProps } from "react-router-dom";
 import st from "./styles.module.scss";
 
@@ -10,7 +10,7 @@ type ButtonOrLinkProps = (
 			as: "a";
 	  })
 ) & {
-	text?: string;
+	children?: ReactNode;
 	styleType?: "fill" | "frame";
 };
 
@@ -21,7 +21,7 @@ const styleTypes = {
 
 const ButtonOrLink: FC<ButtonOrLinkProps> = ({
 	styleType = "fill",
-	text,
+	children,
 	...props
 }) => {
 	const styleClasses = `${st.btn} ${styleTypes[styleType]} fs-md ${props.className}`;
@@ -29,14 +29,14 @@ const ButtonOrLink: FC<ButtonOrLinkProps> = ({
 	if (props.as === "a") {
 		return (
 			<Link {...props} className={styleClasses}>
-				{text}
+				{children}
 			</Link>
 		);
 	}
 
 	return (
 		<button {...props} type={props.type ?? "button"} className={styleClasses}>
-			{text}
+			{children}
 		</button>
 	);
 };
