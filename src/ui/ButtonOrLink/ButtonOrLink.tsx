@@ -24,7 +24,7 @@ const ButtonOrLink: FC<ButtonOrLinkProps> = ({
 	children,
 	...props
 }) => {
-	const styleClasses = `${st.btn} ${styleTypes[styleType]} fs-md ${props.className}`;
+	const styleClasses = `${st.btn} ${styleTypes[styleType]} text-md ${props.className}`;
 
 	if (props.as === "a") {
 		return (
