@@ -1,0 +1,112 @@
+@use "@styles/vars" as *;
+@use "@styles/mixins" as *;
+
+:where(.btn) {
+  --_padding-block: 0.75em;
+  --_padding-inline: 2em;
+  --_border-width: .15em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  padding: var(--_padding-block) var(--_padding-inline);
+  font-size: $fs-def;
+  font-weight: $fw-bold;
+  text-align: center;
+  border-radius: 4em;
+  transition-duration: $transition-t;
+  transition-property: color, background-color, border-color;
+
+  span::first-letter {
+    text-transform: uppercase;
+  }
+
+  isolation: isolate;
+}
+
+:where(.btn.fill) {
+  --_cc: currentColor;
+  color: $ntrl-100;
+  background-color: $yellow-300;
+
+  &:where(:disabled) {
+    background-color: $ntrl-400;
+  }
+
+  &:not(:disabled) {
+    @media (hover: hover) {
+      &:where(:hover) {
+        background-color: $yellow-200;
+      }
+    }
+  }
+}
+
+:where(.btn.frame) {
+  color: $yellow-300;
+  border: var(--_border-width) solid currentColor;
+  padding:
+  calc(var(--_padding-block) - var(--_border-width))
+  calc(var(--_padding-inline) - var(--_border-width));
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    z-index: -1;
+    opacity: 0;
+    transition: $transition-t;
+  }
+
+  &:where(:disabled) {
+    color: $ntrl-400;
+  }
+
+  &:not(:disabled) {
+    @media (hover: hover) {
+      &:where(:hover) {
+        &::before {
+          opacity: .1;
+        }
+      }
+    }
+  }
+}
+
+:where(.btn.shade) {
+  --_shadow-spread: 0.3125em;
+  color: $blue-300;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    width: calc(100% - var(--_shadow-spread));
+    height: calc(100% - var(--_shadow-spread));
+    border-radius: inherit;
+    background-color: $ntrl-200;
+    @include ambientShadow(false, $ntrl-300);
+    transition: $transition-t;
+  }
+
+  &:where(:disabled) {
+    color: $ntrl-400;
+  }
+
+  &:not(:disabled) {
+    @media (hover: hover) {
+      &:where(:hover) {
+        &::before {
+          opacity: .8;
+          @include ambientShadow(false, $blue-200);
+        }
+      }
+    }
+  }
+}
