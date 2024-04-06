@@ -13,15 +13,15 @@ const App = () => {
 			<Route path="/why-wse" element />
 			<Route path="/contacts" element />
 			<Route path="/auth" element>
-				<Route path="/sign-up" element />
-				<Route path="/sign-in" element />
+				<Route path="sign-up" element />
+				<Route path="sign-in" element />
 			</Route>
 			<Route path="/legal-notice" element />
 			<Route path="/privacy-statement" element />
 			<Route path="/copyright" element />
 			<Route path="/about-us" element>
-				<Route path="/company-profile" element />
-				<Route path="/investor-relations" element />
+				<Route path="company-profile" element />
+				<Route path="investor-relations" element />
 			</Route>
 			<Route path="*" element />
 		</Routes>
