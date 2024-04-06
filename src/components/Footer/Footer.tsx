@@ -1,38 +1,30 @@
+import { Link } from "react-router-dom";
 import LogoIcon from "../../ui/icons/LogoIcon";
 import st from "./styles.module.scss";
 
 const Footer = () => {
 	return (
 		<footer className={`${st.footer} bg-primary`}>
-			<a href="#" className={st.logo}>
+			<Link to="/" className={st.logo}>
 				<span hidden>World socket exchange</span>
 				<LogoIcon size="big" className={st.icon} />
-			</a>
+			</Link>
 			<nav className={`${st.nav}`}>
+				<Link to="/" className="text-md">Location</Link>
+				<Link to="/" className="text-md">Contacts</Link>
 				<ul className={`${st.list}`}>
 					<li>
-						<a href="#">location</a>
+						<Link to="/" className="text-sm">Legal Disclaimer</Link>
 					</li>
 					<li>
-						<a href="#">contacts</a>
+						<Link to="/" className="text-sm">Privacy Statement</Link>
 					</li>
 					<li>
-						<ul className={`${st.sublist}`}>
-							<li>
-								<a href="#">Legal Disclaimer</a>
-							</li>
-							<li>
-								<a href="#">Privacy Statement</a>
-							</li>
-							<li>
-								<a href="#">Copyright</a>
-							</li>
-						</ul>
+						<Link to="/" className="text-sm">Copyright</Link>
 					</li>
 				</ul>
 			</nav>
-
-			<p>© 2024 WORLD STOCK EXCHANGE. All Rights Reserved.</p>
+			<p className="text-xs">© 2024 WORLD STOCK EXCHANGE. All Rights Reserved.</p>
 		</footer>
 	);
 };
