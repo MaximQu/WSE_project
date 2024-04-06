@@ -1,53 +1,68 @@
-.fs-h1,
-.fs-h2,
-.fs-h3 {
-  line-height: 1.2;
-}
+.text {
 
-.fs-sm,
-.fs-xs {
-  line-height: 1;
-}
+  // Font size
+  &-h1 {
+    font-size: clamp(1.875rem, 1.3636rem + 2.1818vw, 3rem);
+  }
 
-.fs-h2,
-.fs-h3 {
-  font-weight: 600;
-}
+  &-h2 {
+    font-size: clamp(1.5rem, 1.1591rem + 1.4545vw, 2.25rem);
+  }
 
-.fs-h4,
-.fs-sm,
-.fs-xs {
-  font-weight: 500;
-}
+  &-h3 {
+    font-size: clamp(1.125rem, 0.9545rem + 0.7273vw, 1.5rem);
+  }
 
+  &-h4 {
+    font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
+  }
 
-.fs-h1 {
-  font-size: clamp(1.875rem, 1.3636rem + 2.1818vw, 3rem);
-  font-weight: 700;
-}
+  &-md {
+    font-size: clamp(0.875rem, 0.7614rem + 0.4848vw, 1.125rem);
+  }
 
-.fs-h2 {
-  font-size: clamp(1.5rem, 1.1591rem + 1.4545vw, 2.25rem);
-}
+  &-sm {
+    font-size: clamp(0.75rem, 0.6364rem + 0.4848vw, 1rem);
+  }
 
-.fs-h3 {
-  font-size: clamp(1.125rem, 0.9545rem + 0.7273vw, 1.5rem);
-}
+  &-xs {
+    font-size: clamp(0.625rem, 0.5114rem + 0.4848vw, 0.875rem);
+  }
 
-.fs-h4 {
-  font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
-  line-height: 1.3;
-}
+  // Line height
+  &-h1,
+  &-h2,
+  &-h3 {
+    line-height: 1.2;
+  }
 
-.fs-md {
-  font-size: clamp(0.875rem, 0.7614rem + 0.4848vw, 1.125rem);
-  line-height: 1.4;
-}
+  &-h4 {
+    line-height: 1.3;
+  }
 
-.fs-sm {
-  font-size: clamp(0.75rem, 0.6364rem + 0.4848vw, 1rem);
-}
+  &-md,
+  &-sm,
+  &-xs {
+    line-height: 1.4;
+  }
 
-.fs-xs {
-  font-size: clamp(0.625rem, 0.5114rem + 0.4848vw, 0.875rem);
+  // Wont weight
+  &-h1 {
+    font-weight: 700;
+  }
+
+  &-h2,
+  &-h3 {
+    font-weight: 600;
+  }
+
+  &-h4,
+  &-md {
+    font-weight: 500;
+  }
+
+  &-sm,
+  &-xs {
+    font-weight: 400;
+  }
 }
