@@ -1,0 +1,32 @@
+.container {
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+}
+
+.fs-h1 {
+  font-size: clamp(1.875rem, 1.3636rem + 2.1818vw, 3rem);
+}
+
+.fs-h2 {
+  font-size: clamp(1.5rem, 1.1591rem + 1.4545vw, 2.25rem);
+}
+
+.fs-h3 {
+  font-size: clamp(1.125rem, 0.9545rem + 0.7273vw, 1.5rem);
+}
+
+.fs-h4 {
+  font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
+}
+
+.fs-md {
+  font-size: clamp(0.875rem, 0.7614rem + 0.4848vw, 1.125rem);
+}
+
+.fs-sm {
+  font-size: clamp(0.75rem, 0.6364rem + 0.4848vw, 1rem);
+}
+
+.bg-primary {
+  background-color: var(--c-primary-500);
+}

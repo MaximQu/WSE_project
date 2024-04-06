@@ -1,0 +1,8 @@
+@use './reset.scss';
+@use './vars.scss';
+@use './utils.scss';
+
+body {
+  color: var(--c-white);
+  font-family: 'poppins', sans-serif;
+}

@@ -1,0 +1,45 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2.5rem 1.5rem;
+}
+
+.logo {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.icon {
+    width: 312px;
+    height: 18px;
+}
+
+.nav {
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sublist {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.link {}
+
+.sublink {}
+
+.copyright {}
