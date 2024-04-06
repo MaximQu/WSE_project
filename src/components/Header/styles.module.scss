@@ -1,3 +1,10 @@
 .header {
   padding-block: .75rem;
+  background-color: var(--c-primary-600);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
