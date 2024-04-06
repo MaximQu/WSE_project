@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { Home } from "./pages";
 
 const App = () => {
 	return (
 		<Routes>
-			<Route index element />
+			<Route index element={<Home />} />
 			<Route path="/trade" element />
 			<Route path="/sustainable" element />
 			<Route path="/market" element />
