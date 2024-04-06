@@ -1,6 +1,6 @@
 @use './reset.scss';
 @use './vars.scss';
-@use './utils.scss';
+@use './utils';
 
 body {
   color: var(--c-white);
