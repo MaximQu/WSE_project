@@ -12,7 +12,7 @@ const Header = () => {
 				<Link to="#">
 					<LogoIcon size="big" />
 				</Link>
-				<ButtonOrLink className="">My account</ButtonOrLink>
+				<ButtonOrLink className={st.btn}>My account</ButtonOrLink>
 			</div>
 		</header>
 	);
