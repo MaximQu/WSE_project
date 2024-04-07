@@ -1,5 +1,5 @@
 import { ButtonOrLink } from "@/ui";
-import { BurgerIcon, LogoIcon } from "@/ui/icons";
+import { ArrowIcon, BurgerIcon, CrossIcon, LogoIcon } from "@/ui/icons";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
@@ -55,7 +55,7 @@ const BurgerMenu = () => {
 								onClick={() => setIsActive(false)}
 								className={st.closeBtn}
 							>
-								x
+								<CrossIcon/>
 							</button>
 						</div>
 						<nav>
@@ -102,6 +102,7 @@ const BurgerMenu = () => {
 										className={st.navLink}
 									>
 										<span>About WSE</span>
+                    <ArrowIcon direction={isActiveDropDown ? 'up' : 'down'}/>
 									</button>
 									<div
 										className={`${st.dropDown} ${
