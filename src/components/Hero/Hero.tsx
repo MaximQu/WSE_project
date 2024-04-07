@@ -25,7 +25,7 @@ const Hero = () => {
 							private companies
 						</p>
 					</div>
-					<ButtonOrLink>Start trading</ButtonOrLink>
+					<ButtonOrLink className={st.btn}>Start trading</ButtonOrLink>
 				</div>
 			</div>
 		</div>
