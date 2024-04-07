@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages";
+import { Copyright, Home, LegalDisclaimer, PrivacyStatement } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
@@ -19,9 +19,9 @@ const App = () => {
 					<Route path="sign-up" element />
 					<Route path="sign-in" element />
 				</Route>
-				<Route path="/legal-notice" element />
-				<Route path="/privacy-statement" element />
-				<Route path="/copyright" element />
+				<Route path="/legal-notice" element={<LegalDisclaimer />} />
+				<Route path="/privacy-statement" element={<PrivacyStatement/>} />
+				<Route path="/copyright" element={<Copyright/>} />
 				<Route path="/about-us" element>
 					<Route path="company-profile" element />
 					<Route path="investor-relations" element />

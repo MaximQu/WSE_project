@@ -1,0 +1,30 @@
+@use "@st/utils";
+
+.title {
+	margin-bottom: clamp(1.5rem, 2rem + 3vw, 5rem);
+  color: var(--c-primary-800);
+	text-align: center;
+	@extend .text-h1;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 46.25rem;
+	width: 100%;
+	margin-inline: auto;
+	gap: 1.875rem;
+}
+
+.heading {
+	margin-bottom: 1.5rem;
+  color: var(--c-primary-800);
+	@extend .text-h3;
+}
+
+.text {
+	color: var(--c-primary-600);
+
+	@extend .text-md;
+}
