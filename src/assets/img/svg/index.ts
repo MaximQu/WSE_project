@@ -1,7 +1,7 @@
-import analiticsSVG from "./analytics.svg";
+import analyticsSVG from "./analytics.svg";
 import confidenceSVG from "./confidence.svg";
 import contactsSVG from "./contacts.svg";
 import highFiveSVG from "./high_five.svg";
-import pazzleSVG from "./pazzle.svg";
+import puzzleSVG from "./puzzle.svg";
 
-export { analiticsSVG, confidenceSVG, contactsSVG, highFiveSVG, pazzleSVG };
+export { analyticsSVG, confidenceSVG, contactsSVG, highFiveSVG, puzzleSVG };

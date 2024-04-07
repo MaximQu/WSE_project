@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Copyright, Home, LegalDisclaimer, PrivacyStatement } from "./pages";
+import { Copyright, Home, LegalDisclaimer, NotFound, PrivacyStatement } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
 					<Route path="company-profile" element />
 					<Route path="investor-relations" element />
 				</Route>
-				<Route path="*" element />
+				<Route path="*" element={<NotFound/>} />
 			</Route>
 		</Routes>
 	);
