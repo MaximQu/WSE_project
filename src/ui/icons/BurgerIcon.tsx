@@ -2,9 +2,16 @@ import { FC } from "react";
 
 type BurgerIconProps = {
 	className?: string;
+	theme?: "dark" | "light";
 };
-
-const BurgerIcon: FC<BurgerIconProps> = ({ className }) => {
+const colorScheme = {
+	light: "#FDFEFF",
+	dark: "#2A3342",
+};
+const BurgerIcon: FC<BurgerIconProps> = ({
+	className = "",
+	theme = "light",
+}) => {
 	const styles = `${className}`;
 
 	return (
@@ -18,7 +25,7 @@ const BurgerIcon: FC<BurgerIconProps> = ({ className }) => {
 		>
 			<path
 				d="M6.25 14.584h37.5M6.25 25h37.5M6.25 35.416h37.5"
-				stroke="currentColor"
+				stroke={colorScheme[theme]}
 				stroke-width="3.6"
 				stroke-linecap="round"
 			/>
