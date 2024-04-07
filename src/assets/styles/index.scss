@@ -1,8 +1,27 @@
-@use './reset.scss';
-@use './vars.scss';
-@use './utils';
+@use "./reset.scss";
+@use "./vars.scss";
+@use "./utils";
 
 body {
-  color: var(--c-white);
-  font-family: 'poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
+	color: var(--c-white);
+	font-weight: 400;
+	line-height: 1;
+}
+
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+
+	&-bullet {
+		background-color: var(--c-green-300);
+		width: 0.75rem;
+		height: 0.75rem;
+		opacity: 1;
+
+		&-active {
+			background-color: var(--c-green-600);
+		}
+	}
 }
