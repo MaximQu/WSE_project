@@ -3,7 +3,7 @@ import st from "./styles.module.scss";
 
 const Hero = () => {
 	return (
-		<div className={st.hero}>
+		<section className={st.hero}>
 			<div className={`${st.inner} container`}>
 				<div className={st.wrapper}>
 					<div className={st.videoContainer}>
@@ -28,7 +28,7 @@ const Hero = () => {
 					<ButtonOrLink className={st.btn}>Start trading</ButtonOrLink>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 
