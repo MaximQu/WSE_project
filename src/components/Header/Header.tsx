@@ -10,7 +10,7 @@ const Header = () => {
 			<div className={`${st.wrapper} container`}>
         <BurgerMenu/>
 				<Link to="#">
-					<LogoIcon size="big" />
+					<LogoIcon type="big" />
 				</Link>
 				<ButtonOrLink className={st.btn}>My account</ButtonOrLink>
 			</div>

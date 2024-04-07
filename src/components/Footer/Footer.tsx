@@ -7,7 +7,7 @@ const Footer = () => {
 		<footer className={`${st.footer} bg-primary`}>
 			<Link to="/" className={st.logo}>
 				<span hidden>World socket exchange</span>
-				<LogoIcon size="big" className={st.icon} />
+				<LogoIcon type="big" className={st.icon} />
 			</Link>
 			<nav className={`${st.nav}`}>
 				<Link to="/" className="text-md">Location</Link>
