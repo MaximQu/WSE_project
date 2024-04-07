@@ -1,0 +1,19 @@
+.comment {
+  padding: 1.5rem;
+  border-radius: 0.375rem;
+  background-color: var(--c-primary-400);
+}
+.text {
+  margin-bottom: 2.5rem;
+  max-width: 18.4375rem;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.position {
+  color: var(--c-primary-300);
+}
