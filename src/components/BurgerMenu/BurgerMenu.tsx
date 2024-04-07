@@ -1,5 +1,5 @@
 import { ButtonOrLink } from "@/ui";
-import { LogoIcon } from "@/ui/icons";
+import { BurgerIcon, LogoIcon } from "@/ui/icons";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
@@ -37,7 +37,7 @@ const BurgerMenu = () => {
 				onClick={() => setIsActive(true)}
 				className={st.burgerMenu}
 			>
-				<div className={st.burgerInner}></div>
+				<BurgerIcon />
 			</button>
 			{transition((style, item) =>
 				item ? (
