@@ -1,0 +1,57 @@
+@use "@st/utils";
+
+.slider {
+	background-color: var(--c-primary-800);
+}
+
+.swiper {
+  padding-bottom: 3rem;
+}
+
+.slideContent {
+  display: block;
+	margin-bottom: clamp(2rem, 1rem + 5vw, 7rem);
+}
+
+.closeQuote {
+  display: block;
+  margin-left: auto;
+}
+
+.quote {
+	display: block;
+	text-align: center;
+	max-width: 51rem;
+	margin-inline: auto;
+  padding-block: .5rem;
+	@extend .text-h2;
+
+	&::before,
+	&::after {
+		content: none;
+	}
+}
+
+.author {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.photo {
+	width: 5.5rem;
+	height: 5.5rem;
+	object-fit: cover;
+	border-radius: 100vmax;
+	margin-bottom: 1.75rem;
+}
+
+.fullName {
+	margin-bottom: 0.5rem;
+	@extend .text-h3;
+}
+
+.position {
+	margin-bottom: .5rem;
+	@extend .text-md;
+}
