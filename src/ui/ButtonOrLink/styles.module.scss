@@ -1,7 +1,7 @@
 .btn {
 	text-align: center;
 	border-radius: 0.375rem;
-	background-color: var(--c-green-100);
+	background-color: var(--c-green-500);
 	max-width: 12rem;
 	width: 100%;
 	transition-duration: 0.2s;
@@ -14,11 +14,11 @@
 
 	@media (hover: hover) {
 		&:hover {
-			background-color: var(--c-green-200);
+			background-color: var(--c-green-600);
 		}
 	}
 
 	&:active {
-		background-color: var(--c-green-300);
+		background-color: var(--c-green-700);
 	}
 }
