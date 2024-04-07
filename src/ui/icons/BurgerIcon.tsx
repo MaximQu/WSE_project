@@ -18,7 +18,7 @@ const BurgerIcon: FC<BurgerIconProps> = ({ className }) => {
 		>
 			<path
 				d="M6.25 14.584h37.5M6.25 25h37.5M6.25 35.416h37.5"
-				stroke="#c3c3c3"
+				stroke="currentColor"
 				stroke-width="3.6"
 				stroke-linecap="round"
 			/>
