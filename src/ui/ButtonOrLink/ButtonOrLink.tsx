@@ -10,32 +10,35 @@ type ButtonOrLinkProps = (
 			as: "a";
 	  })
 ) & {
+	className?: string;
 	children?: ReactNode;
-	styleType?: "fill" | "frame";
+	styleType?: "fill" | "frame" | "dark";
 };
 
 const styleTypes = {
 	fill: st.fill,
 	frame: st.frame,
+	dark: st.dark,
 };
 
 const ButtonOrLink: FC<ButtonOrLinkProps> = ({
 	styleType = "fill",
+	className = "",
 	children,
 	...props
 }) => {
-	const styleClasses = `${st.btn} ${styleTypes[styleType]} text-md ${props.className}`;
+	const styles = `${st.btn} ${styleTypes[styleType]} ${className}`;
 
 	if (props.as === "a") {
 		return (
-			<Link {...props} className={styleClasses}>
+			<Link {...props} className={styles}>
 				{children}
 			</Link>
 		);
 	}
 
 	return (
-		<button {...props} type={props.type ?? "button"} className={styleClasses}>
+		<button {...props} type={props.type ?? "button"} className={styles}>
 			{children}
 		</button>
 	);
