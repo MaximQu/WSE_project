@@ -1,8 +1,9 @@
+import { Theme } from "@/types/global";
 import { FC } from "react";
 
 type BurgerIconProps = {
 	className?: string;
-	theme?: "dark" | "light";
+	theme?: Theme;
 };
 const colorScheme = {
 	light: "#FDFEFF",
@@ -16,18 +17,17 @@ const BurgerIcon: FC<BurgerIconProps> = ({
 
 	return (
 		<svg
-			width="50"
-			height="50"
-			fill="none"
-			viewBox="0 0 50 50"
+			width="38"
+			height="22"
+			viewBox="0 0 42 26"
 			xmlns="http://www.w3.org/2000/svg"
 			className={styles}
 		>
 			<path
-				d="M6.25 14.584h37.5M6.25 25h37.5M6.25 35.416h37.5"
+				d="M2.25 2.584h37.5M2.25 13h37.5M2.25 23.416h37.5"
 				stroke={colorScheme[theme]}
-				stroke-width="3.6"
-				stroke-linecap="round"
+				strokeWidth="3.6"
+				strokeLinecap="round"
 			/>
 		</svg>
 	);
