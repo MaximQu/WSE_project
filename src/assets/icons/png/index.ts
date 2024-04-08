@@ -2,11 +2,11 @@ import BulbPNG from "./bulb.png";
 import ChartPNG from "./chart.png";
 import CustomerPNG from "./customer.png";
 import DBPNG from "./db.png";
-import EdicationPNG from "./education.png";
+import EducationPNG from "./education.png";
 import FingerprintPNG from "./fingerprint.png";
 import GlobePNG from "./globe.png";
 import InfoPNG from "./info.png";
-import LeafePNG from "./leafe.png";
+import LeafPNG from "./leaf.png";
 import SecurityPNG from "./security.png";
 import SupportPNG from "./support.png";
 import ToolsPNG from "./tools.png";
@@ -16,11 +16,11 @@ export {
 	ChartPNG,
 	CustomerPNG,
 	DBPNG,
-	EdicationPNG,
+	EducationPNG,
 	FingerprintPNG,
 	GlobePNG,
 	InfoPNG,
-	LeafePNG,
+	LeafPNG,
 	SecurityPNG,
 	SupportPNG,
 	ToolsPNG,

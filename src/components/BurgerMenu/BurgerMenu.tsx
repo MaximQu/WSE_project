@@ -22,13 +22,13 @@ const NavList = () => {
 	return (
 		<ul className={st.navList}>
 			{burgerMenuContent.map((menu: BurgerMenuContentItem) => {
-				if (!menu.dropdown)
+				if (menu.url)
 					return (
 						<li key={menu.link}>
 							<ButtonOrLink
 								className={st.navLink}
                 as="a"
-								to={menu.url ? menu.url : ''}
+								to={menu.url}
 								styleType="dark"
 							>
 								{menu.link}
@@ -49,7 +49,7 @@ const NavList = () => {
 							className={`${st.dropdown} ${isDroppedDown ? st.dropped : ""}`}
 						>
 							<ul>
-								{menu.dropdown.map((submenu: BurgerMenuContentSubItem) => (
+								{menu.dropdown?.map((submenu: BurgerMenuContentSubItem) => (
 									<li key={submenu.link}>
 										<ButtonOrLink
 											className={st.navLink}
