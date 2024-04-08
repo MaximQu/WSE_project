@@ -1,6 +1,6 @@
 import { ButtonOrLink } from "@/ui";
 import { ArrowIcon, CrossIcon, LogoIcon } from "@/ui/icons";
-import { ElementRef, FC, useEffect, useRef, useState } from "react";
+import { FC, useState } from "react";
 import { Link } from "react-router-dom";
 import st from "./styles.module.scss";
 import {
@@ -10,6 +10,7 @@ import {
 } from "./burgerMenuContent";
 
 type BurgerMenuProps = {
+  styles: React.CSSProperties
 	handleCloseBurgerMenu: () => void;
 };
 
@@ -53,9 +54,10 @@ const NavList = () => {
 									<li key={submenu.link}>
 										<ButtonOrLink
 											className={st.navLink}
-                      as="a"
+											as="a"
 											to={submenu.url}
 											styleType="dark"
+                      tabIndex={isDroppedDown ? 0 : -1}
 										>
 											{submenu.link}
 										</ButtonOrLink>
@@ -70,24 +72,9 @@ const NavList = () => {
 	);
 };
 
-const BurgerMenu: FC<BurgerMenuProps> = ({ handleCloseBurgerMenu }) => {
-	const burgerRef = useRef<ElementRef<"nav">>(null);
-
-	useEffect(() => {
-		const handleClickOutside = (e: MouseEvent) => {
-      e.stopImmediatePropagation()
-			if (burgerRef.current && !burgerRef.current.contains(e.target as Node)) {
-				handleCloseBurgerMenu();
-			}
-		};
-		document.addEventListener("mousedown", handleClickOutside);
-		return () => {
-			document.removeEventListener("mousedown", handleClickOutside);
-		};
-	}, [handleCloseBurgerMenu]);
-
+const BurgerMenu: FC<BurgerMenuProps> = ({ handleCloseBurgerMenu, styles }) => {
 	return (
-		<nav className={st.menu} ref={burgerRef}>
+		<nav className={st.menu} style={styles}>
 			<header className={st.header}>
 				<Link to="/" className={st.logo}>
 					<LogoIcon theme="light" className={st.icon} />
