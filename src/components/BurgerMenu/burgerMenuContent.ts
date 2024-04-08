@@ -46,13 +46,13 @@ export const burgerMenuContent = [
 	},
 ];
 
-export type BurgerMenuContet = typeof burgerMenuContent
-export type BurgerMenuContetSubItem = {
+export type BurgerMenuContent = typeof burgerMenuContent
+export type BurgerMenuContentSubItem = {
   link: string,
   url: string
 }
-export type BurgerMenuContetItem = {
+export type BurgerMenuContentItem = {
   link: string,
   url?: string,
-  dropdown?: BurgerMenuContetSubItem[]
+  dropdown?: BurgerMenuContentSubItem[]
 }

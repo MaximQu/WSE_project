@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LogoIcon from "../../ui/icons/LogoIcon";
 import st from "./styles.module.scss";
+import { ButtonOrLink } from "@/ui";
 
 const Footer = () => {
 	return (
@@ -14,13 +15,13 @@ const Footer = () => {
 				<Link to="/" className="text-md">Contacts</Link>
 				<ul className={`${st.list}`}>
 					<li>
-						<Link to="/" className="text-sm">Legal Disclaimer</Link>
+						<ButtonOrLink styleType="dark" to="/" className="text-sm">Legal Disclaimer</ButtonOrLink>
 					</li>
 					<li>
-						<Link to="/" className="text-sm">Privacy Statement</Link>
+						<ButtonOrLink styleType="dark" to="/" className="text-sm">Privacy Statement</ButtonOrLink>
 					</li>
 					<li>
-						<Link to="/" className="text-sm">Copyright</Link>
+						<ButtonOrLink styleType="dark" to="/" className="text-sm">Copyright</ButtonOrLink>
 					</li>
 				</ul>
 			</nav>

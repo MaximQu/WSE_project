@@ -4,8 +4,8 @@ import { ElementRef, FC, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import st from "./styles.module.scss";
 import {
-	BurgerMenuContetItem,
-	BurgerMenuContetSubItem,
+	BurgerMenuContentItem,
+	BurgerMenuContentSubItem,
 	burgerMenuContent,
 } from "./burgerMenuContent";
 
@@ -21,13 +21,14 @@ const NavList = () => {
 	};
 	return (
 		<ul className={st.navList}>
-			{burgerMenuContent.map((menu: BurgerMenuContetItem) => {
+			{burgerMenuContent.map((menu: BurgerMenuContentItem) => {
 				if (!menu.dropdown)
 					return (
 						<li key={menu.link}>
 							<ButtonOrLink
 								className={st.navLink}
-								to={menu.url}
+                as="a"
+								to={menu.url ? menu.url : ''}
 								styleType="dark"
 							>
 								{menu.link}
@@ -48,10 +49,11 @@ const NavList = () => {
 							className={`${st.dropdown} ${isDroppedDown ? st.dropped : ""}`}
 						>
 							<ul>
-								{menu.dropdown.map((submenu: BurgerMenuContetSubItem) => (
+								{menu.dropdown.map((submenu: BurgerMenuContentSubItem) => (
 									<li key={submenu.link}>
 										<ButtonOrLink
 											className={st.navLink}
+                      as="a"
 											to={submenu.url}
 											styleType="dark"
 										>
@@ -99,7 +101,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ handleCloseBurgerMenu }) => {
 				</button>
 			</header>
 			<NavList />
-			<ButtonOrLink className={st.signUp} to="/">
+			<ButtonOrLink as="a" className={st.signUp} to="/">
 				Sign up
 			</ButtonOrLink>
 		</nav>

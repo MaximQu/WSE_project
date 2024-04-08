@@ -1,8 +1,10 @@
+@use '@st/utils';
+
 .hero {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--c-primary-800);
+	@extend .bg-primary;
 	padding-block: 2.5rem;
 }
 
