@@ -1,0 +1,38 @@
+@use "@st/utils";
+
+.advantage {
+	--_color-title: var(--c-primary-100);
+	--_color-text: var(--c-primary-300);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 1rem;
+
+	&.row {
+		--_color-title: var(--c-primary-800);
+		--_color-text: var(--c-primary-600);
+		flex-direction: row;
+		gap: 1.5rem;
+	}
+}
+
+.icon {
+	width: 4.375rem;
+	height: 4.375rem;
+	border-radius: 0.375rem;
+	background-color: var(--c-green-300);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	@extend .text-h3;
+	color: var(--_color-title);
+}
+
+.text {
+	@extend .text-md;
+	color: var(--_color-text);
+}

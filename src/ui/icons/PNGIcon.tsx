@@ -3,11 +3,11 @@ import {
 	ChartPNG,
 	CustomerPNG,
 	DBPNG,
-	EdicationPNG,
+	EducationPNG,
 	FingerprintPNG,
 	GlobePNG,
 	InfoPNG,
-	LeafePNG,
+	LeafPNG,
 	SecurityPNG,
 	SupportPNG,
 	ToolsPNG,
@@ -19,22 +19,23 @@ const pngIconImgSrc = {
 	chart: ChartPNG,
 	customer: CustomerPNG,
 	db: DBPNG,
-	education: EdicationPNG,
+	education: EducationPNG,
 	fingerprint: FingerprintPNG,
 	globe: GlobePNG,
 	info: InfoPNG,
-	leafe: LeafePNG,
+	leaf: LeafPNG,
 	security: SecurityPNG,
 	support: SupportPNG,
 	tools: ToolsPNG,
 };
+export type TPNGIcon = keyof typeof pngIconImgSrc;
 
 type PNGIconProps = {
-	img: keyof typeof pngIconImgSrc;
+	img: TPNGIcon;
 	className?: string;
 };
 
-const BulbIcon: FC<PNGIconProps> = ({ img, className = "" }) => {
+const PNGIcon: FC<PNGIconProps> = ({ img, className = "" }) => {
 	const styles = `${className}`;
 
 	return (
@@ -47,4 +48,4 @@ const BulbIcon: FC<PNGIconProps> = ({ img, className = "" }) => {
 		/>
 	);
 };
-export default BulbIcon;
+export default PNGIcon;

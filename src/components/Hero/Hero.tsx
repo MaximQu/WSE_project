@@ -1,6 +1,5 @@
 import { ButtonOrLink } from "@/ui";
 import st from "./styles.module.scss";
-import Stat from "../Stat/Stat";
 
 const Hero = () => {
 	return (
@@ -28,7 +27,6 @@ const Hero = () => {
 					</div>
 					<ButtonOrLink className={st.btn}>Start trading</ButtonOrLink>
 				</div>
-        <Stat data={[{value:'$10 Billion', text: 'Invested'}]} theme="light"/>
 			</div>
 		</section>
 	);
