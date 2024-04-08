@@ -97,12 +97,6 @@ html {
 	// height: 100%;
 }
 
-/* Reapply the pointer cursor for anchor tags */
-a,
-button {
-	cursor: revert;
-}
-
 /* removes spacing between cells in tables */
 table {
 	border-collapse: collapse;
