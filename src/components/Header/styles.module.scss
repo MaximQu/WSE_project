@@ -1,17 +1,27 @@
 @use '@st/utils';
 
 .header {
-  position: relative;
-  & > *{
+  position: sticky;
+  top: 0;
+  z-index: var(--z-highest);
+  background-color: var(--c-white);
+
+  &>* {
     color: var(--c-primary-800)
   }
+
   &.dark {
     @extend .bg-primary;
-    & > *{
+
+    &>* {
       color: var(--c-white)
     }
   }
-  
+}
+
+.burgerMenuBackdrop {
+  position: fixed;
+  inset: 0;
 }
 
 .logo {
@@ -26,8 +36,7 @@
   display: flex;
   align-items: center;
   padding-block: .75rem;
-	position: relative;
-  z-index: 10;
+  position: relative;
 }
 
 .btn {

@@ -7,7 +7,7 @@ import { FC, useState } from "react";
 import { Theme } from "@/types/global";
 import BurgerButton from "@/ui/BurgerButton/BurgerButton";
 import { getOppositeTheme } from "@/utils/getOppositeTheme";
-import { animated, useTransition } from "react-spring";
+import useAnimatedMounting from "@/hooks/useAnimatedMounting";
 
 type HeaderProps = {
 	theme: Theme;
@@ -15,6 +15,10 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({ theme }) => {
 	const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+	const [shouldRender, styles] = useAnimatedMounting(isBurgerOpen, 800, {
+		onMount: "slideInBurgerMenu",
+		onUnMount: "slideOutBurgerMenu",
+	});
 	const handleOpenBurgerMenu = () => {
 		setIsBurgerOpen(true);
 	};
@@ -22,37 +26,36 @@ const Header: FC<HeaderProps> = ({ theme }) => {
 		setIsBurgerOpen(false);
 	};
 
-	const transition = useTransition(isBurgerOpen, {
-		from: { x: "-100vw", easing: "ease-in" },
-		enter: { x: "0vw", easing: "linear" },
-		leave: { x: "-100vw", easing: "ease-in-out" },
-		config: { duration: 400 },
-	});
-
 	return (
 		<header className={`${st.header} ${theme === "dark" ? st.dark : ""}`}>
-			<div className="container">
-				{transition((style, item) =>
-					item ? (
-						<animated.div style={style}>
-							<BurgerMenu handleCloseBurgerMenu={handleCloseBurgerMenu} />
-						</animated.div>
-					) : (
-						""
-					),
-				)}
-				<div className={`${st.wrapper}`}>
-					<BurgerButton
-						className={st.burgerBtn}
-						theme={getOppositeTheme(theme)}
-						onClick={handleOpenBurgerMenu}
-					/>
-
-					<Link to="#" className={st.logo}>
-						<LogoIcon type="big" theme={getOppositeTheme(theme)} />
-					</Link>
-					<ButtonOrLink className={st.btn}>My account</ButtonOrLink>
-				</div>
+			<div className={`${st.wrapper} container`}>
+				<BurgerButton
+					className={st.burgerBtn}
+					theme={getOppositeTheme(theme)}
+					onClick={handleOpenBurgerMenu}
+				/>
+				<>
+					{isBurgerOpen ? (
+						<div
+							className={st.burgerMenuBackdrop}
+							onClick={handleCloseBurgerMenu}
+						/>
+					) : null}
+					{shouldRender ? (
+						<BurgerMenu
+							handleCloseBurgerMenu={handleCloseBurgerMenu}
+							styles={styles}
+						/>
+					) : null}
+				</>
+				<Link
+					to="#"
+					className={st.logo}
+					aria-label="Logo icon button which leads to main page"
+				>
+					<LogoIcon type="big" theme={getOppositeTheme(theme)} />
+				</Link>
+				<ButtonOrLink className={st.btn}>My account</ButtonOrLink>
 			</div>
 		</header>
 	);
