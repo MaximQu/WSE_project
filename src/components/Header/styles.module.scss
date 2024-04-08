@@ -1,15 +1,36 @@
+@use '@st/utils';
+
 .header {
-  background-color: var(--c-primary-800);
+  position: relative;
+  & > *{
+    color: var(--c-primary-800)
+  }
+  &.dark {
+    @extend .bg-primary;
+    & > *{
+      color: var(--c-white)
+    }
+  }
+  
+}
+
+.logo {
+  @extend .icon-button-fs
+}
+
+.burgerBtn {
+  margin-right: clamp(1rem, 4vw, 3.5rem);
 }
 
 .wrapper {
   display: flex;
-  padding-block: .75rem;
-  justify-content: space-between;
   align-items: center;
+  padding-block: .75rem;
 	position: relative;
+  z-index: 10;
 }
 
 .btn {
   max-width: 10.5rem;
+  margin-left: auto;
 }
