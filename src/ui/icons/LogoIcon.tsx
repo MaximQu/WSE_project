@@ -1,7 +1,8 @@
+import { Theme } from "@/types/global";
 import { FC } from "react";
 
 type LogoIconProps = {
-	theme?: "dark" | "light";
+	theme?: Theme;
 	type?: "small" | "big";
 	className?: string;
 };
