@@ -1,6 +1,7 @@
-@use "./reset.scss";
-@use "./vars.scss";
+@use "./reset";
+@use "./vars";
 @use "./utils";
+@use "./animations";
 
 body {
 	font-family: "Poppins", sans-serif;
