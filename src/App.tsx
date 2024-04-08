@@ -1,10 +1,22 @@
 import { Route, Routes } from "react-router-dom";
-import { Copyright, Home, LegalDisclaimer, NotFound, PrivacyStatement } from "./pages";
+import {
+	Copyright,
+	Home,
+	LegalDisclaimer,
+	NotFound,
+	PrivacyStatement,
+} from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
 	return (
 		<Routes>
+			<Route path="/" element={<MainLayout headerTheme="light"/>}>
+				<Route path="/legal-notice" element={<LegalDisclaimer />} />
+				<Route path="/privacy-statement" element={<PrivacyStatement />} />
+				<Route path="/copyright" element={<Copyright />} />
+				<Route path="*" element={<NotFound />} />
+			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
 				<Route path="/trade" element />
@@ -19,14 +31,10 @@ const App = () => {
 					<Route path="sign-up" element />
 					<Route path="sign-in" element />
 				</Route>
-				<Route path="/legal-notice" element={<LegalDisclaimer />} />
-				<Route path="/privacy-statement" element={<PrivacyStatement/>} />
-				<Route path="/copyright" element={<Copyright/>} />
 				<Route path="/about-us" element>
 					<Route path="company-profile" element />
 					<Route path="investor-relations" element />
 				</Route>
-				<Route path="*" element={<NotFound/>} />
 			</Route>
 		</Routes>
 	);
