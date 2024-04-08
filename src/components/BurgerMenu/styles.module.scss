@@ -1,100 +1,197 @@
 @use '@st/utils';
 
-.burgerMenu {
-	width: 3.125rem;
-	height: 3.125rem;
-	cursor: pointer;
-	border-radius: 0.375rem;
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  position: absolute;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--c-primary-800);
+  z-index: 100000;
+  min-width: 19rem;
+  // top: 100%;
+  // left: 0;
 }
 
-.wrapper {
-	position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-	background-color: var(--c-primary-700);
-	padding: 2.5rem 1.5rem;
-	width: 19.375rem;
-	transition-duration: 0.2s;
-}
-
-.heading {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: clamp(1.5rem, 1rem + 2vw, 3.125rem);
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
 }
 
 .logo {
-	width: 4.6875rem;
-	height: 1.5625rem;
+  @extend .icon-button-fs;
+
+  .icon {
+    width: 75px;
+    height: 25px;
+  }
 }
 
 .closeBtn {
-	cursor: pointer;
-	width: 30px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 0.25rem;
+  padding: 0.5rem;
+  @extend .icon-button-fs;
+  border-radius: .25rem;
 
-	transition-duration: 0.2s;
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--c-primary-600);
+    }
+  }
 
-	@media (hover: hover) {
-		&:hover {
-			background-color: var(--c-primary-600);
-		}
-	}
+  &:active {
+    background-color: var(--c-primary-500);
+  }
+}
 
-	&:active {
-		background-color: var(--c-primary-500);
-	}
+.cross {
+  width: 1rem;
+  height: 1rem;
 }
 
 .navList {
-	margin-bottom: clamp(2rem, 1rem + 2vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  li {
+    width: 100%;
+  }
 }
 
 .navLink {
-	display: block;
-	padding: 0.75rem 1rem;
-	border-radius: 0.375rem;
-	transition-duration: 0.2s;
-	cursor: pointer;
-	width: 100%;
-	text-align: left;
-
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+  text-align: left;
   @extend .text-sm;
-
-	@media (hover: hover) {
-		&:hover {
-			background-color: var(--c-primary-600);
-		}
-	}
 }
 
-.dropDown {
-	display: grid;
-	grid-template-rows: 0fr;
-	transition-duration: 0.2s;
-	padding-left: 1.5rem;
-
-	& > div {
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-	}
-
-	&.active {
-		grid-template-rows: 1fr;
-	}
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
 }
 
-.btn {
-	display: block;
-	max-width: 100%;
+.dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: .2s;
+
+  &.dropped {
+    grid-template-rows: 1fr;
+  }
+
+  > * {
+    overflow: hidden;
+  }
+
+  .navLink {
+    padding-left: 2.5rem;
+  }
 }
+
+.signUp,
+.navLink {
+  max-width: unset;
+}
+
+// .burgerMenu {
+// 	width: 3.125rem;
+// 	height: 3.125rem;
+// 	cursor: pointer;
+// 	border-radius: 0.375rem;
+// }
+
+// .wrapper {
+// 	position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+// 	background-color: var(--c-primary-700);
+// 	padding: 2.5rem 1.5rem;
+// 	width: 19.375rem;
+// 	transition-duration: 0.2s;
+// }
+
+// .heading {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	margin-bottom: clamp(1.5rem, 1rem + 2vw, 3.125rem);
+// }
+
+// .logo {
+// 	width: 4.6875rem;
+// 	height: 1.5625rem;
+// }
+
+// .closeBtn {
+// 	cursor: pointer;
+// 	width: 30px;
+// 	height: 30px;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	border-radius: 0.25rem;
+
+// 	transition-duration: 0.2s;
+
+// 	@media (hover: hover) {
+// 		&:hover {
+// 			background-color: var(--c-primary-600);
+// 		}
+// 	}
+
+// 	&:active {
+// 		background-color: var(--c-primary-500);
+// 	}
+// }
+
+// .navList {
+// 	margin-bottom: clamp(2rem, 1rem + 2vw, 5rem);
+// }
+
+// .navLink {
+// 	display: block;
+// 	padding: 0.75rem 1rem;
+// 	border-radius: 0.375rem;
+// 	transition-duration: 0.2s;
+// 	cursor: pointer;
+// 	width: 100%;
+// 	text-align: left;
+
+// 	display: flex;
+// 	align-items: center;
+// 	gap: 1rem;
+//   @extend .text-sm;
+
+// 	@media (hover: hover) {
+// 		&:hover {
+// 			background-color: var(--c-primary-600);
+// 		}
+// 	}
+// }
+
+// .dropDown {
+// 	display: grid;
+// 	grid-template-rows: 0fr;
+// 	transition-duration: 0.2s;
+// 	padding-left: 1.5rem;
+
+// 	& > div {
+// 		overflow: hidden;
+// 		display: flex;
+// 		flex-direction: column;
+// 	}
+
+// 	&.active {
+// 		grid-template-rows: 1fr;
+// 	}
+// }
+
+// .btn {
+// 	display: block;
+// 	max-width: 100%;
+// }

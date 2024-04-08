@@ -1,27 +1,81 @@
 import { ButtonOrLink } from "@/ui";
-import { ArrowIcon, BurgerIcon, CrossIcon, LogoIcon } from "@/ui/icons";
-import { ElementRef, useEffect, useRef, useState } from "react";
+import { ArrowIcon, CrossIcon, LogoIcon } from "@/ui/icons";
+import { ElementRef, FC, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { animated, useTransition } from "react-spring";
 import st from "./styles.module.scss";
+import {
+	BurgerMenuContetItem,
+	BurgerMenuContetSubItem,
+	burgerMenuContent,
+} from "./burgerMenuContent";
 
-const BurgerMenu = () => {
-	const [isActive, setIsActive] = useState<boolean>(false);
-	const [isActiveDropDown, setIsActiveDropDown] = useState<boolean>(false);
+type BurgerMenuProps = {
+	handleCloseBurgerMenu: () => void;
+};
 
-	const burgerRef = useRef<ElementRef<"div">>(null);
+const NavList = () => {
+	const [isDroppedDown, setIsDroppedDown] = useState(false);
 
-	const transition = useTransition(isActive, {
-		from: { y: -400, opacity: 0, easing: "ease-in" },
-		enter: { y: 0, opacity: 1, easing: "linear" },
-		leave: { y: -400, opacity: 0, easing: "ease-in-out" },
-		config: { duration: 200 },
-	});
+	const handleToggleDropdown = () => {
+		setIsDroppedDown((prev) => !prev);
+	};
+	return (
+		<ul className={st.navList}>
+			{burgerMenuContent.map((menu: BurgerMenuContetItem) => {
+				if (!menu.dropdown)
+					return (
+						<li key={menu.link}>
+							<ButtonOrLink
+								className={st.navLink}
+								to={menu.url}
+								styleType="dark"
+							>
+								{menu.link}
+							</ButtonOrLink>
+						</li>
+					);
+				return (
+					<li key={menu.link}>
+						<ButtonOrLink
+							className={`${st.navLink} ${st.dropdownTrigger}`}
+							styleType="dark"
+							onClick={handleToggleDropdown}
+						>
+							{menu.link}{" "}
+							<ArrowIcon direction={isDroppedDown ? "up" : "down"} />
+						</ButtonOrLink>
+						<div
+							className={`${st.dropdown} ${isDroppedDown ? st.dropped : ""}`}
+						>
+							<ul>
+								{menu.dropdown.map((submenu: BurgerMenuContetSubItem) => (
+									<li key={submenu.link}>
+										<ButtonOrLink
+											className={st.navLink}
+											to={submenu.url}
+											styleType="dark"
+										>
+											{submenu.link}
+										</ButtonOrLink>
+									</li>
+								))}
+							</ul>
+						</div>
+					</li>
+				);
+			})}
+		</ul>
+	);
+};
+
+const BurgerMenu: FC<BurgerMenuProps> = ({ handleCloseBurgerMenu }) => {
+	const burgerRef = useRef<ElementRef<"nav">>(null);
 
 	useEffect(() => {
 		const handleClickOutside = (e: MouseEvent) => {
+      e.stopImmediatePropagation()
 			if (burgerRef.current && !burgerRef.current.contains(e.target as Node)) {
-				setIsActive(false);
+				handleCloseBurgerMenu();
 			}
 		};
 		document.addEventListener("mousedown", handleClickOutside);
@@ -31,110 +85,24 @@ const BurgerMenu = () => {
 	}, []);
 
 	return (
-		<div>
-			<button
-				type="button"
-				onClick={() => setIsActive(true)}
-				className={st.burgerMenu}
-			>
-				<BurgerIcon />
-			</button>
-			{transition((style, item) =>
-				item ? (
-					<animated.div
-						ref={burgerRef}
-						className={`${st.wrapper}`}
-						style={style}
-					>
-						<div className={st.heading}>
-							<Link to="/">
-								<LogoIcon className={st.logo} theme="light" />
-							</Link>
-							<button
-								type="button"
-								onClick={() => setIsActive(false)}
-								className={st.closeBtn}
-							>
-								<CrossIcon/>
-							</button>
-						</div>
-						<nav>
-							<ul className={st.navList}>
-								<li>
-									<Link to="/trade" className={st.navLink}>
-										Trade
-									</Link>
-								</li>
-								<li>
-									<Link to="/sustainable" className={st.navLink}>
-										Sustainable
-									</Link>
-								</li>
-								<li>
-									<Link to="/market" className={st.navLink}>
-										Market
-									</Link>
-								</li>
-								<li>
-									<Link to="/regulation" className={st.navLink}>
-										Regulation
-									</Link>
-								</li>
-								<li>
-									<Link to="/affiliation" className={st.navLink}>
-										Affiliation
-									</Link>
-								</li>
-								<li>
-									<Link to="/private-markets" className={st.navLink}>
-										Private markets
-									</Link>
-								</li>
-								<li>
-									<Link to="/why-wse" className={st.navLink}>
-										Why WSE?
-									</Link>
-								</li>
-								<li>
-									<button
-										type="button"
-										onClick={() => setIsActiveDropDown((prev) => !prev)}
-										className={st.navLink}
-									>
-										<span>About WSE</span>
-                    <ArrowIcon direction={isActiveDropDown ? 'up' : 'down'}/>
-									</button>
-									<div
-										className={`${st.dropDown} ${
-											isActiveDropDown && st.active
-										}`}
-									>
-										<div>
-											<Link className={st.navLink} to="/company-profile">
-												Company profile
-											</Link>
-											<Link className={st.navLink} to="/investor-relations">
-												Investor relations
-											</Link>
-										</div>
-									</div>
-								</li>
-								<li>
-									<Link to="/contacts" className={st.navLink}>
-										Contacts
-									</Link>
-								</li>
-							</ul>
-						</nav>
-						<ButtonOrLink className={st.btn} as="a" to="/auth/sign-up">
-							Sign Up
-						</ButtonOrLink>
-					</animated.div>
-				) : (
-					""
-				),
-			)}
-		</div>
+		<nav className={st.menu} ref={burgerRef}>
+			<header className={st.header}>
+				<Link to="/" className={st.logo}>
+					<LogoIcon theme="light" className={st.icon} />
+				</Link>
+				<button
+					className={st.closeBtn}
+					type="button"
+					onClick={handleCloseBurgerMenu}
+				>
+					<CrossIcon className={st.cross} />
+				</button>
+			</header>
+			<NavList />
+			<ButtonOrLink className={st.signUp} to="/">
+				Sign up
+			</ButtonOrLink>
+		</nav>
 	);
 };
 

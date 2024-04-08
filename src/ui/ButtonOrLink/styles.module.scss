@@ -1,24 +1,49 @@
+@use '@st/utils';
+
 .btn {
-	text-align: center;
-	border-radius: 0.375rem;
-	background-color: var(--c-green-500);
-	max-width: 12rem;
-	width: 100%;
-	transition-duration: 0.2s;
-	cursor: pointer;
-	padding: 1rem 1.875rem;
+  &.fill {
+    --_bg-color: var(--c-green-500);
+    --_hover-bg-color: var(--c-green-600);
+    --_active-bg-color: var(--c-green-700);
+  }
 
-	&::first-letter {
-		text-transform: uppercase;
-	}
+  &.frame {
+    --_border-w: 0.0625em;
+    --_bg-color: transparent;
+    --_hover-bg-color: var(--c-green-200);
+    --_active-bg-color: var(--c-green-300);
+    border: var(--_border-w) solid var(--c-green-500);
+    color: var(--c-primary-700);
+  }
 
-	@media (hover: hover) {
-		&:hover {
-			background-color: var(--c-green-600);
-		}
-	}
+  &.dark {
+    --_bg-color: transparent;
+    --_hover-bg-color: var(--c-primary-600);
+    --_active-bg-color: var(--c-primary-500);
+  }
 
-	&:active {
-		background-color: var(--c-green-700);
-	}
+
+  padding: calc(.75rem - var(--_border-w, 0rem)) calc(1rem - var(--_border-w, 0rem));
+  max-width: 12rem;
+  width: 100%;
+  color: var(--c-white);
+  @extend .text-md;
+  text-align: center;
+  transition-duration: 0.2s;
+  background-color: var(--_bg-color);
+  border-radius: 0.375rem;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--_hover-bg-color);
+    }
+  }
+
+  &:active {
+    background-color: var(--_active-bg-color);
+  }
 }
