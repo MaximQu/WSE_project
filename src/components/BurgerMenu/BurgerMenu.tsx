@@ -82,7 +82,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ handleCloseBurgerMenu }) => {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
-	}, []);
+	}, [handleCloseBurgerMenu]);
 
 	return (
 		<nav className={st.menu} ref={burgerRef}>
