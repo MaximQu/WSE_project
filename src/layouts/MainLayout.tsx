@@ -1,10 +1,16 @@
 import { Footer, Header } from "@/components";
+import { Theme } from "@/types/global";
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
 
-const MainLayout = () => {
+type MainLayoutProps = {
+  headerTheme?: Theme
+}
+
+const MainLayout: FC<MainLayoutProps> = ({headerTheme = 'dark'}) => {
   return (
     <>
-      <Header/>
+      <Header theme={headerTheme}/>
       <Outlet />
       <Footer />
     </>
