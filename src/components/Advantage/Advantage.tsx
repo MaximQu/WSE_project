@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import st from "./styles.module.scss";
 import PNGIcon, { TPNGIcon } from "@/ui/icons/PNGIcon";
 

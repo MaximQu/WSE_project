@@ -1,0 +1,32 @@
+@use '@st/utils';
+
+.section {
+  &.dark {
+    @extend .bg-primary;
+    color: var(--c-white);
+    .subtitle {
+      color: var(--c-primary-300)
+    }
+  }
+
+  color: var(--c-primary-800);
+  .subtitle {
+    color: var(--c-primary-600);
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 1.3636rem + 4.8485vw, 5rem);
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.title {
+  margin-bottom: 1rem;
+  @extend .text-h1;
+}
+
+.subtitle {
+  @extend .text-h4;
+}

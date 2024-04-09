@@ -15,13 +15,13 @@ const Footer = () => {
 				<Link to="/" className="text-md">Contacts</Link>
 				<ul className={`${st.list}`}>
 					<li>
-						<ButtonOrLink styleType="dark" to="/" className="text-sm">Legal Disclaimer</ButtonOrLink>
+						<ButtonOrLink styleType="dark" to="/" className={st.link}>Legal Disclaimer</ButtonOrLink>
 					</li>
 					<li>
-						<ButtonOrLink styleType="dark" to="/" className="text-sm">Privacy Statement</ButtonOrLink>
+						<ButtonOrLink styleType="dark" to="/" className={st.link}>Privacy Statement</ButtonOrLink>
 					</li>
 					<li>
-						<ButtonOrLink styleType="dark" to="/" className="text-sm">Copyright</ButtonOrLink>
+						<ButtonOrLink styleType="dark" to="/" className={st.link}>Copyright</ButtonOrLink>
 					</li>
 				</ul>
 			</nav>
