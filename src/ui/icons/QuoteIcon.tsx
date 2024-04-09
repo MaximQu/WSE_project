@@ -27,8 +27,8 @@ const QuoteIcon: FC<QuoteIconProps> = ({ type = "open", className = "" }) => {
 		>
 			<defs>
 				<linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
-					<stop offset="0%" stop-color="#FDFEFF" stop-opacity="0" />
-					<stop offset="100%" stop-color="#FDFEFF" />
+					<stop offset="0%" stopColor="#FDFEFF" stopOpacity="0" />
+					<stop offset="100%" stopColor="#FDFEFF" />
 				</linearGradient>
 			</defs>
 			<path
