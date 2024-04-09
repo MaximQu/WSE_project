@@ -8,6 +8,14 @@
   max-width: 30rem;
 }
 
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+}
+
 .statsBlock {
   .layout {
     display: grid;
