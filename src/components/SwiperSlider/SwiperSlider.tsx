@@ -1,4 +1,4 @@
-import { successDesktopJPG } from "@/assets/img/jpg";
+import { slide_1, slide_2, slide_3 } from "@/assets/img/jpg";
 import QuoteIcon from "@/ui/icons/QuoteIcon";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -31,7 +31,7 @@ const SwiperSlider = () => {
 						<div className={st.author}>
 							<img
 								className={st.photo}
-								src={successDesktopJPG}
+								src={slide_1}
 								alt="Samuel Clark"
 							/>
 							<span className={st.fullName}>Samuel Clark</span>
@@ -52,7 +52,7 @@ const SwiperSlider = () => {
 						<div className={st.author}>
 							<img
 								className={st.photo}
-								src={successDesktopJPG}
+								src={slide_2}
 								alt="Sarah Thompson"
 							/>
 							<span className={st.fullName}>Sarah Thompson</span>
@@ -73,7 +73,7 @@ const SwiperSlider = () => {
 						<div className={st.author}>
 							<img
 								className={st.photo}
-								src={successDesktopJPG}
+								src={slide_3}
 								alt="Michael Mcfarlane"
 							/>
 							<span className={st.fullName}>Michael Mcfarlane</span>

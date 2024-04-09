@@ -56,7 +56,9 @@ import WSEMobileJPG from './mobile/WSE-mobile.jpg'
 import slimChart from "./slim-chart.jpg";
 import slimHand from "./slim-hand.jpg";
 import slimMoney from "./slim-money.jpg";
-
+import slide_1 from './slide-1.jpg'
+import slide_2 from './slide-2.jpg'
+import slide_3 from './slide-3.jpg'
 export {
 	//Desktop JPGs
 	buildingsDesktopJPG,
@@ -116,4 +118,7 @@ export {
 	slimChart,
 	slimHand,
 	slimMoney,
+  slide_1,
+  slide_2,
+  slide_3,
 };

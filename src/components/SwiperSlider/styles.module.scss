@@ -2,20 +2,21 @@
 
 .slider {
 	background-color: var(--c-primary-800);
+	padding-top: 3.75rem;
 }
 
 .swiper {
-  padding-bottom: 3rem;
+	padding-bottom: 3rem;
 }
 
 .slideContent {
-  display: block;
+	display: block;
 	margin-bottom: clamp(2rem, 1rem + 5vw, 7rem);
 }
 
 .closeQuote {
-  display: block;
-  margin-left: auto;
+	display: block;
+	margin-left: auto;
 }
 
 .quote {
@@ -23,7 +24,7 @@
 	text-align: center;
 	max-width: 51rem;
 	margin-inline: auto;
-  padding-block: .5rem;
+	padding-block: 0.5rem;
 	@extend .text-h2;
 
 	&::before,
@@ -52,6 +53,6 @@
 }
 
 .position {
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 	@extend .text-md;
 }

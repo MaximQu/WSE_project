@@ -1,16 +1,30 @@
 @use "@st/utils";
 
 .content {
-  display: flex;
-  gap: 6rem;
+	display: flex;
+	gap: 6rem;
+}
+
+.universalHeading {
+	header {
+		margin-bottom: 1.5rem;
+	}
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
 }
 
 .tickerTapeWidget {
-  padding-top: 0;
+	padding-top: 0;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
+	width: 100%;
 }

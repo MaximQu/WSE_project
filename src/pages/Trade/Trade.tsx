@@ -1,12 +1,16 @@
-import { Clarification, SwiperSlider } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import st from "./styles.module.scss";
 import {
 	glassesDesktopJPG,
 	glassesMobileJPG,
 	glassesTabletJPG,
 } from "@/assets/img/jpg";
-import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
+import { Clarification, SwiperSlider } from "@/components";
+import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { MultipleButtons } from "@/ui";
+import {
+	RealTimeChartWidget,
+	TickerTapeWidget,
+} from "@/ui/Widgets/TradingViewWidgets";
+import st from "./styles.module.scss";
 
 const Trade = () => {
 	return (
@@ -50,8 +54,21 @@ const Trade = () => {
 					</picture>
 				</div>
 			</UniversalSection>
-      <TickerTapeWidget className={st.tickerTapeWidget}/>
+			<TickerTapeWidget className={st.tickerTapeWidget} />
 			<SwiperSlider />
+			<RealTimeChartWidget />
+			<UniversalSection
+				className={st.universalHeading}
+				theme="light"
+				title="Create your account today!"
+				subtitle="Easy way to Great benefits!"
+			>
+				<MultipleButtons
+					firstBtnText="Register account"
+					secondBtnText="Learn more"
+					adjustment="center"
+				/>
+			</UniversalSection>
 		</main>
 	);
 };
