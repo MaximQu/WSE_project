@@ -1,0 +1,62 @@
+@use '@st/mix' as *;
+
+.ticker {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: var(--c-primary-700);
+  border-radius: 1rem;
+
+  &>*:not(:last-of-type) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 80%;
+      top: 0;
+      bottom: 0;
+      margin-block: auto;
+      width: 1px;
+      right: 0;
+      background-color: color-mix(in hsl, var(--c-white) 10%, transparent 100%);
+    }
+  }
+
+  @media (width <=768px) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      margin-block: auto;
+      background-color: color-mix(in hsl, var(--c-white) 10%, transparent 100%);
+
+    }
+
+    grid-template-columns: 1fr 1fr;
+
+    &>*::before {
+      display: none;
+    }
+
+    &>*:nth-child(2n + 1) {
+      &::before {
+        display: block;
+      }
+    }
+  }
+}
+
+.tickerTape {
+  background-color: var(--c-white);
+  @include adaptivValue('padding-block', 60, 80, 1200, 768);
+
+  @media (width <=768px) {
+    @include adaptivValue('padding-block', 80, 70, 768, 420)
+  }
+}
