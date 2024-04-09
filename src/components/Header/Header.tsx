@@ -1,9 +1,9 @@
 import { ButtonOrLink } from "@/ui";
 import st from "./styles.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LogoIcon } from "@/ui/icons";
 import { BurgerMenu } from "@/components";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Theme } from "@/types/global";
 import BurgerButton from "@/ui/BurgerButton/BurgerButton";
 import { getOppositeTheme } from "@/utils/getOppositeTheme";
@@ -19,12 +19,27 @@ const Header: FC<HeaderProps> = ({ theme }) => {
 		onMount: "slideInBurgerMenu",
 		onUnMount: "slideOutBurgerMenu",
 	});
+
+	const location = useLocation();
+
 	const handleOpenBurgerMenu = () => {
 		setIsBurgerOpen(true);
 	};
 	const handleCloseBurgerMenu = () => {
 		setIsBurgerOpen(false);
 	};
+
+	useEffect(() => {
+    setIsBurgerOpen(false)
+	}, [location]);
+
+	useEffect(() => {
+		if (isBurgerOpen && window.innerWidth <= 480) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [isBurgerOpen]);
 
 	return (
 		<header className={`${st.header} ${theme === "dark" ? st.dark : ""}`}>
@@ -44,6 +59,7 @@ const Header: FC<HeaderProps> = ({ theme }) => {
 					{shouldRender ? (
 						<BurgerMenu
 							handleCloseBurgerMenu={handleCloseBurgerMenu}
+							className={st.burgerMenu}
 							styles={styles}
 						/>
 					) : null}

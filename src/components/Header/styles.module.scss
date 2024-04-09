@@ -32,14 +32,38 @@
   margin-right: clamp(1rem, 4vw, 3.5rem);
 }
 
+.burgerMenu {
+  max-height: 100svh;
+  max-height: 100dvh;
+  overflow-y: auto;
+
+  @media (width <=768px) {
+    top: 0;
+  }
+
+  @media (width <=480px) {
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
 .wrapper {
   display: flex;
   align-items: center;
   padding-block: .75rem;
   position: relative;
+
+  @media (width <=768px) {
+    justify-content: space-between;
+  }
 }
 
 .btn {
   max-width: 10.5rem;
   margin-left: auto;
+
+  @media (width <=768px) {
+    display: none;
+  }
 }
