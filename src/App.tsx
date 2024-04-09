@@ -5,16 +5,18 @@ import {
 	LegalDisclaimer,
 	NotFound,
 	PrivacyStatement,
+	Registration,
 } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<MainLayout headerTheme="light"/>}>
+			<Route path="/" element={<MainLayout headerTheme="light" />}>
 				<Route path="/legal-notice" element={<LegalDisclaimer />} />
 				<Route path="/privacy-statement" element={<PrivacyStatement />} />
 				<Route path="/copyright" element={<Copyright />} />
+				<Route path="/auth/sign-up" element={<Registration />} />
 				<Route path="*" element={<NotFound />} />
 			</Route>
 			<Route path="/" element={<MainLayout />}>
@@ -27,10 +29,6 @@ const App = () => {
 				<Route path="/private-markets" element />
 				<Route path="/why-wse" element />
 				<Route path="/contacts" element />
-				<Route path="/auth" element>
-					<Route path="sign-up" element />
-					<Route path="sign-in" element />
-				</Route>
 				<Route path="/about-us" element>
 					<Route path="company-profile" element />
 					<Route path="investor-relations" element />

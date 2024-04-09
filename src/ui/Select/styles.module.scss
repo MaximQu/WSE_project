@@ -1,0 +1,179 @@
+@use "@st/utils";
+
+.select {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border: 1px solid var(--c-primary-300);
+	border-radius: 0.5rem;
+	width: 100%;
+	padding: 0.6875rem 0.875rem;
+	transition-duration: var(--t-time);
+	color: var(--c-primary-300);
+
+	&:focus {
+		border-color: var(--c-primary-500);
+	}
+
+	&::placeholder {
+		opacity: 0.5;
+	}
+
+	&.phoneCodeStyle {
+		.input {
+			pointer-events: auto;
+			width: fit-content;
+		}
+
+		.wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+			width: fit-content;
+		}
+	}
+}
+
+.block {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	.dropDown {
+		position: absolute;
+		top: 100%;
+		z-index: 1;
+
+		&.active {
+			.dropDownList {
+        padding: .5rem;
+				border: 1px solid var(--c-primary-400);
+			}
+		}
+	}
+
+	.dropDown .dropDownList {
+		background-color: var(--c-white);
+
+		& > * {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding-block: 0.25rem;
+		}
+	}
+}
+
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.inputNumberWrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.1rem;
+  cursor: pointer;
+
+	.input {
+		width: 3rem;
+		max-width: 3rem;
+		cursor: pointer;
+	}
+}
+
+.arrowIcon {
+	min-width: 20px;
+}
+
+.dropDown {
+	display: grid;
+	grid-template-rows: 0fr;
+	color: var(--c-primary-500);
+	text-align: left;
+	transition-duration: var(--t-time);
+
+	&.active {
+		grid-template-rows: 1fr;
+
+		.dropDownList {
+			overflow-y: auto;
+			border-top: 1px solid var(--c-primary-400);
+		}
+	}
+
+	.dropDownList {
+		max-height: 13rem;
+		width: fit-content;
+		overflow: hidden;
+		transition-duration: var(--t-time);
+
+		> * {
+			padding-block: 0.5rem;
+			line-height: 1;
+			transition-duration: var(--t-time);
+
+			&:hover {
+				background-color: var(--c-primary-100);
+			}
+		}
+
+		&::-webkit-scrollbar {
+			width: 10px;
+			height: 10px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: var(--c-primary-100);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: var(--c-primary-300);
+			cursor: grab;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: var(--c-primary-400);
+		}
+	}
+}
+
+.phoneCodeBtn {
+	display: flex;
+	align-items: center;
+}
+
+.countryValueBtn {
+	display: flex;
+	align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.countryBtn {
+  width: 100%;
+  text-align: left;
+}
+
+.flagIcon {
+	max-width: 20px;
+}
+
+.input {
+	display: block;
+	width: 100%;
+	outline: none;
+	pointer-events: none;
+	color: var(--c-primary-500);
+
+	&::placeholder {
+		color: var(--c-primary-300);
+	}
+}
