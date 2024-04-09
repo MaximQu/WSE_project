@@ -23,10 +23,12 @@ const UniversalSection: FC<UniversalSectionProps> = ({
 	return (
 		<section className={styles}>
 			<div className="container">
-				<header className={st.header}>
-					<h2 className={st.title}>{title}</h2>
-					{subtitle ? <p className={st.subtitle}>{subtitle}</p> : null}
-				</header>
+				{title || subtitle ? (
+					<header className={st.header}>
+						<h2 className={st.title}>{title}</h2>
+						{subtitle ? <p className={st.subtitle}>{subtitle}</p> : null}
+					</header>
+				) : null}
 				{children}
 			</div>
 		</section>
