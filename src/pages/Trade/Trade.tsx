@@ -6,6 +6,7 @@ import {
 	glassesMobileJPG,
 	glassesTabletJPG,
 } from "@/assets/img/jpg";
+import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
 
 const Trade = () => {
 	return (
@@ -49,6 +50,7 @@ const Trade = () => {
 					</picture>
 				</div>
 			</UniversalSection>
+      <TickerTapeWidget className={st.tickerTapeWidget}/>
 			<SwiperSlider />
 		</main>
 	);
