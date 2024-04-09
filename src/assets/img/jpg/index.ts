@@ -13,9 +13,9 @@ import solarPanelFieldDesktopJPG from './desktop/solar_panel_field-desktop.jpg'
 import statsDesktopJPG from './desktop/stats-desktop.jpg'
 import successDesktopJPG from './desktop/success-desktop.jpg'
 import windFarmDesktopJPG from './desktop/wind_farm-desktop.jpg'
-import workingProcessDesktopJPG from './desktop/woking_process-desktop.jpg'
+import workingProcessDesktopJPG from './desktop/working_process-desktop.jpg'
 import WSEDesktopJPG from './desktop/WSE-desktop.jpg'
-	
+
 //Tablet JPGs
 import buildingsTabletJPG from './tablet/buildings-tablet.jpg'
 import chartTabletJPG from './tablet/chart-tablet.jpg'
@@ -31,7 +31,7 @@ import solarPanelFieldTabletJPG from './tablet/solar_panel_field-tablet.jpg'
 import statsTabletJPG from './tablet/stats-tablet.jpg'
 import successTabletJPG from './tablet/success-tablet.jpg'
 import windFarmTabletJPG from './tablet/wind_farm-tablet.jpg'
-import workingProcessTabletJPG from './tablet/woking_process-tablet.jpg'
+import workingProcessTabletJPG from './tablet/working_process-tablet.jpg'
 import WSETabletJPG from './tablet/WSE-tablet.jpg'
 
 //Mobile JPGs
@@ -49,10 +49,10 @@ import solarPanelFieldMobileJPG from './mobile/solar_panel_field-mobile.jpg'
 import statsMobileJPG from './mobile/stats-mobile.jpg'
 import successMobileJPG from './mobile/success-mobile.jpg'
 import windFarmMobileJPG from './mobile/wind_farm-mobile.jpg'
-import workingProcessMobileJPG from './mobile/woking_process-mobile.jpg'
+import workingProcessMobileJPG from './mobile/working_process-mobile.jpg'
 import WSEMobileJPG from './mobile/WSE-mobile.jpg'
 
-// Universla JPGs
+// Universal JPGs
 import slimChart from "./slim-chart.jpg";
 import slimHand from "./slim-hand.jpg";
 import slimMoney from "./slim-money.jpg";

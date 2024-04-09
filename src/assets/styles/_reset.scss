@@ -48,6 +48,15 @@ video {
 	max-width: 100%;
 }
 
+input {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	-moz-appearance: textfield;
+}
+
 button,
 html input[type="button"],
 input[type="reset"],
