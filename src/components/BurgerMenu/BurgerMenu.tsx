@@ -10,7 +10,8 @@ import {
 } from "./burgerMenuContent";
 
 type BurgerMenuProps = {
-  styles: React.CSSProperties
+	styles: React.CSSProperties;
+	className?: string;
 	handleCloseBurgerMenu: () => void;
 };
 
@@ -28,7 +29,7 @@ const NavList = () => {
 						<li key={menu.link}>
 							<ButtonOrLink
 								className={st.navLink}
-                as="a"
+								as="a"
 								to={menu.url}
 								styleType="dark"
 							>
@@ -57,7 +58,7 @@ const NavList = () => {
 											as="a"
 											to={submenu.url}
 											styleType="dark"
-                      tabIndex={isDroppedDown ? 0 : -1}
+											tabIndex={isDroppedDown ? 0 : -1}
 										>
 											{submenu.link}
 										</ButtonOrLink>
@@ -72,9 +73,9 @@ const NavList = () => {
 	);
 };
 
-const BurgerMenu: FC<BurgerMenuProps> = ({ handleCloseBurgerMenu, styles }) => {
+const BurgerMenu: FC<BurgerMenuProps> = ({className = '', handleCloseBurgerMenu, styles }) => {
 	return (
-		<nav className={st.menu} style={styles}>
+		<nav className={`${className} ${st.menu}`} style={styles}>
 			<header className={st.header}>
 				<Link to="/" className={st.logo}>
 					<LogoIcon theme="light" className={st.icon} />
