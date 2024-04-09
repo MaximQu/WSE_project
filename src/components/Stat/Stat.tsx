@@ -5,22 +5,20 @@ type StatProps = {
 	data: {
 		value: string;
 		text: string;
-	}[];
+	};
 	theme?: "light" | "dark";
 };
 
-const Stat: FC<StatProps> = ({ data, theme = 'light' }) => {
+const Stat: FC<StatProps> = ({ data, theme = "light" }) => {
 	return (
 		<>
-			{data.map((stat) => (
-				<div
-					key={stat.text}
-					className={`${st.stat} ${theme === "dark" ? st.dark : ""}`}
-				>
-					<span className={st.value}>{stat.value}</span>
-					<span className={st.text}>{stat.text}</span>
-				</div>
-			))}
+			<div
+				key={data.text}
+				className={`${st.stat} ${theme === "dark" ? st.dark : ""}`}
+			>
+				<span className={st.value}>{data.value}</span>
+				<span className={st.text}>{data.text}</span>
+			</div>
 		</>
 	);
 };

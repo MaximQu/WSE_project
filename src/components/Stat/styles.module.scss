@@ -16,10 +16,14 @@
 
 .value {
 	color: var(--_value-color);
-	@extend .text-h1;
+	font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .text {
 	color: var(--_text-color);
-	@extend .text-h4;
+  font-size: 1.125rem;
+  font-weight: medium;
+  line-height: 1.3;
 }
