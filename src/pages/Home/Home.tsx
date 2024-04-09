@@ -1,13 +1,24 @@
-import { Advantage, Hero, Stat } from "@/components";
+import { Advantage, Clarification, Hero, Stat } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { advantages, stats } from "./content";
 import st from "./styles.module.scss";
 import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
+import { confidenceSVG } from "@/assets/img/svg";
 
 const Home = () => {
 	return (
 		<main>
 			<Hero />
+			<UniversalSection theme="light">
+				<div className={st.clarification}>
+					<Clarification
+						title="Invest with Confidence"
+						text1="At World Stock Exchange, we believe in democratizing access to global financial markets."
+						text2="Whether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives."
+					/>
+					<img className={st.clarificationImg} src={confidenceSVG} alt="Invest with Confidence" />
+				</div>
+			</UniversalSection>
 			<UniversalSection
 				title="We believe in the power of data"
 				subtitle="Driving informed decisions, enhancing market intelligence, and ensuring unrivaled accuracy"
@@ -31,7 +42,7 @@ const Home = () => {
 					))}
 				</div>
 			</UniversalSection>
-      <TickerTapeWidget />
+			<TickerTapeWidget />
 		</main>
 	);
 };

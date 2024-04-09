@@ -1,3 +1,13 @@
+.clarification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clarificationImg {
+  max-width: 30rem;
+}
+
 .statsBlock {
   .layout {
     display: grid;

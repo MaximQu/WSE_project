@@ -7,4 +7,5 @@ export { default as Header } from "./Header/Header";
 export { default as Hero } from "./Hero/Hero";
 export { default as Stat } from "./Stat/Stat";
 export { default as Advantage } from "./Advantage/Advantage";
+export { default as Clarification } from "./Clarification/Clarification";
 export { default as SwiperSlider } from "./SwiperSlider/SwiperSlider";

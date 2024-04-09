@@ -1,0 +1,17 @@
+@use "@st/utils";
+
+.title {
+	color: var(--c-primary-800);
+	margin-bottom: 1.5rem;
+	@extend .text-h2;
+}
+
+.text {
+	@extend .text-md;
+	max-width: 30rem;
+	color: var(--c-primary-500);
+
+  &:first-of-type {
+    margin-bottom: 1rem;
+  }
+}
