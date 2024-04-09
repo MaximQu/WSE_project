@@ -12,11 +12,18 @@
 .heading {
 	@extend .text-h3;
 	display: flex;
-	align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 	gap: 2.875rem;
+
+  svg {
+    min-width: 20px;
+  }
 }
 
 .question {
+  @extend .text-h4;
+  font-weight: 700;
 	color: var(--c-primary-800);
 }
 

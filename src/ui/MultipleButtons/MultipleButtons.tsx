@@ -9,12 +9,16 @@ type MultipleButtonsProps = {
 };
 
 const MultipleButtons: FC<MultipleButtonsProps> = ({
-	firstBtnText,
-	secondBtnText,
-  adjustment
+	firstBtnText = "Register account",
+	secondBtnText = "Learn more",
+	adjustment = 'center',
 }) => {
 	return (
-		<div className={`${st.block} ${adjustment === 'center' ? st.center : st.right }`}>
+		<div
+			className={`${st.block} ${
+				adjustment === "center" ? st.center : st.right
+			}`}
+		>
 			<ButtonOrLink as="a" to="/auth/sign-up">
 				{firstBtnText}
 			</ButtonOrLink>

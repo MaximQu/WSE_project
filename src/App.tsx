@@ -6,7 +6,8 @@ import {
 	NotFound,
 	PrivacyStatement,
 	Registration,
-  Trade,
+	Sustainable,
+	Trade,
 } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
@@ -14,7 +15,8 @@ const App = () => {
 	return (
 		<Routes>
 			<Route path="/" element={<MainLayout headerTheme="light" />}>
-				<Route path="/trade" element={<Trade/>} />
+				<Route path="/trade" element={<Trade />} />
+				<Route path="/sustainable" element={<Sustainable />} />
 				<Route path="/legal-notice" element={<LegalDisclaimer />} />
 				<Route path="/privacy-statement" element={<PrivacyStatement />} />
 				<Route path="/copyright" element={<Copyright />} />
@@ -23,7 +25,6 @@ const App = () => {
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="/sustainable" element />
 				<Route path="/market" element />
 				<Route path="/regulation" element />
 				<Route path="/affiliation" element />
