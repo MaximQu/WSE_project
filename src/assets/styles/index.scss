@@ -11,7 +11,7 @@ body {
 }
 
 section {
-  padding-block: 7.5rem;
+  padding-block: clamp(4.375rem, 3.3654rem + 3.8462vw, 6.25rem);
 }
 
 .swiper-pagination {

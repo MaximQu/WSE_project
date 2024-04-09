@@ -1,19 +1,19 @@
 @keyframes slideInBurgerMenu {
   from {
-    left: -100vw;
+    left: -110vw;
   }
 
   to {
-    left: 0vw;
+    left: -1rem;
   }
 }
 
 @keyframes slideOutBurgerMenu {
   from {
-    left: 0vw;
+    left: -1rem;
   }
 
   to {
-    left: -100vw;
+    left: -110vw;
   }
 }

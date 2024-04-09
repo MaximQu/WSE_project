@@ -1,0 +1,36 @@
+.statsBlock {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    justify-items: center;
+    place-content: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+
+    @media (700px <= width <= 940px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    // display: flex;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // gap: 1.5rem;
+
+    // &>* {
+    //   flex:0 0 16.25rem;
+    //   white-space: nowrap;
+    // }
+  }
+}
+
+.advantagesBlock {
+  padding-block: clamp(4.375rem, 2.3864rem + 8.4848vw, 8.75rem);
+
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+    justify-items: center;
+    place-content: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+}
