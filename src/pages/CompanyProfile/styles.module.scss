@@ -1,0 +1,31 @@
+@use "@st/utils";
+
+.account {
+	header {
+		margin-bottom: 1.5rem;
+	}
+
+	.btn {
+		margin-inline: auto;
+	}
+}
+
+.stats {
+	.block {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+}
+
+.explanation {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

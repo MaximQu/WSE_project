@@ -3,7 +3,7 @@ import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { EmailIcon, MarkerIcon, PhoneIcon } from "@/ui/icons";
 import st from "./styles.module.scss";
 
-const Market = () => {
+const Contacts = () => {
 	return (
 		<main>
 			<UniversalSection theme="light" className={st.contact} title="Contacts">
@@ -38,4 +38,4 @@ const Market = () => {
 	);
 };
 
-export default Market;
+export default Contacts;

@@ -24,7 +24,7 @@ const Clarification: FC<ClarificationProps> = ({
 				theme === "light" ? st.light : ""
 			} ${className}`}
 		>
-			<h2 className={st.title}>{title}</h2>
+			{title && <h2 className={st.title}>{title}</h2>}
 			{subTitle && <p className={st.subtitle}>{subTitle}</p>}
 			{text1 || text2 ? (
 				<div className={st.wrapper}>
