@@ -1,20 +1,46 @@
 @use "@st/utils";
 
 .sustainableWrapper {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .universalHeading {
-	header {
-		margin-bottom: 1.5rem;
-	}
+  header {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .faqList {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-	gap: 1.25rem;
+  gap: 1.25rem;
+}
+
+.advantagesBlock {
+  .layout {
+    @extend .six-pack-grid;
+
+    .img {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @media (width <=768px) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+      }
+
+      @media (width <=480px) {
+        grid-column: 1;
+        grid-row: 3 / 4;
+      }
+    }
+
+
+  }
 }

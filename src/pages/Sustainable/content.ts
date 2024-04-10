@@ -1,3 +1,6 @@
+import { solarPanelFieldDesktopJPG, solarPanelFieldMobileJPG, solarPanelFieldTabletJPG } from "@/assets/img/jpg";
+import { TPNGIcon } from "@/ui/icons/PNGIcon";
+
 export const content = [
 	{
 		question: "What is sustainable investing?",
@@ -29,7 +32,7 @@ export const content = [
 
 export const advantages: (
 	| {
-			desctop: string;
+			desktop: string;
 			tablet: string;
 			mobile: string;
 			alt: string;
@@ -37,7 +40,7 @@ export const advantages: (
 	| {
 			title: string;
 			text: string;
-			icon: string;
+			icon: TPNGIcon;
 	  }
 )[] = [
 	{
@@ -50,7 +53,12 @@ export const advantages: (
 		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
 		icon: "globe",
 	},
-
+  {
+    desktop: solarPanelFieldDesktopJPG,
+    tablet: solarPanelFieldTabletJPG,
+    mobile: solarPanelFieldMobileJPG,
+    alt: 'Solar panel field'
+  },
 	{
 		title: "Global Reach",
 		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
