@@ -8,7 +8,7 @@ import {
 } from "@/assets/img/jpg";
 import { RealTimeChartWidget } from "@/ui/Widgets/TradingViewWidgets";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
-import { content } from "./content";
+import { advantages, content } from "./content";
 
 const Sustainable = () => {
 	return (
@@ -35,7 +35,16 @@ const Sustainable = () => {
 			<UniversalSection
 				title="Advantages"
 				subtitle="Discover the benefits of sustainability"
-			></UniversalSection>
+        className={st.advantagesBlock}
+			>
+				<div className={st.layout}>
+					{advantages.map((advantage) => {
+						if ("icon" in advantage)
+							return <Advantage data={advantage} key={advantage.title} />;
+						return <AdaptiveImg {...advantage} className={st.img}/>;
+					})}
+				</div>
+			</UniversalSection>
 			<UniversalSection
 				theme="light"
 				title="Frequently Asked Questions"
