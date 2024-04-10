@@ -6,4 +6,4 @@ export { default as PrivacyStatement } from "./PrivacyStatement/PrivacyStatement
 export { default as Registration } from "./Registration/Registration";
 export { default as Sustainable } from "./Sustainable/Sustainable";
 export { default as Trade } from "./Trade/Trade";
-
+export { default as Market } from "./Market/Market";
