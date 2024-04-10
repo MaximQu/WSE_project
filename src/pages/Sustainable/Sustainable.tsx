@@ -1,4 +1,3 @@
-import React from "react";
 import st from "./styles.module.scss";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { Clarification, DropDown } from "@/components";

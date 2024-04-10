@@ -138,6 +138,7 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 						className="hide"
 						name="phoneCode"
 						value={phoneCodeValue.dial_code}
+            tabIndex={-1}
 						readOnly
 					/>
 				</div>
@@ -154,6 +155,7 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 					className="hide"
 					name="country"
 					value={countryValue}
+          tabIndex={-1}
 					readOnly
 				/>
 				<button

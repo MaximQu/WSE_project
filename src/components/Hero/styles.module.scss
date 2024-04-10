@@ -19,7 +19,7 @@
   margin-bottom: clamp(1.875rem, -0.4808rem + 8.9744vw, 6.25rem);
 
   @media (width <=768px) {
-    @include adaptivValue('padding-block', 44, 84, 768, 420);
+    @include adaptiveValue('padding-block', 44, 84, 768, 420);
     padding-inline: clamp(1rem, -2.6207rem + 13.7931vw, 4rem);
   }
 

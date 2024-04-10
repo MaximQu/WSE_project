@@ -54,9 +54,9 @@
 
 .tickerTape {
   background-color: var(--c-white);
-  @include adaptivValue('padding-block', 60, 80, 1200, 768);
+  @include adaptiveValue('padding-block', 60, 80, 1200, 768);
 
   @media (width <=768px) {
-    @include adaptivValue('padding-block', 80, 70, 768, 420)
+    @include adaptiveValue('padding-block', 80, 70, 768, 420)
   }
 }

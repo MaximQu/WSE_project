@@ -1,7 +1,7 @@
 import {
-  workingProcessDesktopJPG,
-  workingProcessMobileJPG,
-  workingProcessTabletJPG,
+	workingProcessDesktopJPG,
+	workingProcessMobileJPG,
+	workingProcessTabletJPG,
 } from "@/assets/img/jpg";
 import { AdaptiveImg, ButtonOrLink, Select } from "@/ui";
 import { LogoIcon } from "@/ui/icons";
@@ -16,7 +16,11 @@ const Registration = () => {
 		fullName: z.string().min(2, "Required field. Min length 2"),
 		email: z.string().email().min(8, "Required field.Min length 8").trim(),
 		country: z.string().min(1, "Required field"),
-		phoneNumber: z.coerce.number().int().min(9, "Required field. Min length 9").positive(),
+		phoneNumber: z.coerce
+			.number()
+			.int()
+			.min(9, "Required field. Min length 9")
+			.positive(),
 		password: z.string().min(8, "Required field. Min length 8").trim(),
 		phoneCode: z.string(),
 	});

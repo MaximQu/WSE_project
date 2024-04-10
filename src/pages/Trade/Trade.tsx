@@ -1,14 +1,14 @@
 import {
-	glassesDesktopJPG,
-	glassesMobileJPG,
-	glassesTabletJPG,
+  glassesDesktopJPG,
+  glassesMobileJPG,
+  glassesTabletJPG,
 } from "@/assets/img/jpg";
 import { Clarification, SwiperSlider } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
 import {
-	RealTimeChartWidget,
-	TickerTapeWidget,
+  RealTimeChartWidget,
+  TickerTapeWidget,
 } from "@/ui/Widgets/TradingViewWidgets";
 import st from "./styles.module.scss";
 
@@ -53,11 +53,7 @@ const Trade = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons
-					firstBtnText="Register account"
-					secondBtnText="Learn more"
-					adjustment="center"
-				/>
+				<MultipleButtons adjustment="center" />
 			</UniversalSection>
 		</main>
 	);
