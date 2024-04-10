@@ -1,19 +1,28 @@
 @use "@st/utils";
 
 .clarification {
-  max-width: 34.375rem;
+	--_titleColor: var(--c-white);
+	--_subTitleColor: var(--c-white);
+	--_textColor: var(--c-primary-300);
+	max-width: 34.375rem;
+
+	&.light {
+		--_titleColor: var(--c-primary-800);
+		--_subTitleColor: var(--c-primary-800);
+		--_textColor: var(--c-primary-600);
+	}
 }
 
 .title {
-	color: var(--c-primary-800);
-	margin-bottom: 1.5rem;
 	@extend .text-h2;
+	color: var(--_titleColor);
+	margin-bottom: 1.5rem;
 }
 
 .subtitle {
-	color: var(--c-primary-800);
 	@extend .text-h4;
-  margin-bottom: 1.25rem;
+	color: var(--_subTitleColor);
+	margin-bottom: 1.25rem;
 }
 
 .wrapper {
@@ -25,5 +34,5 @@
 .text {
 	@extend .text-md;
 	max-width: 30rem;
-	color: var(--c-primary-500);
+	color: var(--_textColor);
 }

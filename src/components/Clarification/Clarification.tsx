@@ -7,6 +7,7 @@ type ClarificationProps = {
 	text1?: string;
 	text2?: string;
 	className?: string;
+	theme?: "light" | "dark";
 };
 
 const Clarification: FC<ClarificationProps> = ({
@@ -15,9 +16,14 @@ const Clarification: FC<ClarificationProps> = ({
 	text1,
 	text2,
 	className,
+	theme,
 }) => {
 	return (
-		<div className={`${st.clarification} ${className}`}>
+		<div
+			className={`${st.clarification} ${
+				theme === "light" ? st.light : ""
+			} ${className}`}
+		>
 			<h2 className={st.title}>{title}</h2>
 			{subTitle && <p className={st.subtitle}>{subTitle}</p>}
 			{text1 || text2 ? (
