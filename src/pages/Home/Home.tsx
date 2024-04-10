@@ -1,7 +1,7 @@
 import { confidenceSVG } from "@/assets/img/svg";
 import { Advantage, Clarification, Hero, Stat } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { ButtonOrLink } from "@/ui";
+import { MultipleButtons } from "@/ui";
 import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
 import { advantages, stats } from "./content";
 import st from "./styles.module.scss";
@@ -54,14 +54,7 @@ const Home = () => {
 						title="Transform your idea into reality"
 						text1="Discover the Difference with WSE. &nbsp; &nbsp; Create your account!"
 					/>
-					<div className={st.block}>
-						<ButtonOrLink as="a" to="/auth/sign-up">
-							Register account
-						</ButtonOrLink>
-						<ButtonOrLink as="a" to="/" styleType="frame">
-							Learn more
-						</ButtonOrLink>
-					</div>
+          <MultipleButtons/>
 				</div>
 			</UniversalSection>
 		</main>
