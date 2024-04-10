@@ -9,3 +9,4 @@ export { default as Trade } from "./Trade/Trade";
 export { default as Market } from "./Market/Market";
 export { default as PrivateMarkets } from "./PrivateMarkets/PrivateMarkets";
 export { default as Regulation } from "./Regulation/Regulation";
+export { default as Contacts } from "./Contacts/Contacts";
