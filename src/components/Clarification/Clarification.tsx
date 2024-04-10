@@ -6,6 +6,7 @@ type ClarificationProps = {
 	subTitle?: string;
 	text1?: string;
 	text2?: string;
+	className?: string;
 };
 
 const Clarification: FC<ClarificationProps> = ({
@@ -13,15 +14,18 @@ const Clarification: FC<ClarificationProps> = ({
 	subTitle,
 	text1,
 	text2,
+	className,
 }) => {
 	return (
-		<div className={st.clarification}>
+		<div className={`${st.clarification} ${className}`}>
 			<h2 className={st.title}>{title}</h2>
 			{subTitle && <p className={st.subtitle}>{subTitle}</p>}
-			<div className={st.wrapper}>
-				<p className={st.text}>{text1}</p>
-				<p className={st.text}>{text2}</p>
-			</div>
+			{text1 || text2 ? (
+				<div className={st.wrapper}>
+					<p className={st.text}>{text1}</p>
+					<p className={st.text}>{text2}</p>
+				</div>
+			) : null}
 		</div>
 	);
 };

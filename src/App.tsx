@@ -7,6 +7,7 @@ import {
 	NotFound,
 	PrivacyStatement,
 	Registration,
+	Regulation,
 	Sustainable,
 	Trade,
 } from "./pages";
@@ -18,7 +19,9 @@ const App = () => {
 			<Route path="/" element={<MainLayout headerTheme="light" />}>
 				<Route path="/trade" element={<Trade />} />
 				<Route path="/sustainable" element={<Sustainable />} />
-				<Route path="/market" element={<Market/>} />
+				<Route path="/market" element={<Market />} />
+				<Route path="/regulation" element={<Regulation />} />
+				<Route path="/affiliation" element />
 				<Route path="/legal-notice" element={<LegalDisclaimer />} />
 				<Route path="/privacy-statement" element={<PrivacyStatement />} />
 				<Route path="/copyright" element={<Copyright />} />
@@ -27,8 +30,6 @@ const App = () => {
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="/regulation" element />
-				<Route path="/affiliation" element />
 				<Route path="/private-markets" element />
 				<Route path="/why-wse" element />
 				<Route path="/contacts" element />
