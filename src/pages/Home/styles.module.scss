@@ -1,3 +1,5 @@
+@use '@st/utils';
+
 .clarification {
   display: flex;
   align-items: center;
@@ -24,7 +26,7 @@
     place-content: center;
     gap: clamp(1rem, 2vw, 1.5rem);
 
-    @media (700px <= width <= 940px) {
+    @media (700px <=width <=940px) {
       grid-template-columns: 1fr 1fr;
     }
   }
