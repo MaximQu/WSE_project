@@ -28,16 +28,16 @@ export const content = [
 ];
 
 export const advantages: (
-	| string
+	| {
+			desctop: string;
+			tablet: string;
+			mobile: string;
+			alt: string;
+	  }
 	| {
 			title: string;
 			text: string;
-			icon: {
-        desctop: string;
-        tablet: string;
-        mobile: string;
-        alt: string;
-      };
+			icon: string;
 	  }
 )[] = [
 	{
@@ -50,7 +50,7 @@ export const advantages: (
 		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
 		icon: "globe",
 	},
-	
+
 	{
 		title: "Global Reach",
 		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
