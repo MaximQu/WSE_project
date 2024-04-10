@@ -3,7 +3,7 @@ import {
   workingProcessMobileJPG,
   workingProcessTabletJPG,
 } from "@/assets/img/jpg";
-import { ButtonOrLink, Select } from "@/ui";
+import { AdaptiveImg, ButtonOrLink, Select } from "@/ui";
 import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -90,19 +90,13 @@ const Registration = () => {
 					</ButtonOrLink>
 				</form>
 			</div>
-			<picture >
-				<source
-					srcSet={workingProcessMobileJPG}
-					media="(max-width: 480px)"
-					type="image/jpg"
-				/>
-				<source
-					srcSet={workingProcessTabletJPG}
-					media="(max-width: 768px)"
-					type="image/jpg"
-				/>
-				<img className={st.img} src={workingProcessDesktopJPG} alt="Sign up to your account" />
-			</picture>
+			<AdaptiveImg
+				desktop={workingProcessDesktopJPG}
+				tablet={workingProcessTabletJPG}
+				mobile={workingProcessMobileJPG}
+				alt="Sign up to your account"
+        className={st.img}
+			/>
 		</div>
 	);
 };

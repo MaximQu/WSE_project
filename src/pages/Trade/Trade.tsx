@@ -5,7 +5,7 @@ import {
 } from "@/assets/img/jpg";
 import { Clarification, SwiperSlider } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { MultipleButtons } from "@/ui";
+import { AdaptiveImg, MultipleButtons } from "@/ui";
 import {
 	RealTimeChartWidget,
 	TickerTapeWidget,
@@ -35,23 +35,13 @@ const Trade = () => {
 							text2="While off-market trading may lack the transparency and liquidity of on-market trading, it provides opportunities for tailored solutions and access to niche markets. It is commonly used for trading securities that are not listed on formal exchanges, such as bonds, derivatives, and certain types of equities."
 						/>
 					</div>
-					<picture>
-						<source
-							srcSet={glassesMobileJPG}
-							media="(max-width: 480px)"
-							type="image/jpg"
-						/>
-						<source
-							srcSet={glassesTabletJPG}
-							media="(max-width: 768px)"
-							type="image/jpg"
-						/>
-						<img
-							className={st.img}
-							src={glassesDesktopJPG}
-							alt="Sign up to your account"
-						/>
-					</picture>
+					<AdaptiveImg
+						desktop={glassesDesktopJPG}
+						tablet={glassesTabletJPG}
+						mobile={glassesMobileJPG}
+						alt="Sign up to your account"
+						className={st.img}
+					/>
 				</div>
 			</UniversalSection>
 			<TickerTapeWidget className={st.tickerTapeWidget} />
