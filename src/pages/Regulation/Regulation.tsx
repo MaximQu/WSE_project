@@ -79,6 +79,7 @@ const Regulation = () => {
 				<div className={st.clarificationGroup}>
 					{content.clarificationContent.map((item) => (
 						<Clarification
+            key={item.title}
 							className={st.clarificationEl}
 							title={item.title}
 							text1={item.text}
@@ -92,7 +93,7 @@ const Regulation = () => {
 			>
 				<div className={st.commentsGroup}>
 					{content.comments.map((item) => (
-						<Comment data={item} />
+						<Comment key={item.text} data={item} />
 					))}
 				</div>
 			</UniversalSection>

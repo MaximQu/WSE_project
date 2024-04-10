@@ -6,6 +6,7 @@ import {
 	Market,
 	NotFound,
 	PrivacyStatement,
+	PrivateMarkets,
 	Registration,
 	Regulation,
 	Sustainable,
@@ -22,15 +23,15 @@ const App = () => {
 				<Route path="legal-notice" element={<LegalDisclaimer />} />
 				<Route path="privacy-statement" element={<PrivacyStatement />} />
 				<Route path="copyright" element={<Copyright />} />
+				<Route path="market" element={<Market />} />
+				<Route path="regulation" element={<Regulation />} />
+				<Route path="private-markets" element={<PrivateMarkets />} />
+				<Route path="affiliation"/>
 				<Route path="auth/sign-up" element={<Registration />} />
 				<Route path="*" element={<NotFound />} />
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="market" element />
-				<Route path="regulation" element />
-				<Route path="affiliation" element />
-				<Route path="private-markets" element />
 				<Route path="why-wse" element />
 				<Route path="contacts" element />
 				<Route path="about-us" element>
