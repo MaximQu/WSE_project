@@ -1,5 +1,6 @@
 @use './typography';
 @use './container';
+@use './grid';
 
 .bg-primary {
   background-color: var(--c-primary-800);
