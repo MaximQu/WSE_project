@@ -22,7 +22,43 @@ export const content = [
 	{
 		question:
 			"How does World Stock Exchange measure sustainability performance?",
-      answer:
+		answer:
 			"World Stock Exchange measures sustainability performance using key metrics and indicators, ensuring transparency and accountability.",
+	},
+];
+
+export const advantages: (
+	| string
+	| {
+			title: string;
+			text: string;
+			icon: {
+        desctop: string;
+        tablet: string;
+        mobile: string;
+        alt: string;
+      };
+	  }
+)[] = [
+	{
+		title: "Global Reach",
+		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
+		icon: "globe",
+	},
+	{
+		title: "Global Reach",
+		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
+		icon: "globe",
+	},
+	
+	{
+		title: "Global Reach",
+		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
+		icon: "globe",
+	},
+	{
+		title: "Global Reach",
+		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
+		icon: "globe",
 	},
 ];

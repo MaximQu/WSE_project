@@ -27,17 +27,6 @@
     @media (700px <= width <= 940px) {
       grid-template-columns: 1fr 1fr;
     }
-
-    // display: flex;
-    // align-items: center;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // gap: 1.5rem;
-
-    // &>* {
-    //   flex:0 0 16.25rem;
-    //   white-space: nowrap;
-    // }
   }
 }
 

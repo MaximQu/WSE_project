@@ -1,4 +1,3 @@
-import React from "react";
 import st from "./styles.module.scss";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { Clarification, DropDown } from "@/components";
@@ -8,7 +7,7 @@ import {
 	windFarmTabletJPG,
 } from "@/assets/img/jpg";
 import { RealTimeChartWidget } from "@/ui/Widgets/TradingViewWidgets";
-import { MultipleButtons } from "@/ui";
+import { AdaptiveImg, MultipleButtons } from "@/ui";
 import { content } from "./content";
 
 const Sustainable = () => {
@@ -21,26 +20,18 @@ const Sustainable = () => {
 						text1="At World Stock Exchange, we are committed to promoting sustainability in the financial sector."
 						text2="We recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions"
 					/>
-					<picture>
-						<source
-							srcSet={windFarmMobileJPG}
-							media="(max-width: 480px)"
-							type="image/jpg"
-						/>
-						<source
-							srcSet={windFarmTabletJPG}
-							media="(max-width: 768px)"
-							type="image/jpg"
-						/>
-						<img
-							className={st.img}
-							src={windFarmDesktopJPG}
-							alt="Sustainable"
-						/>
-					</picture>
+					<AdaptiveImg
+						desktop={windFarmDesktopJPG}
+						tablet={windFarmTabletJPG}
+						mobile={windFarmMobileJPG}
+						alt="Sustainable"
+						className={st.img}
+					/>
 				</div>
 			</UniversalSection>
-			<RealTimeChartWidget />
+			<UniversalSection theme="light">
+				<RealTimeChartWidget />
+			</UniversalSection>
 			<UniversalSection
 				title="Advantages"
 				subtitle="Discover the benefits of sustainability"

@@ -1,9 +1,9 @@
 import {
-  workingProcessDesktopJPG,
-  workingProcessMobileJPG,
-  workingProcessTabletJPG,
+	workingProcessDesktopJPG,
+	workingProcessMobileJPG,
+	workingProcessTabletJPG,
 } from "@/assets/img/jpg";
-import { ButtonOrLink, Select } from "@/ui";
+import { AdaptiveImg, ButtonOrLink, Select } from "@/ui";
 import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -16,7 +16,11 @@ const Registration = () => {
 		fullName: z.string().min(2, "Required field. Min length 2"),
 		email: z.string().email().min(8, "Required field.Min length 8").trim(),
 		country: z.string().min(1, "Required field"),
-		phoneNumber: z.coerce.number().int().min(9, "Required field. Min length 9").positive(),
+		phoneNumber: z.coerce
+			.number()
+			.int()
+			.min(9, "Required field. Min length 9")
+			.positive(),
 		password: z.string().min(8, "Required field. Min length 8").trim(),
 		phoneCode: z.string(),
 	});
@@ -90,19 +94,13 @@ const Registration = () => {
 					</ButtonOrLink>
 				</form>
 			</div>
-			<picture >
-				<source
-					srcSet={workingProcessMobileJPG}
-					media="(max-width: 480px)"
-					type="image/jpg"
-				/>
-				<source
-					srcSet={workingProcessTabletJPG}
-					media="(max-width: 768px)"
-					type="image/jpg"
-				/>
-				<img className={st.img} src={workingProcessDesktopJPG} alt="Sign up to your account" />
-			</picture>
+			<AdaptiveImg
+				desktop={workingProcessDesktopJPG}
+				tablet={workingProcessTabletJPG}
+				mobile={workingProcessMobileJPG}
+				alt="Sign up to your account"
+        className={st.img}
+			/>
 		</div>
 	);
 };

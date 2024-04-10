@@ -1,4 +1,4 @@
-@mixin adaptivValue($property, $startSize, $minSize, $maxWidth, $minWidth) {
+@mixin adaptiveValue($property, $startSize, $minSize, $maxWidth, $minWidth) {
   $addSize: $startSize - $minSize;
 
   #{$property}: $startSize + px;

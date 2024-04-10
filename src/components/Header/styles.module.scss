@@ -37,11 +37,11 @@
   max-height: 100dvh;
   overflow-y: auto;
 
-  @media (width <=768px) {
+  @media (width <= 768px) {
     top: 0;
   }
 
-  @media (width <=480px) {
+  @media (width <= 480px) {
     width: 100vw;
     min-height: 100vh;
     min-height: 100dvh;

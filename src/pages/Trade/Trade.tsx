@@ -1,14 +1,14 @@
 import {
-	glassesDesktopJPG,
-	glassesMobileJPG,
-	glassesTabletJPG,
+  glassesDesktopJPG,
+  glassesMobileJPG,
+  glassesTabletJPG,
 } from "@/assets/img/jpg";
 import { Clarification, SwiperSlider } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { MultipleButtons } from "@/ui";
+import { AdaptiveImg, MultipleButtons } from "@/ui";
 import {
-	RealTimeChartWidget,
-	TickerTapeWidget,
+  RealTimeChartWidget,
+  TickerTapeWidget,
 } from "@/ui/Widgets/TradingViewWidgets";
 import st from "./styles.module.scss";
 
@@ -35,39 +35,27 @@ const Trade = () => {
 							text2="While off-market trading may lack the transparency and liquidity of on-market trading, it provides opportunities for tailored solutions and access to niche markets. It is commonly used for trading securities that are not listed on formal exchanges, such as bonds, derivatives, and certain types of equities."
 						/>
 					</div>
-					<picture>
-						<source
-							srcSet={glassesMobileJPG}
-							media="(max-width: 480px)"
-							type="image/jpg"
-						/>
-						<source
-							srcSet={glassesTabletJPG}
-							media="(max-width: 768px)"
-							type="image/jpg"
-						/>
-						<img
-							className={st.img}
-							src={glassesDesktopJPG}
-							alt="Sign up to your account"
-						/>
-					</picture>
+					<AdaptiveImg
+						desktop={glassesDesktopJPG}
+						tablet={glassesTabletJPG}
+						mobile={glassesMobileJPG}
+						alt="Sign up to your account"
+						className={st.img}
+					/>
 				</div>
 			</UniversalSection>
 			<TickerTapeWidget className={st.tickerTapeWidget} />
 			<SwiperSlider />
-			<RealTimeChartWidget />
+			<UniversalSection theme="light">
+				<RealTimeChartWidget />
+			</UniversalSection>
 			<UniversalSection
 				className={st.universalHeading}
 				theme="light"
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons
-					firstBtnText="Register account"
-					secondBtnText="Learn more"
-					adjustment="center"
-				/>
+				<MultipleButtons adjustment="center" />
 			</UniversalSection>
 		</main>
 	);
