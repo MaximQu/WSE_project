@@ -12,6 +12,7 @@ import {
 	Regulation,
 	Sustainable,
 	Trade,
+  WhyWSE,
 } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
@@ -34,7 +35,7 @@ const App = () => {
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="why-wse" element />
+				<Route path="why-wse" element={<WhyWSE/>} />
 				<Route path="about-us" element>
 					<Route path="company-profile" element />
 					<Route path="investor-relations" element />
