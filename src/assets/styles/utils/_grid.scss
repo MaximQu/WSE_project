@@ -1,0 +1,7 @@
+.six-pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+  justify-items: center;
+  place-content: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
