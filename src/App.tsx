@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import {
+	Affiliation,
 	CompanyProfile,
 	Contacts,
 	Copyright,
@@ -29,10 +30,10 @@ const App = () => {
 				<Route path="market" element={<Market />} />
 				<Route path="regulation" element={<Regulation />} />
 				<Route path="private-markets" element={<PrivateMarkets />} />
-				<Route path="affiliation" />
+				<Route path="affiliation" element={<Affiliation />} />
 				<Route path="contacts" element={<Contacts />} />
 				<Route path="auth/sign-up" element={<Registration />} />
-				<Route path="about-us" element>
+				<Route path="about-us">
 					<Route path="company-profile" element={<CompanyProfile />} />
 				</Route>
 				<Route path="*" element={<NotFound />} />

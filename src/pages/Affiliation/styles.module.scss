@@ -1,0 +1,34 @@
+@use "@st/utils";
+
+.content {
+	display: flex;
+	gap: 6rem;
+}
+
+.universalHeading {
+	header {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.benefits {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 22.5rem);
+    gap: 5rem;
+  }
+}
+
+
+
+.tickerTapeWidget {
+	padding-top: 0;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
+	width: 100%;
+}
