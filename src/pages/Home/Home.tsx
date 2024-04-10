@@ -13,6 +13,7 @@ const Home = () => {
 			<UniversalSection theme="light">
 				<div className={st.clarification}>
 					<Clarification
+						theme="light"
 						title="Invest with Confidence"
 						text1="At World Stock Exchange, we believe in democratizing access to global financial markets."
 						text2="Whether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives."
@@ -51,10 +52,11 @@ const Home = () => {
 			<UniversalSection theme="light">
 				<div className={st.clarification}>
 					<Clarification
+          theme="light"
 						title="Transform your idea into reality"
 						text1="Discover the Difference with WSE. &nbsp; &nbsp; Create your account!"
 					/>
-          <MultipleButtons/>
+					<MultipleButtons />
 				</div>
 			</UniversalSection>
 		</main>

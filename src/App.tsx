@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import {
+	CompanyProfile,
 	Contacts,
 	Copyright,
 	Home,
@@ -12,7 +13,7 @@ import {
 	Regulation,
 	Sustainable,
 	Trade,
-  WhyWSE,
+	WhyWSE,
 } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 
@@ -31,15 +32,17 @@ const App = () => {
 				<Route path="affiliation" />
 				<Route path="contacts" element={<Contacts />} />
 				<Route path="auth/sign-up" element={<Registration />} />
+				<Route path="about-us" element>
+					<Route path="company-profile" element={<CompanyProfile />} />
+				</Route>
 				<Route path="*" element={<NotFound />} />
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="why-wse" element={<WhyWSE/>} />
-				<Route path="about-us" element>
-					<Route path="company-profile" element />
+				<Route path="why-wse" element={<WhyWSE />} />
+				{/* <Route path="about-us" element>
 					<Route path="investor-relations" element />
-				</Route>
+				</Route> */}
 			</Route>
 		</Routes>
 	);
