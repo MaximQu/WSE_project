@@ -1,4 +1,5 @@
 import { FC } from "react";
+import st from "./styles.module.scss";
 
 type AdaptiveImgProps = {
 	desktop?: string;
@@ -19,7 +20,7 @@ const AdaptiveImg: FC<AdaptiveImgProps> = ({
 	const tabletImgType = tablet?.split(".")[1];
 	const mobileImgType = tablet?.split(".")[1];
 	return (
-		<picture>
+		<picture className={className}>
 			<source
 				srcSet={mobile}
 				media="(max-width: 480px)"
@@ -30,7 +31,7 @@ const AdaptiveImg: FC<AdaptiveImgProps> = ({
 				media="(max-width: 768px)"
 				type={`image/${mobileImgType}`}
 			/>
-			<img className={className} src={desktop} alt={alt} />
+			<img className={`${className} ${st.img}`} src={desktop} alt={alt} />
 		</picture>
 	);
 };
