@@ -29,7 +29,9 @@ const Sustainable = () => {
 					/>
 				</div>
 			</UniversalSection>
-			<RealTimeChartWidget />
+			<UniversalSection theme="light">
+				<RealTimeChartWidget />
+			</UniversalSection>
 			<UniversalSection
 				title="Advantages"
 				subtitle="Discover the benefits of sustainability"

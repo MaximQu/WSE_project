@@ -60,3 +60,7 @@
     @include adaptiveValue('padding-block', 80, 70, 768, 420)
   }
 }
+
+.realtime {
+  height: clamp(13.125rem, -2.3558rem + 58.9744vw, 41.875rem);
+}
