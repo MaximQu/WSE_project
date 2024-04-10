@@ -3,6 +3,7 @@ import {
 	Copyright,
 	Home,
 	LegalDisclaimer,
+	Market,
 	NotFound,
 	PrivacyStatement,
 	Registration,
@@ -17,6 +18,7 @@ const App = () => {
 			<Route path="/" element={<MainLayout headerTheme="light" />}>
 				<Route path="/trade" element={<Trade />} />
 				<Route path="/sustainable" element={<Sustainable />} />
+				<Route path="/market" element={<Market/>} />
 				<Route path="/legal-notice" element={<LegalDisclaimer />} />
 				<Route path="/privacy-statement" element={<PrivacyStatement />} />
 				<Route path="/copyright" element={<Copyright />} />
@@ -25,7 +27,6 @@ const App = () => {
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="/market" element />
 				<Route path="/regulation" element />
 				<Route path="/affiliation" element />
 				<Route path="/private-markets" element />
