@@ -1,0 +1,124 @@
+@use "@st/utils";
+.content {
+	display: flex;
+	gap: 6rem;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3.75rem;
+}
+
+.reversedWrapper {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+}
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.clarificationGroup {
+	display: grid;
+	grid-template-columns: 30rem 30rem;
+	gap: 5rem;
+}
+
+.clarificationEl {
+	max-width: 30rem;
+
+	h2 {
+		@extend .text-h3;
+	}
+	p {
+		@extend .text-sm;
+	}
+}
+
+.commentsGroup {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
+.explanation {
+  padding-bottom: 3.125rem;
+}
+
+.explanationWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+.listItem {
+  display: list-item;
+	@extend .text-md;
+	color: var(--c-primary-600);
+  margin-left: 1.5rem;
+
+	span {
+		color: var(--c-red);
+	}
+}
+
+.sendMailSection {
+  padding-top: 3.125rem;
+	header {
+		margin-bottom: 2.5rem;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	max-width: 34.375rem;
+	margin-inline: auto;
+}
+
+.formWrapper {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.input {
+	display: block;
+	border: 1px solid var(--c-primary-300);
+	border-radius: 0.5rem;
+	max-width: 22.5rem;
+	width: 100%;
+	padding: 0.6875rem 0.875rem;
+	outline: none;
+	transition-duration: var(--t-time);
+
+	&:focus {
+		border-color: var(--c-primary-500);
+	}
+
+	&::placeholder {
+		opacity: 0.5;
+	}
+}
+
+.subInputText {
+	font-size: 0.75rem;
+  line-height: 1.2;
+	font-weight: 500;
+  margin-left: .3rem;
+	color: var(--c-primary-600);
+
+	span {
+		color: var(--c-primary-800);
+	}
+}
+
+.sendMailBtn {
+  padding-block: 0.625rem;
+}

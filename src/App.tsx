@@ -3,9 +3,11 @@ import {
 	Copyright,
 	Home,
 	LegalDisclaimer,
+	Market,
 	NotFound,
 	PrivacyStatement,
 	Registration,
+	Regulation,
 	Sustainable,
 	Trade,
 } from "./pages";
