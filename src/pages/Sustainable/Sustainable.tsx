@@ -1,6 +1,6 @@
 import st from "./styles.module.scss";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { Clarification, DropDown } from "@/components";
+import { Advantage, Clarification, Dropdown } from "@/components";
 import {
 	windFarmDesktopJPG,
 	windFarmMobileJPG,
@@ -43,7 +43,7 @@ const Sustainable = () => {
 			>
 				<div className={st.faqList}>
 					{content.map((item) => (
-						<DropDown key={item.answer} data={item} />
+						<Dropdown key={item.answer} data={item} />
 					))}
 				</div>
 			</UniversalSection>

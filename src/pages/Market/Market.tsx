@@ -1,4 +1,4 @@
-import { DropDown } from "@/components";
+import { Dropdown } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { ButtonOrLink } from "@/ui";
 import {
@@ -51,7 +51,7 @@ const Market = () => {
 			>
 				<div className={st.faqList}>
 					{content.map((item) => (
-						<DropDown key={item.answer} data={item} />
+						<Dropdown key={item.answer} data={item} />
 					))}
 				</div>
 			</UniversalSection>

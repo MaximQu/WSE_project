@@ -2,21 +2,21 @@ import { ArrowIcon } from "@/ui/icons";
 import { FC, useState } from "react";
 import st from "./styles.module.scss";
 
-type DropDownProps = {
+type DropdownProps = {
 	data?: {
 		question: string;
 		answer: string;
 	};
 };
 
-const DropDown: FC<DropDownProps> = ({ data }) => {
+const Dropdown: FC<DropdownProps> = ({ data }) => {
 	const [isActive, setIsActive] = useState<boolean>(false);
 	return (
-		<div className={st.dropDown}>
-			<div className={st.heading} onClick={() => setIsActive((prev) => !prev)}>
-				<h2 className={st.question}>{data?.question}</h2>
+		<div className={st.dropdown}>
+			<button className={st.trigger} onClick={() => setIsActive((prev) => !prev)}>
+				<span className={st.question}>{data?.question}</span>
 				<ArrowIcon type="circle" direction={isActive ? "up" : "down"} />
-			</div>
+			</button>
 			<div className={`${st.wrapper} ${isActive ? st.active : ""}`}>
 				<div>
 					<p className={st.answer}>{data?.answer}</p>
@@ -26,4 +26,4 @@ const DropDown: FC<DropDownProps> = ({ data }) => {
 	);
 };
 
-export default DropDown;
+export default Dropdown;
