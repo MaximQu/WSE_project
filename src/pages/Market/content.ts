@@ -26,3 +26,25 @@ export const faqList = [
 			"Investing in the stock market carries inherent risks, including the potential for loss of capital, market volatility, economic downturns, and company-specific risks. It's important to diversify your investments, conduct thorough research, and consult with financial professionals to mitigate these risks and make informed decisions.",
 	},
 ];
+
+export const investments: {
+	title: string;
+	text: string;
+}[] = [
+	{
+		title: "Growth Investing:",
+		text: "Embrace growth investing strategies aimed at identifying companies with high growth prospects and disruptive innovations.",
+	},
+	{
+		title: "Value Investing:",
+		text: "Discover the principles of value investing, focusing on undervalued stocks with strong fundamentals and long-term growth potential.",
+	},
+	{
+		title: "Index Investing:",
+		text: "Consider the simplicity and effectiveness of index investing, tracking the performance of a specific market index through low-cost index funds or ETFs.",
+	},
+	{
+		title: "Dividend Investing:",
+		text: "Explore dividend investing, where investors seek out companies with a history of paying consistent dividends, providing reliable income and potential capital appreciation.",
+	},
+];

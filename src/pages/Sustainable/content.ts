@@ -57,7 +57,6 @@ export const advantages: (
 		text: "Building resilience to environmental and social risks through sustainable practices.",
 		icon: "fingerprint",
 	},
-
 	{
 		desktop: solarPanelFieldDesktopJPG,
 		tablet: solarPanelFieldTabletJPG,

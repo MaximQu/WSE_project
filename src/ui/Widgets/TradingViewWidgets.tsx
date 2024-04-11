@@ -73,7 +73,11 @@ export const TickerWidget = ({ className = "" }: { className?: string }) => {
 		</div>
 	);
 };
-export const RealTimeChartWidget = ({className = ''}: {className?: string}) => (
+export const RealTimeChartWidget = ({
+	className = "",
+}: {
+	className?: string;
+}) => (
 	<div className={`${className} ${st.realtime}`}>
 		<AdvancedRealTimeChart
 			copyrightStyles={styles}
@@ -81,10 +85,12 @@ export const RealTimeChartWidget = ({className = ''}: {className?: string}) => (
 			interval="D"
 			withdateranges={false}
 			// autosize
-      width={'100%'}
-      height={'100%'}
+			width={"100%"}
+			height={"100%"}
 		/>
 	</div>
 );
-export const SymbolInfoWidget = () => <SymbolInfo copyrightStyles={styles} />;
+export const SymbolInfoWidget = ({symbol}: {symbol?: string}) => (
+	<SymbolInfo copyrightStyles={styles} symbol={symbol} autosize />
+);
 export const ScreenerWidget = () => <Screener copyrightStyles={styles} />;
