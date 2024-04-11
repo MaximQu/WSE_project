@@ -40,10 +40,10 @@
 }
 
 .label {
+	@extend .text-sm;
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
-	@extend .text-sm;
 	color: var(--c-primary-800);
 	text-align: left;
 	width: 100%;

@@ -5,8 +5,8 @@
 	background-color: var(--c-primary-700);
 }
 .text {
-	margin-bottom: 2.5rem;
 	@extend .text-sm;
+	margin-bottom: 2.5rem;
 }
 
 .wrapper {

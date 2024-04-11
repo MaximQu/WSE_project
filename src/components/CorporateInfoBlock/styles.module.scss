@@ -1,10 +1,10 @@
 @use "@st/utils";
 
 .title {
+	@extend .text-h1;
 	margin-bottom: clamp(1.5rem, 2rem + 3vw, 5rem);
   color: var(--c-primary-800);
 	text-align: center;
-	@extend .text-h1;
 }
 
 .wrapper {
@@ -18,9 +18,9 @@
 }
 
 .heading {
+  @extend .text-h3;
 	margin-bottom: 1.5rem;
   color: var(--c-primary-800);
-	@extend .text-h3;
 }
 
 .text {

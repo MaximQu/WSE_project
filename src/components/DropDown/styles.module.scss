@@ -13,6 +13,7 @@
 }
 
 .trigger {
+  @extend .text-h4;
   display: flex;
   align-items: center;
   width: 100%;
@@ -46,7 +47,7 @@
 }
 
 .answer {
-  margin-top: 1rem;
   @extend .text-md;
+  margin-top: 1rem;
   color: var(--c-primary-600);
 }

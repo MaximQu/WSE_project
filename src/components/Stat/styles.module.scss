@@ -1,17 +1,17 @@
 @use "@st/utils";
 
 .stat {
-	--_text-color: var(--c-primary-600);
-	--_value-color: var(--c-primary-400);
-	display: flex;
-	flex-direction: column;
-	gap: 0.75rem;
-	text-align: center;
+  --_text-color: var(--c-primary-600);
+  --_value-color: var(--c-primary-400);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
 
-	&.dark {
-		--_text-color: var(--c-primary-200);
-		--_value-color: var(--c-green-300);
-	}
+  &.dark {
+    --_text-color: var(--c-primary-200);
+    --_value-color: var(--c-green-300);
+  }
 }
 
 .value {

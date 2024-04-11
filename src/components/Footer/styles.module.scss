@@ -38,5 +38,5 @@
 .link {
   @extend .text-sm;
   padding: clamp(0.375rem, 0.2404rem + 0.5128vw, 0.625rem) clamp(0.625rem, 0.2885rem + 1.2821vw, 1.25rem);
-  
+  width: fit-content;
 }

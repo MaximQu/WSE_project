@@ -34,6 +34,7 @@
 		position: relative;
 
 		&::before {
+      @extend .text-h4;
 			content: attr(data-count);
 			position: absolute;
 			top: -24px;
@@ -49,20 +50,19 @@
 			border-radius: 100vmax;
 			background-color: var(--c-green-400);
 			border: 0.375rem solid var(--c-white);
-			@extend .text-h4;
 		}
 	}
 
 	.heading {
+		@extend .text-h4;
 		margin-bottom: 1.5rem;
 		color: var(--c-primary-800);
 		text-align: center;
-		@extend .text-h4;
 	}
 
 	.text {
+    @extend .text-sm;
 		color: var(--c-primary-600);
-		@extend .text-sm;
 	}
 }
 
