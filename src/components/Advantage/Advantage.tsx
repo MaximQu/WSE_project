@@ -10,17 +10,23 @@ type AdvantageProps = {
 	};
 	styleType?: "column" | "row";
 	theme?: "light" | "dark";
+	className?: string;
 };
 
 const Advantage: FC<AdvantageProps> = ({
 	data,
 	styleType = "column",
 	theme = "dark",
+	className,
 }) => {
 	return (
 		<>
 			{styleType === "column" ? (
-				<div className={`${st.advantage} ${theme === "light" ? st.light : ""}`}>
+				<div
+					className={`${st.advantage} ${
+						theme === "light" ? st.light : ""
+					} ${className}`}
+				>
 					<div className={st.icon}>
 						<PNGIcon img={data.icon} />
 					</div>

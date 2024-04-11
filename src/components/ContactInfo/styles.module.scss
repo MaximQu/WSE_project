@@ -1,0 +1,46 @@
+@use "@st/utils";
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.block {
+  text-align: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  padding: 1.75rem;
+  transition-duration: var(--t-time);
+
+  &:hover {
+    background-color: var(--c-green-100);
+  }
+
+  &:active {
+    background-color: var(--c-green-200);
+  }
+}
+
+.icon {
+  margin-bottom: 1.5rem;
+  border-radius: 100vmax;
+  background-color: var(--c-green-500);
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.heading {
+  @extend .text-h2;
+  color: var(--c-primary-800);
+  margin-bottom: 1.5rem;
+}
+
+.value {
+  color: var(--c-primary-600);
+}

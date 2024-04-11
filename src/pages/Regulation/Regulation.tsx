@@ -1,4 +1,4 @@
-import { Clarification, Comment } from "@/components";
+import { Clarification, Comment, EmailForm } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import {
 	papersDesktopJPG,
@@ -115,22 +115,8 @@ const Regulation = () => {
 				title="Leave your email"
 				subtitle="And we will answer all of your questions!"
 			>
-				<form className={st.form}>
-					<div className={st.formWrapper}>
-						<input
-							className={st.input}
-							placeholder="Enter your email"
-							name="emailConnection"
-							type="text"
-						/>
-						<ButtonOrLink className={st.sendMailBtn} type="submit">
-							Connect
-						</ButtonOrLink>
-					</div>
-					<p className={st.subInputText}>
-						We care about your data in our <span>privacy policy</span>
-					</p>
-				</form>
+
+				<EmailForm btnText="Connect" />
 			</UniversalSection>
 		</main>
 	);

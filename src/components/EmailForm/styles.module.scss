@@ -1,0 +1,51 @@
+@use "@st/utils";
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	max-width: 34.375rem;
+	margin-inline: auto;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.input {
+	display: block;
+	border: 1px solid var(--c-primary-300);
+	border-radius: 0.5rem;
+	max-width: 22.5rem;
+	width: 100%;
+	padding: 0.6875rem 0.875rem;
+	outline: none;
+	transition-duration: var(--t-time);
+
+	&:focus {
+		border-color: var(--c-primary-500);
+	}
+
+	&::placeholder {
+		opacity: 0.5;
+	}
+}
+
+.subText {
+	font-size: 0.75rem;
+  line-height: 1.2;
+	font-weight: 500;
+  margin-left: .3rem;
+	color: var(--c-primary-600);
+
+	span {
+		color: var(--c-primary-800);
+	}
+}
+
+.btn {
+  padding-block: 0.625rem;
+}
