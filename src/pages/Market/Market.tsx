@@ -1,13 +1,18 @@
-import { Dropdown } from "@/components";
+import { Clarification, Dropdown } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { ButtonOrLink } from "@/ui";
+import { AdaptiveImg, ButtonOrLink } from "@/ui";
 import {
-  ScreenerWidget,
-  SymbolInfoWidget,
-  TickerTapeWidget,
+	ScreenerWidget,
+	SymbolInfoWidget,
+	TickerTapeWidget,
 } from "@/ui/Widgets/TradingViewWidgets";
-import { faqList } from "./content";
+import { faqList, investments } from "./content";
 import st from "./styles.module.scss";
+import {
+  skyscraperDesktopJPG,
+  skyscraperMobileJPG,
+  skyscraperTabletJPG,
+} from "@/assets/img/jpg";
 
 const Market = () => {
 	return (
@@ -28,24 +33,40 @@ const Market = () => {
 				className={st.offerList}
 			>
 				<div className={st.wrapper}>
-					<div className={st.block}>
-						<SymbolInfoWidget />
-						<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
-					</div>
-					<div className={st.block}>
-						<SymbolInfoWidget />
-						<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
-					</div>
-					<div className={st.block}>
-						<SymbolInfoWidget />
-						<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
-					</div>
+					{["BLACKBULL:US30", "NASDAQ:AAPL", "NYSE:BA"].map((symbol) => (
+						<div className={st.block} key={symbol}>
+							<SymbolInfoWidget symbol={symbol} />
+							<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
+						</div>
+					))}
 				</div>
 			</UniversalSection>
 			<UniversalSection
 				title="Investing is easy"
 				subtitle="Explore different approaches to investing in the stock market, each tailored to suit different financial goals and risk tolerances."
-			></UniversalSection>
+				className={st.investmentsBlock}
+			>
+				<div className={st.layout}>
+					<div className={st.statements}>
+						{investments.map((investment) => (
+							<Clarification
+								key={investment.title}
+								subTitle={investment.title}
+								text1={investment.text}
+							/>
+						))}
+					</div>
+					<AdaptiveImg
+						desktop={skyscraperDesktopJPG}
+						tablet={skyscraperTabletJPG}
+						mobile={skyscraperMobileJPG}
+            switchToTabletWidth={960}
+            switchToMobileWidth={584}
+						alt="Investments"
+						className={st.img}
+					/>
+				</div>
+			</UniversalSection>
 			<UniversalSection
 				className={st.faq}
 				theme="light"

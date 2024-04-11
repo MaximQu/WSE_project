@@ -1,38 +1,54 @@
 @use "@st/utils";
+@use "@st/mix" as *;
 
 .offerList {
-	.wrapper {
-		display: flex;
-		gap: 1.5rem;
-	}
+  .wrapper {
+    display: flex;
+    gap: 1.5rem;
+  }
 
-	.block {
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-		max-width: 22.5rem;
-		width: 100%;
-	}
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 22.5rem;
+    width: 100%;
+  }
 
-	.btn {
-		max-width: 100%;
-	}
+  .btn {
+    max-width: 100%;
+  }
 }
 
 .faq {
-	.list {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.25rem;
-	}
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
 }
 
 .startSection {
-	header {
-		margin-bottom: 1.5rem;
-	}
-	.btn {
-		margin-inline: auto;
-	}
+  header {
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    margin-inline: auto;
+  }
+}
+
+.investmentsBlock {
+  .layout {
+    @extend .six-pack-grid
+  }
+}
+
+.startSection {
+  padding-block: 6.25rem;
+
+  @media (width <= 768px) {
+    padding-block: clamp(4.375rem, 2.1121rem + 8.6207vw, 6.25rem);
+  }
 }
