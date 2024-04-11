@@ -13,14 +13,14 @@
 }
 
 .trigger {
+  @extend .text-h4;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
   gap: 1rem;
   text-align: left;
-  @extend .text-h4;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 
   .question {
     display: block;
@@ -47,7 +47,7 @@
 }
 
 .answer {
-  margin-top: 1rem;
   @extend .text-md;
+  margin-top: 1rem;
   color: var(--c-primary-600);
 }

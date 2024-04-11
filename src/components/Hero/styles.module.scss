@@ -12,11 +12,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  isolation: isolate;
   padding: clamp(2.75rem, -5.6944rem + 17.5926vw, 7.5rem) clamp(4rem, -10rem + 29.1667vw, 11.875rem);
+  margin-bottom: clamp(1.875rem, -0.4808rem + 8.9744vw, 6.25rem);
   border-radius: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
   overflow: hidden;
-  margin-bottom: clamp(1.875rem, -0.4808rem + 8.9744vw, 6.25rem);
+  isolation: isolate;
 
   @media (width <=768px) {
     @include adaptiveValue('padding-block', 44, 84, 768, 420);
@@ -39,7 +39,7 @@
 
 .title {
   font-size: clamp(1.75rem, 0.8077rem + 3.5897vw, 3.5rem);
-  font-weight: bold;
+  font-weight: var(--fw-bold);
   line-height: 1.2;
   margin-bottom: 2.5rem;
 }

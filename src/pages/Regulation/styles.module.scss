@@ -64,8 +64,8 @@
 		gap: 2rem;
 	}
 	.item {
-		display: list-item;
 		@extend .text-md;
+		display: list-item;
 		color: var(--c-primary-600);
 		margin-left: 1.5rem;
 

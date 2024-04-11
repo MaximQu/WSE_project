@@ -1,29 +1,29 @@
 @use "@st/utils";
 
 .stat {
-	--_text-color: var(--c-primary-600);
-	--_value-color: var(--c-primary-400);
-	display: flex;
-	flex-direction: column;
-	gap: 0.75rem;
-	text-align: center;
+  --_text-color: var(--c-primary-600);
+  --_value-color: var(--c-primary-400);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
 
-	&.dark {
-		--_text-color: var(--c-primary-200);
-		--_value-color: var(--c-green-300);
-	}
+  &.dark {
+    --_text-color: var(--c-primary-200);
+    --_value-color: var(--c-green-300);
+  }
 }
 
 .value {
-	color: var(--_value-color);
-	font-size: 3rem;
-  font-weight: bold;
+  color: var(--_value-color);
+  font-size: var(--fs-desc-h1);
+  font-weight: var(--fw-bold);
   line-height: 1.2;
 }
 
 .text {
-	color: var(--_text-color);
-  font-size: 1.125rem;
-  font-weight: medium;
+  color: var(--_text-color);
+  font-size: var(--fs-desct-tab-h4);
+  font-weight: var(--fw-med);
   line-height: 1.3;
 }

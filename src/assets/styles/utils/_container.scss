@@ -1,4 +1,4 @@
 .container {
-  width: min(100% - 2rem, 70.625rem);
+  width: min(100% - var(--container-inline-p), var(--container-max-w));
   margin-inline: auto;
 }

@@ -20,12 +20,12 @@
 }
 
 .quote {
+	@extend .text-h2;
 	display: block;
 	text-align: center;
 	max-width: 51rem;
 	margin-inline: auto;
 	padding-block: 0.5rem;
-	@extend .text-h2;
 
 	&::before,
 	&::after {
@@ -48,8 +48,8 @@
 }
 
 .fullName {
-	margin-bottom: 0.5rem;
 	@extend .text-h3;
+	margin-bottom: 0.5rem;
 }
 
 .position {
