@@ -1,7 +1,11 @@
-import { solarPanelFieldDesktopJPG, solarPanelFieldMobileJPG, solarPanelFieldTabletJPG } from "@/assets/img/jpg";
+import {
+	solarPanelFieldDesktopJPG,
+	solarPanelFieldMobileJPG,
+	solarPanelFieldTabletJPG,
+} from "@/assets/img/jpg";
 import { TPNGIcon } from "@/ui/icons/PNGIcon";
 
-export const content = [
+export const faq_content = [
 	{
 		question: "What is sustainable investing?",
 		answer:
@@ -44,29 +48,30 @@ export const advantages: (
 	  }
 )[] = [
 	{
-		title: "Global Reach",
-		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
-		icon: "globe",
+		title: "Inclusivity",
+		text: "Enabling participation of all stakeholders in sustainable initiatives and investments.",
+		icon: "leaf",
 	},
 	{
-		title: "Global Reach",
-		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
-		icon: "globe",
+		title: "Resilience",
+		text: "Building resilience to environmental and social risks through sustainable practices.",
+		icon: "fingerprint",
 	},
-  {
-    desktop: solarPanelFieldDesktopJPG,
-    tablet: solarPanelFieldTabletJPG,
-    mobile: solarPanelFieldMobileJPG,
-    alt: 'Solar panel field'
-  },
+
 	{
-		title: "Global Reach",
-		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
-		icon: "globe",
+		desktop: solarPanelFieldDesktopJPG,
+		tablet: solarPanelFieldTabletJPG,
+		mobile: solarPanelFieldMobileJPG,
+		alt: "Solar panel field",
 	},
 	{
-		title: "Global Reach",
-		text: "Benefit from our extensive network and gain access to investment opportunities across continents, all from one platform.",
-		icon: "globe",
+		title: "Accountability",
+		text: "Maintaining responsibility through transparent reporting and accountability mechanisms.",
+		icon: "chart",
+	},
+	{
+		title: "Innovation",
+		text: "Driving innovation through sustainable solutions and investment strategies.",
+		icon: "bulb",
 	},
 ];

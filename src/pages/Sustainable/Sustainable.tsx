@@ -8,7 +8,7 @@ import {
 } from "@/assets/img/jpg";
 import { RealTimeChartWidget } from "@/ui/Widgets/TradingViewWidgets";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
-import { advantages, content } from "./content";
+import { advantages, faq_content } from "./content";
 
 const Sustainable = () => {
 	return (
@@ -16,8 +16,8 @@ const Sustainable = () => {
 			<UniversalSection className={st.sustainableBlock} theme="light">
 				<div className={st.wrapper}>
 					<Clarification
-          className={st.block}
-          theme="light"
+						className={st.block}
+						theme="light"
 						title="Sustainable"
 						text1="At World Stock Exchange, we are committed to promoting sustainability in the financial sector."
 						text2="We recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions"
@@ -37,24 +37,30 @@ const Sustainable = () => {
 			<UniversalSection
 				title="Advantages"
 				subtitle="Discover the benefits of sustainability"
-        className={st.advantagesBlock}
+				className={st.advantagesBlock}
 			>
 				<div className={st.layout}>
 					{advantages.map((advantage) => {
 						if ("icon" in advantage)
 							return <Advantage data={advantage} key={advantage.title} />;
-						return <AdaptiveImg {...advantage} className={st.img}/>;
+						return (
+							<AdaptiveImg
+								{...advantage}
+								key={advantage.alt}
+								className={st.img}
+							/>
+						);
 					})}
 				</div>
 			</UniversalSection>
 			<UniversalSection
-      className={st.faq}
+				className={st.faq}
 				theme="light"
 				title="Frequently Asked Questions"
 				subtitle="Exploring common queries: Your comprehensive guide to frequently asked questions about sustainability and investing with world stock exchange"
 			>
 				<div className={st.list}>
-					{content.map((item) => (
+					{faq_content.map((item) => (
 						<Dropdown key={item.answer} data={item} />
 					))}
 				</div>
