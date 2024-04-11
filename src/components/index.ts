@@ -9,3 +9,5 @@ export { default as Stat } from "./Stat/Stat";
 export { default as Advantage } from "./Advantage/Advantage";
 export { default as Clarification } from "./Clarification/Clarification";
 export { default as SwiperSlider } from "./SwiperSlider/SwiperSlider";
+export { default as EmailForm } from "./EmailForm/EmailForm";
+export { default as ContactInfo } from "./ContactInfo/ContactInfo";

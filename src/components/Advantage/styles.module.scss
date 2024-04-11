@@ -7,11 +7,11 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-  padding: 1.5rem;
+	padding: 1.5rem;
 	gap: 1rem;
-  max-width: 35ch;
+	max-width: 35ch;
 
-  &.light {
+	&.light {
 		--_color-title: var(--c-primary-800);
 		--_color-text: var(--c-primary-600);
 		gap: 1.5rem;
@@ -20,6 +20,8 @@
 	&.row {
 		flex-direction: row;
 		gap: 1.5rem;
+		text-align: left;
+		max-width: 34.375rem;
 	}
 }
 
