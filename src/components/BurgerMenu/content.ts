@@ -1,4 +1,4 @@
-export const burgerMenuContent = [
+export const navList = [
 	{
 		link: "Trade",
 		url: "/trade",
@@ -46,13 +46,5 @@ export const burgerMenuContent = [
 	},
 ];
 
-export type BurgerMenuContent = typeof burgerMenuContent
-export type BurgerMenuContentSubItem = {
-  link: string,
-  url: string
-}
-export type BurgerMenuContentItem = {
-  link: string,
-  url?: string,
-  dropdown?: BurgerMenuContentSubItem[]
-}
+export const logoLink = '/'
+export const buttonLink = '/auth/sign-up'

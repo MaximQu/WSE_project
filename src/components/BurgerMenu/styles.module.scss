@@ -32,8 +32,8 @@
 }
 
 .closeBtn {
-  padding: 0.5rem;
   @extend .icon-button-fs;
+  padding: 0.5rem;
   border-radius: .25rem;
 
   @media (hover: hover) {
@@ -76,7 +76,7 @@
 .dropdown {
   display: grid;
   grid-template-rows: 0fr;
-  transition: .2s;
+  transition-duration: var(--t-time);
 
   &.dropped {
     grid-template-rows: 1fr;
