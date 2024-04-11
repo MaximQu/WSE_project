@@ -6,7 +6,7 @@ import {
   SymbolInfoWidget,
   TickerTapeWidget,
 } from "@/ui/Widgets/TradingViewWidgets";
-import { content } from "./content";
+import { faqList } from "./content";
 import st from "./styles.module.scss";
 
 const Market = () => {
@@ -14,6 +14,7 @@ const Market = () => {
 		<main>
 			<TickerTapeWidget isCompact />
 			<UniversalSection
+				className={st.marketData}
 				theme="light"
 				title="Market Data"
 				subtitle="Browse or search the securities listed on The International Stock Exchange"
@@ -24,19 +25,20 @@ const Market = () => {
 				theme="light"
 				title="Get the best offer today"
 				subtitle="Top-3 to invest today!"
+				className={st.offerList}
 			>
-				<div className={st.widgetWrapper}>
-					<div className={st.widgetBlock}>
+				<div className={st.wrapper}>
+					<div className={st.block}>
 						<SymbolInfoWidget />
-						<ButtonOrLink className={st.widgetBtn}>Trade</ButtonOrLink>
+						<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
 					</div>
-					<div className={st.widgetBlock}>
+					<div className={st.block}>
 						<SymbolInfoWidget />
-						<ButtonOrLink className={st.widgetBtn}>Trade</ButtonOrLink>
+						<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
 					</div>
-					<div className={st.widgetBlock}>
+					<div className={st.block}>
 						<SymbolInfoWidget />
-						<ButtonOrLink className={st.widgetBtn}>Trade</ButtonOrLink>
+						<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
 					</div>
 				</div>
 			</UniversalSection>
@@ -45,12 +47,13 @@ const Market = () => {
 				subtitle="Explore different approaches to investing in the stock market, each tailored to suit different financial goals and risk tolerances."
 			></UniversalSection>
 			<UniversalSection
+				className={st.faq}
 				theme="light"
 				title="Frequently Asked Questions"
 				subtitle="Answers to your burning questions about the Stock Market"
 			>
-				<div className={st.faqList}>
-					{content.map((item) => (
+				<div className={st.list}>
+					{faqList.map((item) => (
 						<Dropdown key={item.answer} data={item} />
 					))}
 				</div>
@@ -60,7 +63,7 @@ const Market = () => {
 				title="Ready to start?"
 				subtitle="Easy way to Great benefits!"
 			>
-				<ButtonOrLink className={st.startBtn} as="a" to="/auth/sign-up">
+				<ButtonOrLink className={st.btn} as="a" to="/auth/sign-up">
 					Register account
 				</ButtonOrLink>
 			</UniversalSection>

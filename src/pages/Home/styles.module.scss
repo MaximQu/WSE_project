@@ -1,41 +1,48 @@
-@use '@st/utils';
+@use "@st/utils";
 
-.clarification {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+.confidence {
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-.clarificationImg {
-  max-width: 30rem;
-}
-
-.block {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  width: 100%;
+	.block {
+		max-width: 30rem;
+	}
+	.img {
+		max-width: 30rem;
+	}
 }
 
 .statsBlock {
-  .layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    justify-items: center;
-    place-content: center;
-    gap: clamp(1rem, 2vw, 1.5rem);
+	.layout {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+		justify-items: center;
+		place-content: center;
+		gap: clamp(1rem, 2vw, 1.5rem);
 
-    @media (700px <=width <=940px) {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
+		@media (700px <=width <=940px) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
 
 .advantagesBlock {
-  padding-block: clamp(4.375rem, 2.3864rem + 8.4848vw, 8.75rem);
+	padding-block: clamp(4.375rem, 2.3864rem + 8.4848vw, 8.75rem);
 
-  .layout {
-    @extend .six-pack-grid;
-  }
+	.layout {
+		@extend .six-pack-grid;
+	}
+}
+
+.transform {
+	.wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.block {
+		max-width: 24rem;
+	}
 }

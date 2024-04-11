@@ -13,9 +13,11 @@ import { advantages, content } from "./content";
 const Sustainable = () => {
 	return (
 		<main>
-			<UniversalSection theme="light">
-				<div className={st.sustainableWrapper}>
+			<UniversalSection className={st.sustainableBlock} theme="light">
+				<div className={st.wrapper}>
 					<Clarification
+          className={st.block}
+          theme="light"
 						title="Sustainable"
 						text1="At World Stock Exchange, we are committed to promoting sustainability in the financial sector."
 						text2="We recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions"
@@ -46,11 +48,12 @@ const Sustainable = () => {
 				</div>
 			</UniversalSection>
 			<UniversalSection
+      className={st.faq}
 				theme="light"
 				title="Frequently Asked Questions"
 				subtitle="Exploring common queries: Your comprehensive guide to frequently asked questions about sustainability and investing with world stock exchange"
 			>
-				<div className={st.faqList}>
+				<div className={st.list}>
 					{content.map((item) => (
 						<Dropdown key={item.answer} data={item} />
 					))}
@@ -58,7 +61,7 @@ const Sustainable = () => {
 			</UniversalSection>
 			<UniversalSection
 				theme="light"
-				className={st.universalHeading}
+				className={st.account}
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>

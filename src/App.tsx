@@ -41,9 +41,9 @@ const App = () => {
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
 				<Route path="why-wse" element={<WhyWSE />} />
-				{/* <Route path="about-us" element>
+				<Route path="about-us" element>
 					<Route path="investor-relations" element />
-				</Route> */}
+				</Route>
 			</Route>
 		</Routes>
 	);

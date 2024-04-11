@@ -1,14 +1,16 @@
 @use "@st/utils";
 
-.content {
-	display: flex;
-	gap: 6rem;
+.sendEmail {
+  header {
+    margin-bottom: 1.5rem;
+  }
 }
 
-.universalHeading {
-	header {
-		margin-bottom: 1.5rem;
-	}
+.description {
+  .wrapper {
+    margin-inline: auto;
+    max-width: 37.5rem;
+  }
 }
 
 .benefits {
@@ -17,18 +19,4 @@
     grid-template-columns: repeat(3, 22.5rem);
     gap: 5rem;
   }
-}
-
-
-
-.tickerTapeWidget {
-	padding-top: 0;
-}
-
-.block {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 1rem;
-	width: 100%;
 }

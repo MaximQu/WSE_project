@@ -1,7 +1,7 @@
 import { contactsSVG } from "@/assets/img/svg";
+import { ContactInfo } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import st from "./styles.module.scss";
-import { ContactInfo } from "@/components";
 
 const Contacts = () => {
 	return (

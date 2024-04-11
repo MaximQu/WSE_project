@@ -10,16 +10,17 @@ const Home = () => {
 	return (
 		<main>
 			<Hero />
-			<UniversalSection theme="light">
-				<div className={st.clarification}>
+			<UniversalSection className={st.confidence} theme="light">
+				<div className={st.wrapper}>
 					<Clarification
+						className={st.block}
 						theme="light"
 						title="Invest with Confidence"
 						text1="At World Stock Exchange, we believe in democratizing access to global financial markets."
 						text2="Whether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives."
 					/>
 					<img
-						className={st.clarificationImg}
+						className={st.img}
 						src={confidenceSVG}
 						alt="Invest with Confidence"
 					/>
@@ -49,14 +50,15 @@ const Home = () => {
 				</div>
 			</UniversalSection>
 			<TickerTapeWidget />
-			<UniversalSection theme="light">
-				<div className={st.clarification}>
+			<UniversalSection className={st.transform} theme="light">
+				<div className={st.wrapper}>
 					<Clarification
-          theme="light"
+						className={st.block}
+						theme="light"
 						title="Transform your idea into reality"
 						text1="Discover the Difference with WSE. &nbsp; &nbsp; Create your account!"
 					/>
-					<MultipleButtons />
+					<MultipleButtons adjustment="right " />
 				</div>
 			</UniversalSection>
 		</main>

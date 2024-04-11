@@ -1,6 +1,6 @@
+import { analyticsSVG } from "@/assets/img/svg";
 import { ButtonOrLink } from "@/ui";
 import st from "./styles.module.scss";
-import { analyticsSVG } from "@/assets/img/svg";
 
 const NotFound = () => {
 	return (

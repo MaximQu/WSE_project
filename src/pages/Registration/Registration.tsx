@@ -8,8 +8,8 @@ import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
-import st from "./styles.module.scss";
 import { countriesData } from "../../../countriesData";
+import st from "./styles.module.scss";
 
 const Registration = () => {
 	const signUpSchema = z.object({
@@ -99,7 +99,7 @@ const Registration = () => {
 				tablet={workingProcessTabletJPG}
 				mobile={workingProcessMobileJPG}
 				alt="Sign up to your account"
-        className={st.img}
+				className={st.img}
 			/>
 		</div>
 	);

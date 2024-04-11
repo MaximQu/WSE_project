@@ -1,30 +1,36 @@
+import {
+  papersDesktopJPG,
+  papersMobileJPG,
+  papersTabletJPG,
+  signatureDesktopJPG,
+  signatureMobileJPG,
+  signatureTabletJPG,
+} from "@/assets/img/jpg";
 import { Clarification, Comment, EmailForm } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import {
-	papersDesktopJPG,
-	papersMobileJPG,
-	papersTabletJPG,
-	signatureDesktopJPG,
-	signatureMobileJPG,
-	signatureTabletJPG,
-} from "@/assets/img/jpg";
-import { AdaptiveImg, ButtonOrLink } from "@/ui";
-import { content } from "./content";
+import { AdaptiveImg } from "@/ui";
+import { clarification_content, comments } from "./content";
 import st from "./styles.module.scss";
 
 const Regulation = () => {
 	return (
 		<main>
-			<UniversalSection theme="light" title="Regulations">
+			<UniversalSection
+				className={st.regulationInfo}
+				theme="light"
+				title="Regulations"
+			>
 				<div className={st.contentWrapper}>
 					<div className={st.content}>
 						<div className={st.wrapper}>
 							<Clarification
+								className={st.block}
 								theme="light"
 								title="Regulatory Framework"
 								text1="World Stock Exchange is authorized by the Guernsey Financial Services Commission to operate as an investment exchange in compliance with the Protection of Investors (Bailiwick of Guernsey)Law, 2020."
 							/>
 							<Clarification
+								className={st.block}
 								theme="light"
 								title="Regulatory Framework"
 								text1="At World Stock Exchange, we oversee the listing of securities and supervise our exchange members. We establish, enforce, and monitor compliance with our Listing Rules and Membership Rules, including Trading and Settlement Rules."
@@ -49,6 +55,7 @@ const Regulation = () => {
 								alt="Sign up to your account"
 							/>
 							<Clarification
+								className={st.block}
 								theme="light"
 								title="Our Mission"
 								text1="Our mission at World Stock Exchange is to provide a robust and efficient platform for companies to list their securities, investors to trade with confidence, and stakeholders to engage with transparency."
@@ -58,13 +65,13 @@ const Regulation = () => {
 					</div>
 				</div>
 			</UniversalSection>
-			<UniversalSection theme="light">
-				<div className={st.clarificationGroup}>
-					{content.clarificationContent.map((item) => (
+			<UniversalSection className={st.clarificationGroup} theme="light">
+				<div className={st.wrapper}>
+					{clarification_content.map((item) => (
 						<Clarification
 							theme="light"
 							key={item.title}
-							className={st.clarificationEl}
+							className={st.block}
 							title={item.title}
 							text1={item.text}
 						/>
@@ -72,17 +79,18 @@ const Regulation = () => {
 				</div>
 			</UniversalSection>
 			<UniversalSection
+				className={st.comments}
 				title="Testimonial from our clients"
 				subtitle="With Flex, you can build websites without writing code."
 			>
-				<div className={st.commentsGroup}>
-					{content.comments.map((item) => (
+				<div className={st.list}>
+					{comments.map((item) => (
 						<Comment key={item.text} data={item} />
 					))}
 				</div>
 			</UniversalSection>
 			<UniversalSection className={st.explanation} theme="light">
-				<div className={st.explanationWrapper}>
+				<div className={st.wrapper}>
 					<Clarification
 						theme="light"
 						title="Complaints"
@@ -95,13 +103,13 @@ const Regulation = () => {
 							title="How to Submit a Complaint"
 							subTitle="To file a complaint regarding WSE, please follow these steps:"
 						/>
-						<ol className={st.orderedList}>
-							<li className={st.listItem}>
+						<ol className={st.list}>
+							<li className={st.item}>
 								Submit your complaint in writing to our Compliance Department at
 								<span> necesito-su-correoelectronico</span>
 								@worldstockexchange.com.
 							</li>
-							<li className={st.listItem}>
+							<li className={st.item}>
 								Provide as much information as possible to help us understand
 								and address your concerns promptly."
 							</li>
@@ -110,12 +118,11 @@ const Regulation = () => {
 				</div>
 			</UniversalSection>
 			<UniversalSection
-				className={st.sendMailSection}
+				className={st.sendMail}
 				theme="light"
 				title="Leave your email"
 				subtitle="And we will answer all of your questions!"
 			>
-
 				<EmailForm btnText="Connect" />
 			</UniversalSection>
 		</main>

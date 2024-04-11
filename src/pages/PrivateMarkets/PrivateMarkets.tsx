@@ -6,13 +6,13 @@ import {
 import { Clarification, Dropdown } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
+import { Fragment } from "react/jsx-runtime";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
-import { content } from "./content";
+import { faq_content, slider_content, steps_content } from "./content";
 import st from "./styles.module.scss";
-import { Fragment } from "react/jsx-runtime";
 
 const PrivateMarkets = () => {
 	return (
@@ -56,9 +56,9 @@ const PrivateMarkets = () => {
 				className={st.steps}
 				title="Joining World Stock Exchange and accessing private markets is easy"
 			>
-				<ul className={st.stepsList}>
-					{content.steps.map((item) => (
-						<li className={st.card} data-count={item.id}>
+				<ul className={st.list}>
+					{steps_content.map((item) => (
+						<li key={item.id} className={st.card} data-count={item.id}>
 							<h3 className={st.heading}>{item.title}</h3>
 							<p className={st.text}>{item.text}</p>
 						</li>
@@ -69,7 +69,7 @@ const PrivateMarkets = () => {
 				title="Unlock exclusive opportunities with WSE"
 				subtitle="Why choose World Stock Exchange for private market investing?"
 			>
-				{/* <Swiper
+				<Swiper
 					className={st.swiper}
 					slidesPerView={3}
 					modules={[Pagination]}
@@ -78,15 +78,11 @@ const PrivateMarkets = () => {
 					grabCursor={true}
 				>
 					<SwiperSlide className={st.slide}>
-						{content.slider.map((item) => (
+						{slider_content.map((item) => (
 							<Fragment key={item.title}>
-								<img
-									src={item.photo}
-									className={st.slideImg}
-									alt={item.title}
-								/>
+								<img src={item.photo} className={st.img} alt={item.title} />
 								<Clarification
-									className={st.clarification}
+									className={st.block}
 									theme="dark"
 									title={item.title}
 									text1={item.text_1}
@@ -95,20 +91,20 @@ const PrivateMarkets = () => {
 							</Fragment>
 						))}
 					</SwiperSlide>
-				</Swiper> */}
+				</Swiper>
 			</UniversalSection>
 			<UniversalSection
+				className={st.faq}
 				theme="light"
 				title="Frequently Asked Questions"
 				subtitle="Answers to your burning questions about the Stock Market"
 			>
-				<div className={st.faqList}>
-					{content.faqData.map((item) => (
+				<div className={st.list}>
+					{faq_content.map((item) => (
 						<Dropdown key={item.answer} data={item} />
 					))}
 				</div>
 			</UniversalSection>
-
 			<UniversalSection
 				theme="light"
 				className={st.account}
