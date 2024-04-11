@@ -15,15 +15,15 @@
 }
 
 .value {
-	color: var(--_value-color);
-	font-size: 3rem;
-  font-weight: bold;
+  color: var(--_value-color);
+  font-size: var(--fs-desc-h1);
+  font-weight: var(--fw-bold);
   line-height: 1.2;
 }
 
 .text {
-	color: var(--_text-color);
-  font-size: 1.125rem;
-  font-weight: medium;
+  color: var(--_text-color);
+  font-size: var(--fs-desct-tab-h4);
+  font-weight: var(--fw-med);
   line-height: 1.3;
 }

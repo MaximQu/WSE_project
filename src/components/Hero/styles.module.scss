@@ -39,7 +39,7 @@
 
 .title {
   font-size: clamp(1.75rem, 0.8077rem + 3.5897vw, 3.5rem);
-  font-weight: bold;
+  font-weight: var(--fw-bold);
   line-height: 1.2;
   margin-bottom: 2.5rem;
 }

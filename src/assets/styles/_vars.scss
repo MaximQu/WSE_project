@@ -23,6 +23,52 @@
   --c-white: hsl(218, 100%, 100%);
   --c-red: hsl(7, 66%, 48%);
 
+  // font-weight
+  --fw-xbold: 800;
+  --fw-bold: 700;
+  --fw-semi: 600;
+  --fw-med: 500;
+  --fw-reg: 400;
+
+  // font-size
+  //desktop
+  --fs-desc-h1: 3rem; //asdaw
+  --fs-desc-h2: 2.25rem;
+  --fs-desc-h3: 1.5rem;
+  --fs-desc-h4: 1.25rem;
+  --fs-desc-md: 1.125rem;
+  --fs-desc-sm: 1rem;
+  // from desktop to tablet
+  --fs-desct-tab-h1: clamp(2.375rem, 1.049rem + 2.7624vw, 3rem);
+  --fs-desct-tab-h2: clamp(2rem, 1.4696rem + 1.105vw, 2.25rem);
+  --fs-desct-tab-h3: clamp(1.25rem, 0.7196rem + 1.105vw, 1.5rem);
+  --fs-desct-tab-h4: clamp(1.125rem, 0.8598rem + 0.5525vw, 1.25rem);
+  --fs-desct-tab-md: clamp(1rem, 0.7348rem + 0.5525vw, 1.125rem);
+  --fs-desct-tab-sm: clamp(0.875rem, 0.6098rem + 0.5525vw, 1rem);
+  //tablet
+  --fs-tab-h1: 2.375rem;
+  --fs-tab-h2: 2rem;
+  --fs-tab-h3: 1.25rem;
+  --fs-tab-h4: 1.125rem;
+  --fs-tab-md: 1rem;
+  --fs-tab-sm: 0.875rem;
+  // from tablet to mobile
+  --fs-tab-mob-h1: clamp(1.875rem, 1.2716rem + 2.2989vw, 2.375rem);
+  --fs-tab-mob-h2: clamp(1.5rem, 0.8966rem + 2.2989vw, 2rem);
+  --fs-tab-mob-h3: clamp(1.125rem, 0.9741rem + 0.5747vw, 1.25rem);
+  --fs-tab-mob-h4: clamp(1rem, 0.8491rem + 0.5747vw, 1.125rem);
+  --fs-tab-mob-md: clamp(0.875rem, 0.7241rem + 0.5747vw, 1rem);
+  --fs-tab-mob-sm: clamp(0.75rem, 0.5991rem + 0.5747vw, 0.875rem);
+  //mobile
+  --fs-mob-h1: 1.875rem;
+  --fs-mob-h2: 1.5rem;
+  --fs-mob-h3: 1.125rem;
+  --fs-mob-h4: 1rem;
+  --fs-mob-md: 0.875rem;
+  --fs-mob-sm: 0.75rem;
+
+  --fs-copyright: 0.875rem;
+
   // z-index
   --z-highest: 1000;
   --z-high: 100;
