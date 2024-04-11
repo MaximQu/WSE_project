@@ -18,7 +18,7 @@ const BurgerButton: FC<BurgerButtonProps> = ({
 			type="button"
 			className={`${className} ${st.btn} ${st[theme]}`}
 			{...props}
-      aria-label="burger menu button"
+      aria-label="Burger menu button"
 		>
 			<BurgerIcon theme={theme} />
 		</button>
