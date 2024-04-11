@@ -1,0 +1,18 @@
+@use "@st/utils";
+
+.contacts {
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.account {
+	header {
+		margin-bottom: 1.5rem;
+	}
+
+	.btn {
+		margin-inline: auto;
+	}
+}

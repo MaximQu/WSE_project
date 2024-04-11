@@ -89,7 +89,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({className = '', handleCloseBurgerMenu,
 				</button>
 			</header>
 			<NavList />
-			<ButtonOrLink as="a" className={st.signUp} to="/">
+			<ButtonOrLink as="a" className={st.signUp} to="/auth/sign-up">
 				Sign up
 			</ButtonOrLink>
 		</nav>

@@ -1,22 +1,23 @@
 import { Route, Routes } from "react-router-dom";
-import {
-	Affiliation,
-	CompanyProfile,
-	Contacts,
-	Copyright,
-	Home,
-	LegalDisclaimer,
-	Market,
-	NotFound,
-	PrivacyStatement,
-	PrivateMarkets,
-	Registration,
-	Regulation,
-	Sustainable,
-	Trade,
-	WhyWSE,
-} from "./pages";
 import MainLayout from "./layouts/MainLayout";
+import {
+  Affiliation,
+  CompanyProfile,
+  Contacts,
+  Copyright,
+  Home,
+  InvestorRelations,
+  LegalDisclaimer,
+  Market,
+  NotFound,
+  PrivacyStatement,
+  PrivateMarkets,
+  Registration,
+  Regulation,
+  Sustainable,
+  Trade,
+  WhyWSE,
+} from "./pages";
 
 const App = () => {
 	return (
@@ -24,9 +25,6 @@ const App = () => {
 			<Route path="/" element={<MainLayout headerTheme="light" />}>
 				<Route path="trade" element={<Trade />} />
 				<Route path="sustainable" element={<Sustainable />} />
-				<Route path="legal-notice" element={<LegalDisclaimer />} />
-				<Route path="privacy-statement" element={<PrivacyStatement />} />
-				<Route path="copyright" element={<Copyright />} />
 				<Route path="market" element={<Market />} />
 				<Route path="regulation" element={<Regulation />} />
 				<Route path="private-markets" element={<PrivateMarkets />} />
@@ -36,13 +34,16 @@ const App = () => {
 				<Route path="about-us">
 					<Route path="company-profile" element={<CompanyProfile />} />
 				</Route>
+				<Route path="legal-notice" element={<LegalDisclaimer />} />
+				<Route path="privacy-statement" element={<PrivacyStatement />} />
+				<Route path="copyright" element={<Copyright />} />
 				<Route path="*" element={<NotFound />} />
 			</Route>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
 				<Route path="why-wse" element={<WhyWSE />} />
 				<Route path="about-us" element>
-					<Route path="investor-relations" element />
+					<Route path="investor-relations" element={<InvestorRelations />} />
 				</Route>
 			</Route>
 		</Routes>
