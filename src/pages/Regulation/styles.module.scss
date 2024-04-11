@@ -1,75 +1,84 @@
 @use "@st/utils";
-.content {
-	display: flex;
-	gap: 6rem;
-}
 
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 3.75rem;
-}
+.regulationInfo {
+	.contentWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+	}
 
-.reversedWrapper {
-	display: flex;
-	align-items: center;
-	gap: 6rem;
-}
+	.content {
+		display: flex;
+		gap: 6rem;
+	}
 
-.contentWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 5rem;
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 3.75rem;
+	}
+
+	.reversedWrapper {
+		display: flex;
+		align-items: center;
+		gap: 6rem;
+	}
+
+	.block {
+		max-width: 30rem;
+	}
 }
 
 .clarificationGroup {
-	display: grid;
-	grid-template-columns: 30rem 30rem;
-	gap: 5rem;
+	.wrapper {
+		display: grid;
+		grid-template-columns: 30rem 30rem;
+		gap: 5rem;
+	}
+
+	.block {
+		max-width: 30rem;
+
+		h2 {
+			@extend .text-h3;
+		}
+		p {
+			@extend .text-sm;
+		}
+	}
 }
 
-.clarificationEl {
-	max-width: 30rem;
-
-	h2 {
-		@extend .text-h3;
+.comments {
+	.list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
 	}
-	p {
-		@extend .text-sm;
-	}
-}
-
-.commentsGroup {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1rem;
 }
 
 .explanation {
-  padding-bottom: 3.125rem;
-}
+	padding-bottom: 3.125rem;
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+	.item {
+		display: list-item;
+		@extend .text-md;
+		color: var(--c-primary-600);
+		margin-left: 1.5rem;
 
-.explanationWrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
-}
-
-.listItem {
-  display: list-item;
-	@extend .text-md;
-	color: var(--c-primary-600);
-  margin-left: 1.5rem;
-
-	span {
-		color: var(--c-red);
+		span {
+			color: var(--c-red);
+		}
 	}
 }
 
-.sendMailSection {
-  padding-top: 3.125rem;
+.sendMail {
+	padding-top: 3.125rem;
+
 	header {
 		margin-bottom: 2.5rem;
 	}
 }
-

@@ -1,35 +1,38 @@
 @use "@st/utils";
 
-.widgetWrapper {
-	display: flex;
-	gap: 1.5rem;
+.offerList {
+	.wrapper {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		max-width: 22.5rem;
+		width: 100%;
+	}
+
+	.btn {
+		max-width: 100%;
+	}
 }
 
-.widgetBlock {
-	display: flex;
-	flex-direction: column;
-	gap: 1.25rem;
-	max-width: 22.5rem;
-	width: 100%;
-}
-
-.widgetBtn {
-	max-width: 100%;
-}
-
-.faqList {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  gap: 1.25rem;
+.faq {
+	.list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+	}
 }
 
 .startSection {
 	header {
 		margin-bottom: 1.5rem;
 	}
-}
-
-.startBtn {
-	margin-inline: auto;
+	.btn {
+		margin-inline: auto;
+	}
 }

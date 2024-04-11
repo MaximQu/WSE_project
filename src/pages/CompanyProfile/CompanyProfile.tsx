@@ -1,17 +1,17 @@
 import {
-	WSEDesktopJPG,
-	WSEMobileJPG,
-	WSETabletJPG,
-	successDesktopJPG,
-	successMobileJPG,
-	successTabletJPG,
+  WSEDesktopJPG,
+  WSEMobileJPG,
+  WSETabletJPG,
+  successDesktopJPG,
+  successMobileJPG,
+  successTabletJPG,
 } from "@/assets/img/jpg";
 import { puzzleSVG } from "@/assets/img/svg";
 import { Advantage, Clarification } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { AdaptiveImg } from "@/ui";
+import { company_values } from "./content";
 import st from "./styles.module.scss";
-import { content } from "./content";
 
 const CompanyProfile = () => {
 	return (
@@ -50,7 +50,11 @@ const CompanyProfile = () => {
 					/>
 				</div>
 			</UniversalSection>
-			<UniversalSection theme="light" className={st.values} title="Company values">
+			<UniversalSection
+				theme="light"
+				className={st.values}
+				title="Company values"
+			>
 				<div className={st.wrapper}>
 					<AdaptiveImg
 						className={st.img}
@@ -60,8 +64,14 @@ const CompanyProfile = () => {
 						alt="Company values"
 					/>
 					<ul>
-						{content.company_values.map((item) => (
-							<Advantage theme="light" className={st.advantage} styleType="row" data={item} />
+						{company_values.map((item) => (
+							<Advantage
+								key={item.icon}
+								theme="light"
+								className={st.advantage}
+								styleType="row"
+								data={item}
+							/>
 						))}
 					</ul>
 				</div>

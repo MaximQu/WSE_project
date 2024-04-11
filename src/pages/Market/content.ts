@@ -1,4 +1,4 @@
-export const content = [
+export const faqList = [
 	{
 		question: "What is the stock market, and how does it work?",
 		answer:
@@ -25,5 +25,4 @@ export const content = [
 		answer:
 			"Investing in the stock market carries inherent risks, including the potential for loss of capital, market volatility, economic downturns, and company-specific risks. It's important to diversify your investments, conduct thorough research, and consult with financial professionals to mitigate these risks and make informed decisions.",
 	},
-  
 ];

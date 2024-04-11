@@ -11,21 +11,48 @@ const Footer = () => {
 				<LogoIcon type="big" className={st.icon} />
 			</Link>
 			<nav className={`${st.nav}`}>
-				<Link to="/" className="text-md">Location</Link>
-				<Link to="/" className="text-md">Contacts</Link>
+				<Link to="/" className="text-md">
+					Location
+				</Link>
+				<Link to="/contacts" className="text-md">
+					Contacts
+				</Link>
 				<ul className={`${st.list}`}>
 					<li>
-						<ButtonOrLink styleType="dark" to="/" className={st.link}>Legal Disclaimer</ButtonOrLink>
+						<ButtonOrLink
+							as="a"
+							styleType="dark"
+							to="/legal-notice"
+							className={st.link}
+						>
+							Legal Disclaimer
+						</ButtonOrLink>
 					</li>
 					<li>
-						<ButtonOrLink styleType="dark" to="/" className={st.link}>Privacy Statement</ButtonOrLink>
+						<ButtonOrLink
+							as="a"
+							styleType="dark"
+							to="/privacy-statement"
+							className={st.link}
+						>
+							Privacy Statement
+						</ButtonOrLink>
 					</li>
 					<li>
-						<ButtonOrLink styleType="dark" to="/" className={st.link}>Copyright</ButtonOrLink>
+						<ButtonOrLink
+							as="a"
+							styleType="dark"
+							to="/copyright"
+							className={st.link}
+						>
+							Copyright
+						</ButtonOrLink>
 					</li>
 				</ul>
 			</nav>
-			<p className="text-xs">© 2024 WORLD STOCK EXCHANGE. All Rights Reserved.</p>
+			<p className="text-xs">
+				© 2024 WORLD STOCK EXCHANGE. All Rights Reserved.
+			</p>
 		</footer>
 	);
 };

@@ -4,7 +4,6 @@
 	--_titleColor: var(--c-white);
 	--_subTitleColor: var(--c-white);
 	--_textColor: var(--c-primary-300);
-	max-width: 34.375rem;
 
 	&.light {
 		--_titleColor: var(--c-primary-800);
@@ -33,6 +32,5 @@
 
 .text {
 	@extend .text-md;
-	max-width: 30rem;
 	color: var(--_textColor);
 }

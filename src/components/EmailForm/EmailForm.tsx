@@ -15,7 +15,8 @@ const EmailForm: FC<EmailFormProps> = ({ btnText = " Join us",className }) => {
 					className={st.input}
 					placeholder="Enter your email"
 					name="emailConnection"
-					type="text"
+					type="email"
+          required
 				/>
 				<ButtonOrLink className={st.btn} type="submit">
 					{btnText}
