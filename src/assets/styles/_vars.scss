@@ -67,7 +67,7 @@
   --fs-mob-md: 0.875rem;
   --fs-mob-sm: 0.75rem;
 
-  --fs-copyright: 0.875rem;
+  --fs-copyright: clamp(0.625rem, 0.3233rem + 1.1494vw, 0.875rem);
 
   // z-index
   --z-highest: 1000;
