@@ -1,6 +1,10 @@
 @use "@st/utils";
 
-.explanationBlock {
+.explanation {
+	p {
+		font-size: var(--fs-desc-md);
+		line-height: 1.3;
+	}
 	.layout {
 		display: flex;
 		flex-direction: column;
@@ -9,10 +13,15 @@
 			display: flex;
 			gap: 1rem;
 			margin-bottom: clamp(3.75rem, 3.0769rem + 2.5641vw, 5rem);
-		}
 
-		p {
-			@extend .text-sm;
+			@media (width <= 768px) {
+				flex-direction: column;
+			}
+
+			p {
+				font-size: var(--fs-desc-sm);
+				line-height: 1.3;
+			}
 		}
 	}
 }
@@ -117,4 +126,8 @@
 	header {
 		margin-bottom: 1.5rem;
 	}
+
+  .block {
+    justify-content: center;
+  }
 }

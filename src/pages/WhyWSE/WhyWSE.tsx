@@ -8,8 +8,9 @@ import st from "./styles.module.scss";
 const WhyWSE = () => {
 	return (
 		<main>
-			<UniversalSection theme="light">
+			<UniversalSection>
 				<Clarification
+        skewed
 					title="Why WSE?"
 					text={`At WSE, we pride ourselves on offering a comprehensive platform designed to unlock exclusive investment opportunities and empower investors to achieve their financial goals.\n\nHere are just a few reasons why you should choose WSE:`}
 				/>
@@ -41,13 +42,13 @@ const WhyWSE = () => {
 				title="Our strength"
 				subtitle="At World Stock Exchange (WSE), we pride ourselves on our robust foundation built upon several key strengths"
 			>
-				<div className={st.wrapper}>
-					<div className={st.content}>
+				<div className={st.content}>
+					<div className={st.wrapper}>
 						{explanations.map((item) => (
-							<Clarification theme="light" key={item.subtitle} {...item} />
+							<Clarification className={st.block} theme="light" key={item.subtitle} {...item} />
 						))}
 					</div>
-					<img src={highFiveSVG} alt="Our strength" />
+					<img className={st.img} src={highFiveSVG} alt="Our strength" />
 				</div>
 			</UniversalSection>
 		</main>

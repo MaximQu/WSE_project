@@ -17,31 +17,27 @@ const Regulation = () => {
 				theme="light"
 				title="Regulations"
 			>
-				<div className={st.contentWrapper}>
-					<div className={st.content}>
-						<div className={st.wrapper}>
-							<Clarification
-								className={st.block}
-								theme="light"
-								{...regulations.framework1}
-							/>
-							<Clarification
-								className={st.block}
-								theme="light"
-								{...regulations.framework2}
-							/>
-						</div>
-						<AdaptiveImg className={st.img} {...regulations.papersImg} />
+				<div className={st.content}>
+					<div className={st.wrapper}>
+						<Clarification
+							className={st.block}
+							theme="light"
+							{...regulations.framework1}
+						/>
+						<Clarification
+							className={st.block}
+							theme="light"
+							{...regulations.framework2}
+						/>
 					</div>
-					<div className={st.content}>
-						<div className={st.reversedWrapper}>
-							<AdaptiveImg className={st.img} {...regulations.signatureImg} />
-							<Clarification
-								className={st.block}
-								theme="light"
-								{...regulations.ourMission}
-							/>
-						</div>
+					<AdaptiveImg className={st.img} {...regulations.papersImg} />
+					<AdaptiveImg className={st.img} {...regulations.signatureImg} />
+					<div className={st.wrapper}>
+						<Clarification
+							className={st.block}
+							theme="light"
+							{...regulations.ourMission}
+						/>
 					</div>
 				</div>
 			</UniversalSection>
@@ -72,7 +68,7 @@ const Regulation = () => {
 			<UniversalSection className={st.explanation} theme="light">
 				<div className={st.wrapper}>
 					<Clarification theme="light" {...explanations.complaints} />
-					<div>
+					<div className={st.block}>
 						<Clarification theme="light" {...explanations.howToSubmit} />
 						<ol className={st.list}>
 							<li className={st.item}>

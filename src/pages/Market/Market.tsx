@@ -17,8 +17,10 @@ import {
 const Market = () => {
 	return (
 		<main>
-			<UniversalSection>
+			<UniversalSection className={st.introduction} theme="light">
 				<Clarification
+        className={st.block}
+					theme="light"
 					skewed
 					title={"Introduction \nto the Stock Market"}
 					text="The stock market is a dynamic marketplace where investors buy and sell shares of publicly traded companies, driving economic growth and wealth creation. Whether you're new to investing or a seasoned trader, understanding the fundamentals of the stock market is essential for making informed financial decisions."
@@ -37,7 +39,7 @@ const Market = () => {
 				theme="light"
 				title="Get the best offer today"
 				subtitle="Top-3 to invest today!"
-				className={st.offerList}
+				className={st.offer}
 			>
 				<div className={st.wrapper}>
 					{["BLACKBULL:US30", "NASDAQ:AAPL", "NYSE:BA"].map((symbol) => (
@@ -51,7 +53,7 @@ const Market = () => {
 			<UniversalSection
 				title="Investing is easy"
 				subtitle="Explore different approaches to investing in the stock market, each tailored to suit different financial goals and risk tolerances."
-				className={st.investmentsBlock}
+				className={st.investments}
 			>
 				<div className={st.layout}>
 					<div className={st.statements}>

@@ -64,10 +64,10 @@ export const advantages: {
 ];
 
 export const sustainable: {
-	clarefication: Pick<ClarificationProps, "title" | "text">;
+	clarification: Pick<ClarificationProps, "title" | "text">;
 	img: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile" | "alt">;
 } = {
-	clarefication: {
+	clarification: {
 		title: "Sustainable",
 		text: "At World Stock Exchange, we are committed to promoting sustainability in the financial sector.\n\nWe recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions",
 	},

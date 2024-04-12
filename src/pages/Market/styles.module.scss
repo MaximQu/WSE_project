@@ -1,7 +1,15 @@
 @use "@st/utils";
 @use "@st/mix" as *;
 
-.offerList {
+.introduction {
+  .block {
+    p {
+      max-width: 34.375rem;
+    }
+  }
+}
+
+.offer {
   .wrapper {
     display: flex;
     gap: 1.5rem;
@@ -39,9 +47,10 @@
   }
 }
 
-.investmentsBlock {
+.investments {
   .layout {
-    @extend .six-pack-grid
+    @extend .six-pack-grid;
+    gap: 1rem;
   }
 }
 

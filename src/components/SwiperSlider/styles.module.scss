@@ -14,6 +14,12 @@
 	margin-bottom: clamp(2rem, 1rem + 5vw, 7rem);
 }
 
+.quoteIcon {
+	font-size: var(--fs-desc-md);
+  width: clamp(3.125rem, 1.7201rem + 5.3521vw, 5.5rem);
+  height: clamp(2.125rem, 1.1637rem + 3.662vw, 3.75rem);
+}
+
 .closeQuote {
 	display: block;
 	margin-left: auto;
@@ -26,6 +32,10 @@
 	max-width: 51rem;
 	margin-inline: auto;
 	padding-block: 0.5rem;
+
+	@media (width <= 480px) {
+		font-size: var(--fs-desc-md);
+	}
 
 	&::before,
 	&::after {

@@ -1,13 +1,13 @@
 import { Advantage, Clarification, EmailForm } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { AdaptiveImg } from "@/ui";
 import { benefits, hero, statement } from "./content";
 import st from "./styles.module.scss";
-import { AdaptiveImg } from "@/ui";
 
 const Affiliation = () => {
 	return (
 		<main>
-			<UniversalSection theme="light" className={st.sendEmail}>
+			<UniversalSection theme="light" className={st.hero}>
 				<Clarification
 					skewed
 					theme="light"
@@ -15,9 +15,9 @@ const Affiliation = () => {
 					title={hero.title}
 					text={hero.text}
 				/>
-				<div>
-					<AdaptiveImg {...hero.img1}/>
-					<AdaptiveImg {...hero.img2}/>
+				<div className={st.imgGroup}>
+					<AdaptiveImg {...hero.img1} />
+					<AdaptiveImg {...hero.img2} />
 				</div>
 			</UniversalSection>
 			<UniversalSection
@@ -29,10 +29,7 @@ const Affiliation = () => {
 				<EmailForm />
 			</UniversalSection>
 			<UniversalSection className={st.description}>
-				<Clarification
-					className={st.wrapper}
-					text={statement}
-				/>
+				<Clarification className={st.wrapper} text={statement} />
 			</UniversalSection>
 			<UniversalSection
 				theme="light"
@@ -45,6 +42,14 @@ const Affiliation = () => {
 						<Advantage key={item.icon} theme="light" data={item} />
 					))}
 				</div>
+			</UniversalSection>
+			<UniversalSection
+				title="How to Become an Affiliate?"
+				subtitle="Join our affiliate program in just a few easy steps"
+				theme="light"
+			></UniversalSection>
+			<UniversalSection theme="light" className={st.sendEmail}>
+				<EmailForm />
 			</UniversalSection>
 		</main>
 	);
