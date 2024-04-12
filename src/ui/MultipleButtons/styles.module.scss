@@ -3,12 +3,30 @@
 .block {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-  flex-wrap: wrap;
 	gap: 1rem;
-	width: 100%;
 
-	&.right {
-		justify-content: flex-end;
+	@media (width <=768px) {
+		width: 100%;
+		justify-content: center;
+	}
+
+	@media (width <=480px) {
+		width: 100%;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.btn {
+		min-width: 12rem;
+		max-width: max-content;
+
+		@media (width <=768px) {
+			min-width: unset;
+			max-width: 12rem;
+		}
+
+		@media (width <=480px) {
+			max-width: 100%;
+		}
 	}
 }
