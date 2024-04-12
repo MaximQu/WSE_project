@@ -78,4 +78,7 @@
 
   // animation
   --t-time: .2s;
+
+  //shadow
+  --shadow: 0 4px 4px color-mix(in hsl, var(--c-primary-400) 17%, transparent);
 }

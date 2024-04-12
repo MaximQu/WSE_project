@@ -6,7 +6,6 @@ import {
 import { Clarification, Dropdown } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
-import { Fragment } from "react/jsx-runtime";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
@@ -17,6 +16,12 @@ import st from "./styles.module.scss";
 const PrivateMarkets = () => {
 	return (
 		<main>
+			<UniversalSection
+				theme="light"
+				className={st.greetings}
+				title="Welcome to &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Private markets at WSE"
+				subtitle="Explore exclusive investment opportunities and discover the potential of private markets with World Stock Exchange. Our platform provides access to a diverse range of private investment options, allowing investors to participate in exciting ventures and unlock new avenues for portfolio growth. Whether you're seeking alternative assets, venture capital opportunities, or private equity investments, our platform offers a gateway to the world of private markets. Join us and delve into a realm of potential and opportunity."
+			></UniversalSection>
 			<UniversalSection
 				className={st.explanationBlock}
 				title="How Does It Work?"
@@ -66,31 +71,32 @@ const PrivateMarkets = () => {
 				</ul>
 			</UniversalSection>
 			<UniversalSection
+      className={st.slider}
 				title="Unlock exclusive opportunities with WSE"
 				subtitle="Why choose World Stock Exchange for private market investing?"
 			>
 				<Swiper
 					className={st.swiper}
-					slidesPerView={3}
+					slidesPerView={'auto'}
 					modules={[Pagination]}
+          spaceBetween={24}
+          // autoHeight={true}
 					pagination={{ clickable: true }}
-					loop={false}
-					grabCursor={true}
+					// loop={false}
+					// grabCursor={true}
 				>
-					<SwiperSlide className={st.slide}>
-						{slider_content.map((item) => (
-							<Fragment key={item.title}>
-								<img src={item.photo} className={st.img} alt={item.title} />
-								<Clarification
-									className={st.block}
-									theme="dark"
-									title={item.title}
-									text1={item.text_1}
-									text2={item.text_2}
-								/>
-							</Fragment>
-						))}
-					</SwiperSlide>
+					{slider_content.map((item) => (
+						<SwiperSlide className={st.slide} key={item.title}>
+							<img src={item.photo} className={st.img} alt={item.title} />
+							<Clarification
+								className={st.block}
+								theme="dark"
+								title={item.title}
+								text1={item.text_1}
+								text2={item.text_2}
+							/>
+						</SwiperSlide>
+					))}
 				</Swiper>
 			</UniversalSection>
 			<UniversalSection

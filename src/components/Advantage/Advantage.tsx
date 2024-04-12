@@ -20,35 +20,19 @@ const Advantage: FC<AdvantageProps> = ({
 	className,
 }) => {
 	return (
-		<>
-			{styleType === "column" ? (
-				<div
-					className={`${st.advantage} ${
-						theme === "light" ? st.light : ""
-					} ${className}`}
-				>
-					<div className={st.icon}>
-						<PNGIcon img={data.icon} />
-					</div>
-					<h3 className={st.title}>{data.title}</h3>
-					<p className={st.text}>{data.text}</p>
-				</div>
-			) : (
-				<div
-					className={`${st.advantage} ${st.row} ${
-						theme === "light" ? st.light : ""
-					}`}
-				>
-					<div className={st.icon}>
-						<PNGIcon img={data.icon} />
-					</div>
-					<div className="">
-						<h3 className={st.title}>{data.title}</h3>
-						<p className={st.text}>{data.text}</p>
-					</div>
-				</div>
-			)}
-		</>
+		<div
+			className={`${st.advantage} ${styleType === "row" ? st.row : ""} ${
+				theme === "light" ? st.light : ""
+			} ${className}`}
+		>
+			<div className={st.icon}>
+				<PNGIcon img={data.icon} />
+			</div>
+			<div className="">
+				<h3 className={st.title}>{data.title}</h3>
+				<p className={st.text}>{data.text}</p>
+			</div>
+		</div>
 	);
 };
 

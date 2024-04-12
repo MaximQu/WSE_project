@@ -5,7 +5,7 @@
   width: 100%;
   padding: 2rem;
   border-radius: 0.375rem;
-  box-shadow: 0 4px 4px color-mix(in hsl, var(--c-primary-400) 17%, transparent);
+  box-shadow: var(--shadow);
 
   &:has(>*:active) {
     background-color: var(--c-green-100);
