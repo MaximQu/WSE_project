@@ -1,54 +1,82 @@
 @use "@st/utils";
+
 .sustainableBlock {
-	.wrapper {
-		display: flex;
-		align-items: center;
-		gap: 2rem;
-	}
-	.block {
-		max-width: 34.375rem;
-	}
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .block {
+    max-width: 34.375rem;
+  }
 }
 
 .account {
-	header {
-		margin-bottom: 1.5rem;
-	}
+  header {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .faq {
-	.list {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.25rem;
-	}
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
 }
 
 .advantagesBlock {
-	.layout {
-		@extend .six-pack-grid;
+  .layout {
+    // @extend .six-pack-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // place-items: center start;
+    justify-items: center;
 
-		.img {
-			grid-column: 2 / 3;
-			grid-row: 1 / 3;
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
+    @media (width <=885px) {
+      grid-template-columns: 1fr 1fr;
+    }
 
-			@media (width <=768px) {
-				grid-column: 1 / 3;
-				grid-row: 2 / 3;
-			}
+    @media (width <=480px) {
+      grid-template-columns: 1fr;
+    }
 
-			@media (width <=480px) {
-				grid-column: 1;
-				grid-row: 3 / 4;
-			}
-		}
-	}
+    .img {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      width: 100%;
+      @media (width <=885px) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+      }
+
+      @media (width <=480px) {
+        grid-column: 1;
+        grid-row: 3 / 4;
+      }
+    }
+
+    // .img {
+    // 	grid-column: 2 / 3;
+    // 	grid-row: 1 / 3;
+    // 	height: 100%;
+    // 	width: 100%;
+    // 	object-fit: cover;
+
+    // 	@media (width <=768px) {
+    // 		grid-column: 1 / 3;
+    // 		grid-row: 2 / 3;
+    // 	}
+
+    // 	@media (width <=480px) {
+    // 		grid-column: 1;
+    // 		grid-row: 3 / 4;
+    // 	}
+    // }
+  }
 }
-
 .account {
   .block {
     justify-content: center;

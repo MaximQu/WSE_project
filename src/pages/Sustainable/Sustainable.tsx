@@ -2,6 +2,9 @@ import st from "./styles.module.scss";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { Advantage, Clarification, Dropdown } from "@/components";
 import {
+	solarPanelFieldDesktopJPG,
+	solarPanelFieldMobileJPG,
+	solarPanelFieldTabletJPG,
 	windFarmDesktopJPG,
 	windFarmMobileJPG,
 	windFarmTabletJPG,
@@ -40,17 +43,17 @@ const Sustainable = () => {
 				className={st.advantagesBlock}
 			>
 				<div className={st.layout}>
-					{advantages.map((advantage) => {
-						if ("icon" in advantage)
-							return <Advantage data={advantage} key={advantage.title} />;
-						return (
-							<AdaptiveImg
-								{...advantage}
-								key={advantage.alt}
-								className={st.img}
-							/>
-						);
-					})}
+					{advantages.map((advantage) => (
+						<Advantage data={advantage} key={advantage.title} />
+					))}
+					<AdaptiveImg
+						desktop={solarPanelFieldDesktopJPG}
+						tablet={solarPanelFieldTabletJPG}
+						mobile={solarPanelFieldMobileJPG}
+						alt={"Solar panel field"}
+            switchToTabletWidth={885}
+						className={st.img}
+					/>
 				</div>
 			</UniversalSection>
 			<UniversalSection

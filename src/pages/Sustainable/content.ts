@@ -1,8 +1,3 @@
-import {
-	solarPanelFieldDesktopJPG,
-	solarPanelFieldMobileJPG,
-	solarPanelFieldTabletJPG,
-} from "@/assets/img/jpg";
 import { TPNGIcon } from "@/ui/icons/PNGIcon";
 
 export const faq_content = [
@@ -34,19 +29,11 @@ export const faq_content = [
 	},
 ];
 
-export const advantages: (
-	| {
-			desktop: string;
-			tablet: string;
-			mobile: string;
-			alt: string;
-	  }
-	| {
-			title: string;
-			text: string;
-			icon: TPNGIcon;
-	  }
-)[] = [
+export const advantages: {
+	title: string;
+	text: string;
+	icon: TPNGIcon;
+}[] = [
 	{
 		title: "Inclusivity",
 		text: "Enabling participation of all stakeholders in sustainable initiatives and investments.",
@@ -56,12 +43,6 @@ export const advantages: (
 		title: "Resilience",
 		text: "Building resilience to environmental and social risks through sustainable practices.",
 		icon: "fingerprint",
-	},
-	{
-		desktop: solarPanelFieldDesktopJPG,
-		tablet: solarPanelFieldTabletJPG,
-		mobile: solarPanelFieldMobileJPG,
-		alt: "Solar panel field",
 	},
 	{
 		title: "Accountability",
