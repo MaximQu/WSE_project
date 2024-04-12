@@ -9,14 +9,21 @@ import {
 import { faqList, investments } from "./content";
 import st from "./styles.module.scss";
 import {
-  skyscraperDesktopJPG,
-  skyscraperMobileJPG,
-  skyscraperTabletJPG,
+	skyscraperDesktopJPG,
+	skyscraperMobileJPG,
+	skyscraperTabletJPG,
 } from "@/assets/img/jpg";
 
 const Market = () => {
 	return (
 		<main>
+			<UniversalSection>
+				<Clarification
+					skewed
+					title={"Introduction \nto the Stock Market"}
+					text="The stock market is a dynamic marketplace where investors buy and sell shares of publicly traded companies, driving economic growth and wealth creation. Whether you're new to investing or a seasoned trader, understanding the fundamentals of the stock market is essential for making informed financial decisions."
+				/>
+			</UniversalSection>
 			<TickerTapeWidget isCompact />
 			<UniversalSection
 				className={st.marketData}
@@ -51,8 +58,8 @@ const Market = () => {
 						{investments.map((investment) => (
 							<Clarification
 								key={investment.title}
-								subTitle={investment.title}
-								text1={investment.text}
+								subtitle={investment.title}
+								text={investment.text}
 							/>
 						))}
 					</div>
@@ -60,8 +67,8 @@ const Market = () => {
 						desktop={skyscraperDesktopJPG}
 						tablet={skyscraperTabletJPG}
 						mobile={skyscraperMobileJPG}
-            switchToTabletWidth={960}
-            switchToMobileWidth={584}
+						switchToTabletWidth={960}
+						switchToMobileWidth={584}
 						alt="Investments"
 						className={st.img}
 					/>

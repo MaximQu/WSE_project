@@ -1,15 +1,12 @@
-import {
-  papersDesktopJPG,
-  papersMobileJPG,
-  papersTabletJPG,
-  signatureDesktopJPG,
-  signatureMobileJPG,
-  signatureTabletJPG,
-} from "@/assets/img/jpg";
 import { Clarification, Comment, EmailForm } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { AdaptiveImg } from "@/ui";
-import { clarification_content, comments } from "./content";
+import {
+	clarification_content,
+	comments,
+	explanations,
+	regulations,
+} from "./content";
 import st from "./styles.module.scss";
 
 const Regulation = () => {
@@ -26,40 +23,23 @@ const Regulation = () => {
 							<Clarification
 								className={st.block}
 								theme="light"
-								title="Regulatory Framework"
-								text1="World Stock Exchange is authorized by the Guernsey Financial Services Commission to operate as an investment exchange in compliance with the Protection of Investors (Bailiwick of Guernsey)Law, 2020."
+								{...regulations.framework1}
 							/>
 							<Clarification
 								className={st.block}
 								theme="light"
-								title="Regulatory Framework"
-								text1="At World Stock Exchange, we oversee the listing of securities and supervise our exchange members. We establish, enforce, and monitor compliance with our Listing Rules and Membership Rules, including Trading and Settlement Rules."
-								text2="These regulations govern the behavior of issuers and members, ensuring integrity and transparency in our marketplace."
+								{...regulations.framework2}
 							/>
 						</div>
-						<AdaptiveImg
-							className={st.img}
-							mobile={papersMobileJPG}
-							tablet={papersTabletJPG}
-							desktop={papersDesktopJPG}
-							alt="Sign up to your account"
-						/>
+						<AdaptiveImg className={st.img} {...regulations.papersImg} />
 					</div>
 					<div className={st.content}>
 						<div className={st.reversedWrapper}>
-							<AdaptiveImg
-								className={st.img}
-								mobile={signatureMobileJPG}
-								tablet={signatureTabletJPG}
-								desktop={signatureDesktopJPG}
-								alt="Sign up to your account"
-							/>
+							<AdaptiveImg className={st.img} {...regulations.signatureImg} />
 							<Clarification
 								className={st.block}
 								theme="light"
-								title="Our Mission"
-								text1="Our mission at World Stock Exchange is to provide a robust and efficient platform for companies to list their securities, investors to trade with confidence, and stakeholders to engage with transparency."
-								text2="We strive to cultivate a dynamic marketplace that fosters liquidity, fair pricing, and responsible investment practices, contributing to the long-term prosperity of businesses and communities worldwide."
+								{...regulations.ourMission}
 							/>
 						</div>
 					</div>
@@ -73,7 +53,7 @@ const Regulation = () => {
 							key={item.title}
 							className={st.block}
 							title={item.title}
-							text1={item.text}
+							text={item.text}
 						/>
 					))}
 				</div>
@@ -91,18 +71,9 @@ const Regulation = () => {
 			</UniversalSection>
 			<UniversalSection className={st.explanation} theme="light">
 				<div className={st.wrapper}>
-					<Clarification
-						theme="light"
-						title="Complaints"
-						text1="At World Stock Exchange (WSE), we take all complaints seriously and conduct thorough investigations in accordance with our regulations."
-						text2="If you have a complaint, please clearly indicate this in your correspondence and provide detailed information to assist our investigation process."
-					/>
+					<Clarification theme="light" {...explanations.complaints} />
 					<div>
-						<Clarification
-							theme="light"
-							title="How to Submit a Complaint"
-							subTitle="To file a complaint regarding WSE, please follow these steps:"
-						/>
+						<Clarification theme="light" {...explanations.howToSubmit} />
 						<ol className={st.list}>
 							<li className={st.item}>
 								Submit your complaint in writing to our Compliance Department at

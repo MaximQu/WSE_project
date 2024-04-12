@@ -1,11 +1,25 @@
 import { Advantage, Clarification, EmailForm } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { benefits } from "./content";
+import { benefits, hero, statement } from "./content";
 import st from "./styles.module.scss";
+import { AdaptiveImg } from "@/ui";
 
 const Affiliation = () => {
 	return (
 		<main>
+			<UniversalSection theme="light" className={st.sendEmail}>
+				<Clarification
+					skewed
+					theme="light"
+					className={st.wrapper}
+					title={hero.title}
+					text={hero.text}
+				/>
+				<div>
+					<AdaptiveImg {...hero.img1}/>
+					<AdaptiveImg {...hero.img2}/>
+				</div>
+			</UniversalSection>
 			<UniversalSection
 				theme="light"
 				className={st.sendEmail}
@@ -16,10 +30,8 @@ const Affiliation = () => {
 			</UniversalSection>
 			<UniversalSection className={st.description}>
 				<Clarification
-					theme="dark"
 					className={st.wrapper}
-					text1="At World Stock Exchange (WSE), we understand the value of collaboration in expanding our reach and connecting with traders and investors worldwide."
-					text2="Our affiliation with marketing affiliates is a key component of our strategy to promote our platform, attract new clients, and drive engagement within the financial community."
+					text={statement}
 				/>
 			</UniversalSection>
 			<UniversalSection

@@ -5,13 +5,10 @@ import {
 	solarPanelFieldDesktopJPG,
 	solarPanelFieldMobileJPG,
 	solarPanelFieldTabletJPG,
-	windFarmDesktopJPG,
-	windFarmMobileJPG,
-	windFarmTabletJPG,
 } from "@/assets/img/jpg";
 import { RealTimeChartWidget } from "@/ui/Widgets/TradingViewWidgets";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
-import { advantages, faq_content } from "./content";
+import { advantages, faq_content, sustainable } from "./content";
 
 const Sustainable = () => {
 	return (
@@ -21,17 +18,9 @@ const Sustainable = () => {
 					<Clarification
 						className={st.block}
 						theme="light"
-						title="Sustainable"
-						text1="At World Stock Exchange, we are committed to promoting sustainability in the financial sector."
-						text2="We recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions"
+						{...sustainable.clarefication}
 					/>
-					<AdaptiveImg
-						desktop={windFarmDesktopJPG}
-						tablet={windFarmTabletJPG}
-						mobile={windFarmMobileJPG}
-						alt="Sustainable"
-						className={st.img}
-					/>
+					<AdaptiveImg {...sustainable.img} className={st.img} />
 				</div>
 			</UniversalSection>
 			<UniversalSection theme="light">
@@ -51,7 +40,7 @@ const Sustainable = () => {
 						tablet={solarPanelFieldTabletJPG}
 						mobile={solarPanelFieldMobileJPG}
 						alt={"Solar panel field"}
-            switchToTabletWidth={885}
+						switchToTabletWidth={885}
 						className={st.img}
 					/>
 				</div>
@@ -74,7 +63,7 @@ const Sustainable = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons  className={st.block}/>
+				<MultipleButtons className={st.block} />
 			</UniversalSection>
 		</main>
 	);

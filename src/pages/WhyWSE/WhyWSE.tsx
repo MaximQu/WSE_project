@@ -1,13 +1,19 @@
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import st from "./styles.module.scss";
-import { ButtonOrLink } from "@/ui";
-import { content } from "./content";
-import { Clarification, Stat } from "@/components";
 import { highFiveSVG } from "@/assets/img/svg";
+import { Clarification, Stat } from "@/components";
+import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { ButtonOrLink } from "@/ui";
+import { explanations, stats } from "./content";
+import st from "./styles.module.scss";
 
 const WhyWSE = () => {
 	return (
 		<main>
+			<UniversalSection theme="light">
+				<Clarification
+					title="Why WSE?"
+					text={`At WSE, we pride ourselves on offering a comprehensive platform designed to unlock exclusive investment opportunities and empower investors to achieve their financial goals.\n\nHere are just a few reasons why you should choose WSE:`}
+				/>
+			</UniversalSection>
 			<UniversalSection
 				theme="light"
 				className={st.account}
@@ -24,21 +30,21 @@ const WhyWSE = () => {
 				subtitle="Unlocking opportunities, empowering investors: our impact"
 			>
 				<div className={st.block}>
-					{content.stats.map((item) => (
+					{stats.map((item) => (
 						<Stat theme="dark" key={item.value} data={item} />
 					))}
 				</div>
 			</UniversalSection>
 			<UniversalSection
-      theme="light"
+				theme="light"
 				className={st.explanation}
 				title="Our strength"
 				subtitle="At World Stock Exchange (WSE), we pride ourselves on our robust foundation built upon several key strengths"
 			>
 				<div className={st.wrapper}>
 					<div className={st.content}>
-						{content.explanation.map((item) => (
-							<Clarification theme="light" key={item.title} subTitle={item.title} text1={item.text} />
+						{explanations.map((item) => (
+							<Clarification theme="light" key={item.subtitle} {...item} />
 						))}
 					</div>
 					<img src={highFiveSVG} alt="Our strength" />

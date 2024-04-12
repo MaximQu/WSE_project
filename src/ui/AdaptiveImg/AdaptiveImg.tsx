@@ -1,7 +1,7 @@
 import { FC } from "react";
 import st from "./styles.module.scss";
 
-type AdaptiveImgProps = {
+export type AdaptiveImgProps = {
 	desktop?: string;
 	tablet?: string;
 	mobile?: string;
