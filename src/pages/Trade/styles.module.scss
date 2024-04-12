@@ -3,16 +3,28 @@
 .wseDescription {
 	.content {
 		display: flex;
-		gap: 6rem;
+    align-items: flex-start;
+		gap: clamp(1.5rem, -1.162rem + 10.1408vw, 6rem);
+
+    @media (width <=768px) {
+      flex-direction: column;
+		}
 	}
 	.wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 5rem;
+		gap: clamp(1.5rem, -0.5704rem + 7.8873vw, 5rem);
 	}
 
 	.block {
-		max-width: 34.5rem;
+    max-width: 34.5rem;
+    @media (width <=768px) {
+      max-width: 100%;
+      h2 {
+        max-width: 34.5rem;
+      }
+
+		}
 	}
 }
 
@@ -24,4 +36,8 @@
 	header {
 		margin-bottom: 1.5rem;
 	}
+
+  .block {
+    justify-content: center;
+  }
 }
