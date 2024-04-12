@@ -1,9 +1,8 @@
-import { confidenceSVG } from "@/assets/img/svg";
 import { Advantage, Clarification, Hero, Stat } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { MultipleButtons } from "@/ui";
 import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
-import { advantages, stats } from "./content";
+import { advantages, confidence, stats, transformation } from "./content";
 import st from "./styles.module.scss";
 
 const Home = () => {
@@ -15,15 +14,10 @@ const Home = () => {
 					<Clarification
 						className={st.block}
 						theme="light"
-						title="Invest with Confidence"
-						text1="At World Stock Exchange, we believe in democratizing access to global financial markets."
-						text2="Whether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives."
+						title={confidence.title}
+						text={confidence.text}
 					/>
-					<img
-						className={st.img}
-						src={confidenceSVG}
-						alt="Invest with Confidence"
-					/>
+					<img className={st.img} {...confidence.img} />
 				</div>
 			</UniversalSection>
 			<UniversalSection
@@ -55,8 +49,8 @@ const Home = () => {
 					<Clarification
 						className={st.block}
 						theme="light"
-						title="Transform your idea into reality"
-						text1="Discover the Difference with WSE. Create your account!"
+						title={transformation.title}
+						text={transformation.text}
 					/>
 					<MultipleButtons />
 				</div>

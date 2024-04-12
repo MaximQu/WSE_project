@@ -1,3 +1,5 @@
+import { confidenceSVG } from "@/assets/img/svg";
+import { ClarificationProps } from "@/components/Clarification/Clarification";
 import { TPNGIcon } from "@/ui/icons/PNGIcon";
 
 export const advantages: {
@@ -58,3 +60,22 @@ export const stats: {
 		text: "Accuracy",
 	},
 ];
+
+export const confidence: Pick<ClarificationProps, "title" | "text"> & {
+	img: {
+		src: string;
+		alt: string;
+	};
+} = {
+	title: "Invest with Confidence",
+	text: "At World Stock Exchange, we believe in democratizing access to global financial markets.\n\nWhether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives.",
+	img: {
+		src: confidenceSVG,
+		alt: "Invest with Confidence",
+	},
+};
+
+export const transformation: Pick<ClarificationProps, "title" | "text"> = {
+	title: "Transform your idea into reality",
+	text: "Discover the Difference with WSE. Create your account!",
+};

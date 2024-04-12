@@ -40,7 +40,6 @@ const App = () => {
 				<Route element={<MainLayout />}>
 					<Route index element={<Home />} />
 					<Route path="why-wse" element={<WhyWSE />} />
-					<Route path="about-us" element></Route>
 				</Route>
 			</Route>
 			<Route path="about-us">

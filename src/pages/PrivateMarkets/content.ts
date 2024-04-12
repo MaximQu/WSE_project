@@ -63,27 +63,18 @@ export const steps_content = [
 
 export const slider_content = [
 	{
-		photo: `${slimChart}`,
+		photo: slimChart,
 		title: "Diverse Investment Options",
-		text_1:
-			"At WSE, we offer a curated selection of private market opportunities, spanning various industries and asset classes.",
-		text_2:
-			"From innovative startups to established companies and real estate projects, our platform provides access to a diverse range of investment options tailored to your preferences and risk appetite.",
+		text: "At WSE, we offer a curated selection of private market opportunities, spanning various industries and asset classes.\n\nFrom innovative startups to established companies and real estate projects, our platform provides access to a diverse range of investment options tailored to your preferences and risk appetite.",
 	},
 	{
-		photo: `${slimMoney}`,
+		photo: slimMoney,
 		title: "Potential for Higher Returns",
-		text_1:
-			"Private market investments have the potential to deliver attractive returns over the long term. ",
-		text_2:
-			"By investing in early-stage ventures and growth companies before they go public, investors can capitalize on the potential for significant growth and value appreciation, enhancing their overall investment portfolio.",
+		text: "Private market investments have the potential to deliver attractive returns over the long term.\n\nBy investing in early-stage ventures and growth companies before they go public, investors can capitalize on the potential for significant growth and value appreciation, enhancing their overall investment portfolio.",
 	},
 	{
-		photo: `${slimHand}`,
+		photo: slimHand,
 		title: "Exclusivity and Access",
-		text_1:
-			"By joining WSE, investors gain access to exclusive investment opportunities not available on public stock exchanges. ",
-		text_2:
-			"Our platform connects investors with promising ventures seeking funding, offering a unique opportunity to participate in the growth and success of innovative businesses and projects.",
+		text: "By joining WSE, investors gain access to exclusive investment opportunities not available on public stock exchanges.\n\nOur platform connects investors with promising ventures seeking funding, offering a unique opportunity to participate in the growth and success of innovative businesses and projects.",
 	},
 ];

@@ -1,32 +1,5 @@
 @use "@st/utils";
 
-.greetings {
-	display: flex;
-	flex-direction: column;
-
-	header {
-		max-width: 100%;
-		margin-bottom: 0;
-	}
-
-	h2 {
-		@extend .text-h2;
-		text-align: left;
-		margin-bottom: 2.5rem;
-		margin-right: auto;
-		max-width: 27rem;
-	}
-
-	p {
-		text-align: left;
-		align-items: center;
-		margin-inline: auto;
-		font-size: var(--fs-desc-md);
-		padding-left: 2.5rem;
-		max-width: 42rem;
-	}
-}
-
 .explanationBlock {
 	.layout {
 		display: flex;

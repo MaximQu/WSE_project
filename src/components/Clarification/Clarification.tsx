@@ -1,37 +1,35 @@
 import { FC } from "react";
 import st from "./styles.module.scss";
 
-type ClarificationProps = {
+export type ClarificationProps = {
 	title?: string;
-	subTitle?: string;
-	text1?: string;
-	text2?: string;
+	subtitle?: string;
+	text?: string;
 	className?: string;
 	theme?: "light" | "dark";
+	skewed?: boolean;
 };
 
 const Clarification: FC<ClarificationProps> = ({
 	title,
-	subTitle,
-	text1,
-	text2,
-	className,
-	theme,
+	subtitle,
+	text,
+	className = '',
+	theme = 'dark',
+	skewed = false,
 }) => {
 	return (
 		<div
-			className={`${st.clarification} ${
-				theme === "light" ? st.light : ""
-			} ${className}`}
+			className={`
+        ${st.clarification} 
+        ${theme === "light" ? st.light : ""} 
+        ${skewed ? st.skewed : ""} 
+        ${className}
+      `}
 		>
-			{title && <h2 className={st.title}>{title}</h2>}
-			{subTitle && <p className={st.subtitle}>{subTitle}</p>}
-			{text1 || text2 ? (
-				<div className={st.wrapper}>
-					<p className={st.text}>{text1}</p>
-					<p className={st.text}>{text2}</p>
-				</div>
-			) : null}
+			{title ? <h2 className={st.title}>{title}</h2> : null}
+			{subtitle ? <p className={st.subtitle}>{subtitle}</p> : null}
+			{text ? <p className={st.text}>{text}</p> : null}
 		</div>
 	);
 };

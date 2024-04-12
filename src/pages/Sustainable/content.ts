@@ -1,3 +1,10 @@
+import {
+	windFarmDesktopJPG,
+	windFarmMobileJPG,
+	windFarmTabletJPG,
+} from "@/assets/img/jpg";
+import { ClarificationProps } from "@/components/Clarification/Clarification";
+import { AdaptiveImgProps } from "@/ui/AdaptiveImg/AdaptiveImg";
 import { TPNGIcon } from "@/ui/icons/PNGIcon";
 
 export const faq_content = [
@@ -55,3 +62,19 @@ export const advantages: {
 		icon: "bulb",
 	},
 ];
+
+export const sustainable: {
+	clarefication: Pick<ClarificationProps, "title" | "text">;
+	img: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile" | "alt">;
+} = {
+	clarefication: {
+		title: "Sustainable",
+		text: "At World Stock Exchange, we are committed to promoting sustainability in the financial sector.\n\nWe recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions",
+	},
+	img: {
+		desktop: windFarmDesktopJPG,
+		tablet: windFarmTabletJPG,
+		mobile: windFarmMobileJPG,
+		alt: "Sustainable",
+	},
+};

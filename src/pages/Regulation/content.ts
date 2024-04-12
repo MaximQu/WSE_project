@@ -1,3 +1,14 @@
+import {
+	papersDesktopJPG,
+	papersMobileJPG,
+	papersTabletJPG,
+	signatureDesktopJPG,
+	signatureMobileJPG,
+	signatureTabletJPG,
+} from "@/assets/img/jpg";
+import { ClarificationProps } from "@/components/Clarification/Clarification";
+import { AdaptiveImgProps } from "@/ui/AdaptiveImg/AdaptiveImg";
+
 export const clarification_content = [
 	{
 		title: "Regulatory Authority:",
@@ -65,3 +76,50 @@ export const comments = [
 		position: "Portfolio Manager",
 	},
 ];
+
+export const regulations: {
+	framework1: Pick<ClarificationProps, "title" | "text">;
+	framework2: Pick<ClarificationProps, "title" | "text">;
+	ourMission: Pick<ClarificationProps, "title" | "text">;
+	papersImg: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile" | "alt">;
+	signatureImg: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile" | "alt">;
+} = {
+	framework1: {
+		title: "Regulatory Framework",
+		text: "World Stock Exchange is authorized by the Guernsey Financial Services Commission to operate as an investment exchange in compliance with the Protection of Investors (Bailiwick of Guernsey)Law, 2020.",
+	},
+	framework2: {
+		title: "Regulatory Framework",
+		text: "At World Stock Exchange, we oversee the listing of securities and supervise our exchange members. We establish, enforce, and monitor compliance with our Listing Rules and Membership Rules, including Trading and Settlement Rules.\n\nThese regulations govern the behavior of issuers and members, ensuring integrity and transparency in our marketplace.",
+	},
+	ourMission: {
+		title: "Our Mission",
+		text: "Our mission at World Stock Exchange is to provide a robust and efficient platform for companies to list their securities, investors to trade with confidence, and stakeholders to engage with transparency.\n\nWe strive to cultivate a dynamic marketplace that fosters liquidity, fair pricing, and responsible investment practices, contributing to the long-term prosperity of businesses and communities worldwide.",
+	},
+	signatureImg: {
+		desktop: signatureDesktopJPG,
+		tablet: signatureTabletJPG,
+		mobile: signatureMobileJPG,
+		alt: "Sign up to your account",
+	},
+	papersImg: {
+		desktop: papersDesktopJPG,
+		tablet: papersTabletJPG,
+		mobile: papersMobileJPG,
+		alt: "Sign up to your account",
+	},
+};
+
+export const explanations: {
+	complaints: Pick<ClarificationProps, "title" | "text">;
+	howToSubmit: Pick<ClarificationProps, "title" | "subtitle">;
+} = {
+	complaints: {
+		title: "Complaints",
+		text: "At World Stock Exchange (WSE), we take all complaints seriously and conduct thorough investigations in accordance with our regulations.\n\nIf you have a complaint, please clearly indicate this in your correspondence and provide detailed information to assist our investigation process.",
+	},
+  howToSubmit: {
+    title: "How to Submit a Complaint",
+    subtitle: "To file a complaint regarding WSE, please follow these steps:"
+  }
+};
