@@ -1,22 +1,44 @@
 @use "@st/utils";
 
-.sendEmail {
-  header {
-    margin-bottom: 1.5rem;
-  }
+.hero {
+	header {
+		margin-bottom: 1.5rem;
+	}
+
+	.wrapper {
+		margin-bottom: clamp(2.5rem, 1.0211rem + 5.6338vw, 5rem);
+	}
+
+	.imgGroup {
+		display: flex;
+		gap: 1.25rem;
+
+    @media (width <= 768px) {
+      flex-direction: column;
+		}
+
+	}
 }
 
 .description {
-  .wrapper {
-    margin-inline: auto;
-    max-width: 37.5rem;
-  }
+	.wrapper {
+		margin-inline: auto;
+		max-width: 37.5rem;
+    p {
+      font-size: var(--fs-desct-tab-md);
+    }
+	}
 }
 
 .benefits {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 22.5rem);
-    gap: 5rem;
-  }
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: clamp(1.25rem, -0.9683rem + 8.4507vw, 5rem);
+
+    @media (width <=768px) {
+      grid-template-columns: 1fr;
+      place-items: center;
+		}
+	}
 }

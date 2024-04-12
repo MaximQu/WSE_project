@@ -8,11 +8,24 @@
 	margin-inline: auto;
 }
 
-.wrapper {
+.content {
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 	gap: 1.5rem;
 	width: 100%;
+
+	@media (width <= 480px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+  width: 100%;
 }
 
 .input {
@@ -32,13 +45,16 @@
 	&::placeholder {
 		opacity: 0.5;
 	}
+  @media (width <= 480px) {
+		max-width: 100%;
+	}
 }
 
 .subText {
 	font-size: 0.75rem;
-  line-height: 1.2;
+	line-height: 1.2;
 	font-weight: var(--fw-med);
-  margin-left: .3rem;
+	margin-left: 0.3rem;
 	color: var(--c-primary-600);
 
 	span {
@@ -47,5 +63,7 @@
 }
 
 .btn {
-  padding-block: 0.625rem;
+	@media (width <= 480px) {
+		max-width: 100%;
+	}
 }

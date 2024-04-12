@@ -18,7 +18,7 @@ const Sustainable = () => {
 					<Clarification
 						className={st.block}
 						theme="light"
-						{...sustainable.clarefication}
+						{...sustainable.clarification}
 					/>
 					<AdaptiveImg {...sustainable.img} className={st.img} />
 				</div>

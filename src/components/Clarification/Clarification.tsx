@@ -14,16 +14,16 @@ const Clarification: FC<ClarificationProps> = ({
 	title,
 	subtitle,
 	text,
-	className = '',
-	theme = 'dark',
+	className = "",
+	theme = "dark",
 	skewed = false,
 }) => {
 	return (
 		<div
 			className={`
-        ${st.clarification} 
-        ${theme === "light" ? st.light : ""} 
-        ${skewed ? st.skewed : ""} 
+        ${st.clarification}
+        ${theme === "light" ? st.light : ""}
+        ${skewed ? st.skewed : ""}
         ${className}
       `}
 		>

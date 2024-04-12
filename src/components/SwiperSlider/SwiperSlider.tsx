@@ -20,20 +20,19 @@ const SwiperSlider = () => {
 				>
 					<SwiperSlide className={st.slide}>
 						<div className={st.slideContent}>
-							<QuoteIcon />
+							<QuoteIcon className={st.quoteIcon} />
 							<q className={st.quote}>
 								Impressed by WSE's user-friendly platform and personalized
 								guidance. <br /> They've made investing in global markets
 								accessible and straightforward.
 							</q>
-							<QuoteIcon className={st.closeQuote} type="close" />
+							<QuoteIcon
+								className={`${st.quoteIcon} ${st.closeQuote}`}
+								type="close"
+							/>
 						</div>
 						<div className={st.author}>
-							<img
-								className={st.photo}
-								src={slide_1}
-								alt="Samuel Clark"
-							/>
+							<img className={st.photo} src={slide_1} alt="Samuel Clark" />
 							<span className={st.fullName}>Samuel Clark</span>
 							<span className={st.position}>Investment Advisor</span>
 						</div>
@@ -50,11 +49,7 @@ const SwiperSlider = () => {
 							<QuoteIcon className={st.closeQuote} type="close" />
 						</div>
 						<div className={st.author}>
-							<img
-								className={st.photo}
-								src={slide_2}
-								alt="Sarah Thompson"
-							/>
+							<img className={st.photo} src={slide_2} alt="Sarah Thompson" />
 							<span className={st.fullName}>Sarah Thompson</span>
 							<span className={st.position}>Financial Analyst</span>
 						</div>
@@ -71,11 +66,7 @@ const SwiperSlider = () => {
 							<QuoteIcon className={st.closeQuote} type="close" />
 						</div>
 						<div className={st.author}>
-							<img
-								className={st.photo}
-								src={slide_3}
-								alt="Michael Mcfarlane"
-							/>
+							<img className={st.photo} src={slide_3} alt="Michael Mcfarlane" />
 							<span className={st.fullName}>Michael Mcfarlane</span>
 							<span className={st.position}>Wealth Manager</span>
 						</div>

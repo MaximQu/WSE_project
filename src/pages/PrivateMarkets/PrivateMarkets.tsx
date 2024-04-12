@@ -25,7 +25,7 @@ const PrivateMarkets = () => {
 				/>
 			</UniversalSection>
 			<UniversalSection
-				className={st.explanationBlock}
+				className={st.explanation}
 				title="How Does It Work?"
 				subtitle="Entering the private markets with World Stock Exchange is straightforward and offers unique investment opportunities. Here's how it works."
 			>
@@ -82,10 +82,7 @@ const PrivateMarkets = () => {
 					slidesPerView={"auto"}
 					modules={[Pagination]}
 					spaceBetween={24}
-					// autoHeight={true}
 					pagination={{ clickable: true }}
-					// loop={false}
-					// grabCursor={true}
 				>
 					{slider_content.map((item) => (
 						<SwiperSlide className={st.slide} key={item.title}>
@@ -117,7 +114,7 @@ const PrivateMarkets = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons />
+				<MultipleButtons  className={st.block}/>
 			</UniversalSection>
 		</main>
 	);

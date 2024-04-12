@@ -9,12 +9,14 @@
 
 	.content {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 6rem;
 	}
 
 	.wrapper {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		gap: 3.75rem;
 	}
 
@@ -26,14 +28,21 @@
 
 	.block {
 		max-width: 30rem;
+		p {
+			font-size: var(--fs-desc-sm);
+		}
 	}
 }
 
 .clarificationGroup {
 	.wrapper {
 		display: grid;
-		grid-template-columns: 30rem 30rem;
-		gap: 5rem;
+		grid-template-columns: 1fr 1fr;
+		gap: clamp(2.5rem, 1.0211rem + 5.6338vw, 5rem)
+			clamp(2.5rem, -2.2324rem + 18.0282vw, 10.5rem);
+		@media (width <= 575px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.block {
@@ -42,6 +51,7 @@
 		h2 {
 			@extend .text-h3;
 		}
+
 		p {
 			@extend .text-sm;
 		}
@@ -52,17 +62,35 @@
 	.list {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		gap: 1rem;
+		gap: 1.5rem;
+
+		@media (width <= 991px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (width <= 575px) {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 
 .explanation {
 	padding-bottom: 3.125rem;
+
 	.wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
+		gap: 3rem;
+		@media (width <= 768px) {
+			grid-template-columns: 1fr;
+		}
 	}
+
+	.block {
+		@media (width <= 768px) {
+		}
+	}
+
 	.item {
 		@extend .text-md;
 		display: list-item;

@@ -25,7 +25,7 @@ const CompanyProfile = () => {
 						title={hero.title}
 						text={hero.text}
 					/>
-					<img src={puzzleSVG} alt="Mission of WSE" />
+					<img className={st.img} src={puzzleSVG} alt="Mission of WSE" />
 				</div>
 			</UniversalSection>
 			<UniversalSection
