@@ -74,7 +74,7 @@ const Sustainable = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons />
+				<MultipleButtons  className={st.block}/>
 			</UniversalSection>
 		</main>
 	);

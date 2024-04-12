@@ -50,15 +50,15 @@ const Home = () => {
 				</div>
 			</UniversalSection>
 			<TickerTapeWidget />
-			<UniversalSection className={st.transform} theme="light">
+			<UniversalSection className={st.transformation} theme="light">
 				<div className={st.wrapper}>
 					<Clarification
 						className={st.block}
 						theme="light"
 						title="Transform your idea into reality"
-						text1="Discover the Difference with WSE. &nbsp; &nbsp; Create your account!"
+						text1="Discover the Difference with WSE. Create your account!"
 					/>
-					<MultipleButtons adjustment="right " />
+					<MultipleButtons />
 				</div>
 			</UniversalSection>
 		</main>

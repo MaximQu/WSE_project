@@ -1,5 +1,32 @@
 @use "@st/utils";
 
+.greetings {
+	display: flex;
+	flex-direction: column;
+
+	header {
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+
+	h2 {
+		@extend .text-h2;
+		text-align: left;
+		margin-bottom: 2.5rem;
+		margin-right: auto;
+		max-width: 27rem;
+	}
+
+	p {
+		text-align: left;
+		align-items: center;
+		margin-inline: auto;
+		font-size: var(--fs-desc-md);
+		padding-left: 2.5rem;
+		max-width: 42rem;
+	}
+}
+
 .explanationBlock {
 	.layout {
 		display: flex;
@@ -22,8 +49,7 @@
 		@extend .text-h2;
 	}
 	.list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		@extend .six-pack-grid;
 		gap: 3.75rem 1.5rem;
 	}
 
@@ -32,12 +58,13 @@
 		background-color: var(--c-primary-100);
 		border-radius: 0.375rem;
 		position: relative;
+		box-shadow: var(--shadow);
 
 		&::before {
-      @extend .text-h4;
+			@extend .text-h4;
 			content: attr(data-count);
 			position: absolute;
-			top: -24px;
+			top: -30px;
 			left: 0;
 			right: 0;
 			margin: auto;
@@ -54,37 +81,53 @@
 	}
 
 	.heading {
-		@extend .text-h4;
+		font-size: var(--fs-desc-md);
+		line-height: 1.35;
 		margin-bottom: 1.5rem;
 		color: var(--c-primary-800);
 		text-align: center;
 	}
 
 	.text {
-    @extend .text-sm;
+		font-size: var(--fs-desc-sm);
+		line-height: 1.35;
+		font-weight: var(--fw-med);
 		color: var(--c-primary-600);
 	}
 }
 
-.swiper {
-	.slide {
-		display: flex;
-		flex-direction: column;
-		padding: 1.5rem;
-		width: 100%;
-		background-color: var(--c-primary-700);
-		border-radius: 0.375rem;
+.slider {
+	@media (width <= 480px) {
+		display: none;
+	}
+	.swiper {
+		.slide {
+			display: flex;
+			flex-direction: column;
+			padding: 1.5rem;
+			width: 100%;
+			background-color: var(--c-primary-700);
+			border-radius: 0.375rem;
+			max-width: 22.5rem;
+			height: auto;
 
-		.block {
-			h2 {
-				@extend .text-h3;
+			.block {
+				margin-bottom: auto;
+				h2 {
+					@extend .text-h3;
+				}
+
+				p {
+					font-size: var(--fs-desc-md);
+				}
 			}
 		}
-	}
 
-	.img {
-		margin-bottom: 2.125rem;
-		border-radius: 0.1875rem;
+		.img {
+			margin-bottom: 2.125rem;
+			border-radius: 0.1875rem;
+			height: unset;
+		}
 	}
 }
 

@@ -60,7 +60,7 @@ const Trade = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons adjustment="center" />
+				<MultipleButtons className={st.block}/>
 			</UniversalSection>
 		</main>
 	);

@@ -5,24 +5,20 @@ import st from "./styles.module.scss";
 type MultipleButtonsProps = {
 	firstBtnText?: string;
 	secondBtnText?: string;
-	adjustment?: "center" | "right ";
+  className?: string;
 };
 
 const MultipleButtons: FC<MultipleButtonsProps> = ({
 	firstBtnText = "Register account",
 	secondBtnText = "Learn more",
-	adjustment = 'center',
+  className
 }) => {
 	return (
-		<div
-			className={`${st.block} ${
-				adjustment === "center" ? st.center : st.right
-			}`}
-		>
-			<ButtonOrLink as="a" to="/auth/sign-up">
+		<div className={`${st.block} ${className}`}>
+			<ButtonOrLink className={st.btn} as="a" to="/auth/sign-up">
 				{firstBtnText}
 			</ButtonOrLink>
-			<ButtonOrLink as="a" to="/" styleType="frame">
+			<ButtonOrLink className={st.btn} as="a" to="/" styleType="frame">
 				{secondBtnText}
 			</ButtonOrLink>
 		</div>
