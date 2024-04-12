@@ -5,12 +5,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	@media (width <=768px) {
+		.wrapper {
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
 	}
 
 	.block {
 		max-width: 30rem;
 	}
 	.img {
+		margin-left: auto;
 		max-width: 30rem;
 	}
 }
@@ -37,12 +47,37 @@
 	}
 }
 
-.transform {
+.transformation {
 	.wrapper {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+    gap: 1rem;
+
+		@media (width <=768px) {
+			flex-direction: column;
+			text-align: center;
+			gap: clamp(1rem, -0.2069rem + 4.5977vw, 2rem);
+		}
 	}
+
 	.block {
 		max-width: 24rem;
+
+		@media (width <=768px) {
+			text-align: center;
+		}
+
+		p {
+			max-width: 19rem;
+
+			@media (width <=768px) {
+				margin-inline: auto;
+			}
+
+			@media (width <=480px) {
+				max-width: 15rem;
+			}
+		}
 	}
 }
