@@ -1,4 +1,4 @@
-import { Clarification } from "@/components";
+import { Clarification, UniversalSection } from "@/components";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
 import {
 	RealTimeChartWidget,
