@@ -1,8 +1,42 @@
 @use "@st/utils";
 
+.clarificationGroup {
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+
+    @media(width <= 768px) {
+      grid-template-columns: 1fr;
+    }
+	}
+
+	.firstBlock,
+	.secondBlock,
+	.thirdBlock {
+		p:last-of-type {
+			font-size: var(--fs-desc-sm);
+		}
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+    h2 {
+      font-size: var(--fs-desct-tab-h3);
+    }
+	}
+}
+
 .contacts {
 	.wrapper {
-    flex-direction: row;
+		flex-direction: row;
+
+    @media(width <= 768px) {
+      flex-direction: column;
+    }
 	}
 }
 

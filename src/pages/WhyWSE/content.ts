@@ -1,4 +1,5 @@
 import { ClarificationProps } from "@/components/Clarification/Clarification";
+import { TPNGIcon } from "@/ui/icons/PNGIcon";
 
 export const stats = [
 	{
@@ -19,7 +20,34 @@ export const stats = [
 	},
 ];
 
-export const explanations: Pick<ClarificationProps, 'subtitle' | 'text'>[] =  [
+export const advantages: {
+	title: string;
+	text: string;
+	icon: TPNGIcon;
+}[] = [
+	{
+		title: "Global Access",
+		text: "WSE offers access to diverse private market opportunities worldwide. Whether you're interested in startups, established companies, or real estate, our platform provides curated options to suit your preferences.",
+		icon: "globe",
+	},
+	{
+		title: "Innovative Technology",
+		text: "WSE utilizes cutting-edge technology for a seamless investment experience. Our user-friendly platform simplifies exploration, research, and investment in private markets, ensuring efficiency and ease.",
+		icon: "bulb",
+	},
+	{
+		title: "Expert Guidance",
+		text: "Our experienced professionals offer personalized support throughout your investment journey. From selecting opportunities to navigating the process, we're here to help you make informed decisions and maximize returns.",
+		icon: "education",
+	},
+	{
+		title: "Transparency and Security",
+		text: "At WSE, we prioritize transparency and security. Adhering to strict regulatory standards, we employ robust measures to safeguard your investments and personal information, offering peace of mind as you invest.",
+		icon: "security",
+	},
+];
+
+export const explanations: Pick<ClarificationProps, "subtitle" | "text">[] = [
 	{
 		subtitle: "Comprehensive Network",
 		text: "With a vast and diverse network spanning across various financial sectors, WSE offers unparalleled access to investment opportunities. Our global reach enables investors to explore a wide array of ventures, from traditional stocks to innovative assets.",

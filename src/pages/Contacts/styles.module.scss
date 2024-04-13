@@ -2,20 +2,28 @@
 
 .contact {
 	.content {
-		// grid-template-columns: repeat(auto-fit, minmax(360px, 620px));
 		display: grid;
-		grid-template-columns: 360px min(100%, 620px);
-		justify-content: center;
+		grid-template-columns: minmax(min(300px, 100%), 360px) minmax(
+				min(360px, 100%),
+				620px
+			);
+		justify-content: space-between;
 		grid-template-rows: 1fr;
 		gap: 1rem;
 
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(2, 1fr);
 		}
 	}
 
+	.list {
+		max-width: 22.5rem;
+		width: 100%;
+		margin-inline: auto;
+	}
+
 	.img {
-		// max-width: 41.875rem;
+		place-self: center;
+    max-width: 41.875rem;
 	}
 }
