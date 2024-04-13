@@ -8,7 +8,7 @@ const Contacts = () => {
 		<main>
 			<UniversalSection theme="light" className={st.contact} title="Contacts">
 				<div className={st.content}>
-					<ContactInfo />
+					<ContactInfo className={st.list} />
 					<img className={st.img} src={contactsSVG} alt="Contact" />
 				</div>
 			</UniversalSection>

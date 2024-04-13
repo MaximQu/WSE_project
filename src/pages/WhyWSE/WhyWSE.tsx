@@ -1,19 +1,39 @@
 import { highFiveSVG } from "@/assets/img/svg";
-import { Clarification, Stat } from "@/components";
+import { Advantage, Clarification, Stat } from "@/components";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { ButtonOrLink } from "@/ui";
-import { explanations, stats } from "./content";
+import { AdaptiveImg, ButtonOrLink } from "@/ui";
+import { advantages, explanations, stats } from "./content";
 import st from "./styles.module.scss";
+import {
+	laptopDesktopJPG,
+	laptopMobileJPG,
+	laptopTabletJPG,
+} from "@/assets/img/jpg";
 
 const WhyWSE = () => {
 	return (
 		<main>
 			<UniversalSection>
 				<Clarification
-        skewed
+					skewed
 					title="Why WSE?"
 					text={`At WSE, we pride ourselves on offering a comprehensive platform designed to unlock exclusive investment opportunities and empower investors to achieve their financial goals.\n\nHere are just a few reasons why you should choose WSE:`}
 				/>
+			</UniversalSection>
+			<UniversalSection className={st.advantagesBlock}>
+				<div className={st.layout}>
+					{advantages.map((advantage) => (
+						<Advantage data={advantage} key={advantage.title} />
+					))}
+					<AdaptiveImg
+						desktop={laptopDesktopJPG}
+						tablet={laptopTabletJPG}
+						mobile={laptopMobileJPG}
+						alt={"Why WSE?"}
+						switchToTabletWidth={885}
+						className={st.img}
+					/>
+				</div>
 			</UniversalSection>
 			<UniversalSection
 				theme="light"
@@ -45,7 +65,12 @@ const WhyWSE = () => {
 				<div className={st.content}>
 					<div className={st.wrapper}>
 						{explanations.map((item) => (
-							<Clarification className={st.block} theme="light" key={item.subtitle} {...item} />
+							<Clarification
+								className={st.block}
+								theme="light"
+								key={item.subtitle}
+								{...item}
+							/>
 						))}
 					</div>
 					<img className={st.img} src={highFiveSVG} alt="Our strength" />

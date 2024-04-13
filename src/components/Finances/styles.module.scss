@@ -1,0 +1,16 @@
+@use "@st/utils";
+
+.finances {
+  display: grid;
+}
+
+.title {
+	@extend .text-h3;
+	color: var(--_color-title);
+  margin-bottom: .75rem;
+}
+
+.text {
+	@extend .text-md;
+	color: var(--_color-text);
+}

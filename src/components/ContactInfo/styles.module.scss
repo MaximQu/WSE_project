@@ -42,5 +42,7 @@
 }
 
 .value {
+  display: block;
   color: var(--c-primary-600);
+  font-size: var(--fs-desc-h4);
 }
