@@ -1,16 +1,39 @@
 @use "@st/utils";
 
 .finances {
-  display: grid;
+	display: grid;
+	grid-template-columns: repeat(2, 16.5625rem);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1.5rem;
+	grid-auto-flow: row;
+
+	&.threeEl {
+		& > *:nth-of-type(2) {
+			grid-row: 1 / 3;
+			grid-column: 2;
+			align-self: center;
+
+			@media (width <= 575px) {
+				grid-row: unset;
+				grid-column: unset;
+			}
+		}
+	}
+	@media (width <= 768) {
+    grid-template-rows: 1fr;
+	}
+	@media (width <= 575px) {
+    grid-template-columns: 1fr;
+	}
 }
 
 .title {
-	@extend .text-h3;
+	@extend .text-h4;
 	color: var(--_color-title);
-  margin-bottom: .75rem;
+	margin-bottom: 0.75rem;
 }
 
 .text {
-	@extend .text-md;
+	@extend .text-sm;
 	color: var(--_color-text);
 }

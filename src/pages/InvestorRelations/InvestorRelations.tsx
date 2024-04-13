@@ -45,11 +45,19 @@ const InvestorRelations = () => {
 			<UniversalSection>
 				<RealTimeChartWidget />
 			</UniversalSection>
-			<UniversalSection theme="light" title="Financial performance">
+			<UniversalSection
+				className={st.finances}
+				theme="light"
+				title="Financial performance"
+			>
 				<div className={st.content}>
 					<div className={st.wrapper}>
-						<Finances data={financesGroup.highlights} />
+						<div className={st.heading}>
+							<h3 className={st.title}>Key financial highlights</h3>
+							<Finances data={financesGroup.highlights} />
+						</div>
 						<AdaptiveImg
+							className={st.img}
 							desktop={statsDesktopJPG}
 							tablet={statsTabletJPG}
 							mobile={statsMobileJPG}
@@ -57,15 +65,23 @@ const InvestorRelations = () => {
 					</div>
 					<div className={st.wrapper}>
 						<AdaptiveImg
+							className={st.img}
 							desktop={moneyDesktopJPG}
 							tablet={moneyTabletJPG}
 							mobile={moneyMobileJPG}
 						/>
-						<Finances data={financesGroup.statements} />
+						<div className={st.heading}>
+							<h3 className={st.title}>Financial Statements:</h3>
+							<Finances data={financesGroup.statements} grid="three" />
+						</div>
 					</div>
 					<div className={st.wrapper}>
-						<Finances data={financesGroup.reports} />
+						<div className={st.heading}>
+							<h3 className={st.title}>Quarterly and Annual Reports:</h3>
+							<Finances data={financesGroup.reports} />
+						</div>
 						<AdaptiveImg
+							className={st.img}
 							desktop={chartDesktopJPG}
 							tablet={chartTabletJPG}
 							mobile={chartMobileJPG}

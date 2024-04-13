@@ -6,31 +6,21 @@ type FinancesProps = {
 		title: string;
 		text: string;
 	}[];
-	styleType?: "column" | "row";
-	theme?: "light" | "dark";
+	grid?: "three"
 	className?: string;
 };
 
-const Finances: FC<FinancesProps> = ({
-	data,
-	styleType = "column",
-	theme = "dark",
-	className,
-}) => {
+
+const Finances: FC<FinancesProps> = ({ data, grid, className }) => {
+	const styles = `${st.finances} ${grid === 'three' ? st.threeEl : ''} ${className}`;
 	return (
-		<div
-			className={`${st.finances} ${styleType === "row" ? st.row : ""} ${
-				theme === "light" ? st.light : ""
-			} ${className}`}
-		>
-      {
-        data.map(item => (
-          <div className={st.block}>
-            <h3 className={st.title}>{item.title}</h3>
-            <p className={st.text}>{item.text}</p>
-          </div>
-        ))
-      }
+		<div className={styles}>
+			{data.map((item) => (
+				<div key={item.title} className={st.block}>
+					<h3 className={st.title}>{item.title}</h3>
+					<p className={st.text}>{item.text}</p>
+				</div>
+			))}
 		</div>
 	);
 };
