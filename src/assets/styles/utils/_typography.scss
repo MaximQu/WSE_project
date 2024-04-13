@@ -60,6 +60,12 @@
     line-height: 1.2;
   }
 
+  @media (width <= 480px) {
+    &-h3 {
+      line-height: 1.4;
+    }
+  }
+
   &-h4 {
     line-height: 1.3;
   }

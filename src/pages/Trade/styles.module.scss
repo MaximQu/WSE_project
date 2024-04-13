@@ -1,25 +1,30 @@
 @use "@st/utils";
+@use "@st/mix" as *;
 
 .wseDescription {
-	.content {
-		display: flex;
+  .content {
+    display: flex;
     align-items: flex-start;
-		gap: clamp(1.5rem, -1.162rem + 10.1408vw, 6rem);
+    gap: clamp(1.5rem, -1.162rem + 10.1408vw, 6rem);
 
     @media (width <=768px) {
       flex-direction: column;
-		}
-	}
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: clamp(1.5rem, -0.5704rem + 7.8873vw, 5rem);
-	}
+    }
+  }
 
-	.block {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, -0.5704rem + 7.8873vw, 5rem);
+  }
+
+  .block {
     max-width: 34.5rem;
+    gap: 1.25rem;
+
     @media (width <=768px) {
       max-width: 100%;
+
       h2 {
         max-width: 34.5rem;
       }
@@ -36,13 +41,13 @@
 }
 
 .tickerTapeWidget {
-	padding-top: 0;
+  padding-top: 0;
 }
 
 .account {
-	header {
-		margin-bottom: 1.5rem;
-	}
+  header {
+    margin-bottom: 1.5rem;
+  }
 
   .block {
     justify-content: center;
