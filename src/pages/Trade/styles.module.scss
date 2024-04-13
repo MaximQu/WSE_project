@@ -23,8 +23,16 @@
       h2 {
         max-width: 34.5rem;
       }
-		}
-	}
+    }
+  }
+}
+
+.testimonialsBlock {
+  padding-top: clamp(2.1875rem, -1.1274rem + 6.9061vw, 3.75rem);
+
+  @media (width <=768px) {
+    @include adaptiveValue('padding-top', 35, 60, 768, 480)
+  }
 }
 
 .tickerTapeWidget {

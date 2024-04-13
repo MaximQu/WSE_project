@@ -34,7 +34,9 @@ const Trade = () => {
 				</div>
 			</UniversalSection>
 			<TickerTapeWidget className={st.tickerTapeWidget} />
-			<SwiperSlider />
+			<UniversalSection className={st.testimonialsBlock}>
+				<TestimonialSlider />
+			</UniversalSection>
 			<UniversalSection theme="light">
 				<RealTimeChartWidget />
 			</UniversalSection>
