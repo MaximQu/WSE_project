@@ -1,6 +1,5 @@
 import st from "./styles.module.scss";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
-import { Advantage, Clarification, Dropdown } from "@/components";
+import { Advantage, Clarification, Dropdown, UniversalSection } from "@/components";
 import {
 	solarPanelFieldDesktopJPG,
 	solarPanelFieldMobileJPG,

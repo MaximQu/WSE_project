@@ -1,5 +1,4 @@
-import { Advantage, Clarification, EmailForm } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Advantage, Clarification, EmailForm, UniversalSection } from "@/components";
 import { AdaptiveImg } from "@/ui";
 import { benefits, hero, statement } from "./content";
 import st from "./styles.module.scss";

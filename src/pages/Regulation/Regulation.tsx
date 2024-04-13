@@ -1,5 +1,4 @@
-import { Clarification, Comment, EmailForm } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Clarification, Comment, EmailForm, UniversalSection } from "@/components";
 import { AdaptiveImg } from "@/ui";
 import {
 	clarification_content,

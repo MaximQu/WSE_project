@@ -17,7 +17,7 @@ const TestimonialSlider = () => {
 			grabCursor={true}
 		>
 			{testimonials.map((testimonial) => (
-				<SwiperSlide className={st.slide}>
+				<SwiperSlide className={st.slide} key={testimonial.quote}>
 					<blockquote className={st.testimonial}>
 						<QuoteIcon className={st.quoteIcon} />
 						<q className={st.quote}>{testimonial.quote}</q>

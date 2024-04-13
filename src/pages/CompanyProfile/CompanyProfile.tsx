@@ -4,8 +4,7 @@ import {
 	successTabletJPG,
 } from "@/assets/img/jpg";
 import { puzzleSVG } from "@/assets/img/svg";
-import { Advantage, Clarification } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Advantage, Clarification, UniversalSection } from "@/components";
 import { AdaptiveImg } from "@/ui";
 import { company_values, hero, history } from "./content";
 import st from "./styles.module.scss";
