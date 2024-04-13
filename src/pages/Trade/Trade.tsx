@@ -1,6 +1,4 @@
-import { Clarification } from "@/components";
-import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Clarification, TestimonialSlider, UniversalSection } from "@/components";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
 import {
 	RealTimeChartWidget,

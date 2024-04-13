@@ -1,5 +1,4 @@
-import { Clarification, ContactInfo, Finances } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Clarification, ContactInfo, Finances, UniversalSection } from "@/components";
 import { AdaptiveImg, ButtonOrLink } from "@/ui";
 import { RealTimeChartWidget } from "@/ui/Widgets/TradingViewWidgets";
 import st from "./styles.module.scss";

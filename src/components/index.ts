@@ -11,5 +11,5 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as Hero } from "./Hero/Hero";
 export { default as Stat } from "./Stat/Stat";
-export { default as SwiperSlider } from "./SwiperSlider/SwiperSlider";
-
+export { default as TestimonialSlider } from "./TestimonialSlider/TestimonialSlider";
+export { default as UniversalSection } from "./UniversalSection/UniversalSection";

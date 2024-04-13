@@ -1,5 +1,4 @@
-import { CorporateInfoBlock } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { CorporateInfoBlock, UniversalSection } from "@/components";
 import { content } from "./content";
 
 const LegalDisclaimer = () => {

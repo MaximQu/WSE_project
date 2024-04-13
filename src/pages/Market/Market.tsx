@@ -1,5 +1,4 @@
-import { Clarification, Dropdown } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Clarification, Dropdown, UniversalSection } from "@/components";
 import { AdaptiveImg, ButtonOrLink } from "@/ui";
 import {
 	ScreenerWidget,

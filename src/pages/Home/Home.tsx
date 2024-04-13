@@ -1,5 +1,4 @@
-import { Advantage, Clarification, Hero, Stat } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Advantage, Clarification, Hero, Stat, UniversalSection } from "@/components";
 import { MultipleButtons } from "@/ui";
 import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
 import { advantages, confidence, stats, transformation } from "./content";

@@ -1,6 +1,5 @@
 import { highFiveSVG } from "@/assets/img/svg";
-import { Advantage, Clarification, Stat } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Advantage, Clarification, Stat, UniversalSection } from "@/components";
 import { AdaptiveImg, ButtonOrLink } from "@/ui";
 import { advantages, explanations, stats } from "./content";
 import st from "./styles.module.scss";

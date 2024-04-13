@@ -3,8 +3,7 @@ import {
 	smartphoneMobileJPG,
 	smartphoneTabletJPG,
 } from "@/assets/img/jpg";
-import { Clarification, Dropdown } from "@/components";
-import UniversalSection from "@/components/UniversalSection/UniversalSection";
+import { Clarification, Dropdown, UniversalSection } from "@/components";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
