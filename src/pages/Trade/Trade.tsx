@@ -1,12 +1,13 @@
-import { Clarification, SwiperSlider } from "@/components";
+import { Clarification } from "@/components";
+import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider";
 import UniversalSection from "@/components/UniversalSection/UniversalSection";
 import { AdaptiveImg, MultipleButtons } from "@/ui";
 import {
 	RealTimeChartWidget,
 	TickerTapeWidget,
 } from "@/ui/Widgets/TradingViewWidgets";
-import st from "./styles.module.scss";
 import { wseDescription } from "./content";
+import st from "./styles.module.scss";
 
 const Trade = () => {
 	return (
@@ -34,7 +35,9 @@ const Trade = () => {
 				</div>
 			</UniversalSection>
 			<TickerTapeWidget className={st.tickerTapeWidget} />
-			<SwiperSlider />
+			<UniversalSection className={st.testimonialsBlock}>
+				<TestimonialSlider />
+			</UniversalSection>
 			<UniversalSection theme="light">
 				<RealTimeChartWidget />
 			</UniversalSection>

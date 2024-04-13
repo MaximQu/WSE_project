@@ -14,6 +14,12 @@ section {
   padding-block: clamp(4.375rem, 3.3654rem + 3.8462vw, 6.25rem);
 }
 
+.testimonial-slider {
+  .swiper-pagination {
+    bottom: 0;
+  }
+}
+
 .swiper-pagination {
 	display: flex;
 	justify-content: center;

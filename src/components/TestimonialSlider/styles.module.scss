@@ -1,0 +1,96 @@
+@use "@st/utils";
+@use "@st/mix" as *;
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, -1.3867rem + 4.9724vw, 2.125rem);
+  align-items: center;
+  padding-bottom: 1.75rem;
+
+  @media (width <=768px) {
+    gap: clamp(0rem, -1.2069rem + 4.5977vw, 1rem);
+  }
+
+  height: auto;
+}
+
+.testimonial {
+  text-align: center;
+  position: relative;
+  padding-inline: clamp(2.9375rem, -3.6923rem + 13.8122vw, 6.0625rem);
+  @include adaptiveValue('padding-top', 40, 65, 1130, 768);
+  @include adaptiveValue('padding-bottom', 78, 44, 1130, 768);
+
+  @media (width <=768px) {
+    padding-inline: clamp(1rem, -1.2292rem + 8.6806vw, 2.9375rem);
+    @include adaptiveValue('padding-top', 65, 40, 768, 480);
+    @include adaptiveValue('padding-bottom', 44, 72, 768, 480);
+  }
+}
+
+.quoteIcon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: clamp(5rem, 3.9392rem + 2.2099vw, 5.5rem);
+  height: clamp(3.375rem, 2.5794rem + 1.6575vw, 3.75rem);
+
+  @media (width <=768px) {
+    width: clamp(3.125rem, 0rem + 10.4167vw, 5rem);
+    height: clamp(2.125rem, 0.0417rem + 6.9444vw, 3.375rem);
+  }
+
+  &.closeQuote {
+    left: unset;
+    top: unset;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+.quote {
+  @extend .text-h2;
+  text-align: center;
+  white-space: pre-line;
+
+  @media (width <=480px) {
+    font-size: var(--fs-mob-h3);
+    font-weight: var(--fw-semi);
+  }
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  max-width: 5rem;
+  max-height: 5rem;
+  border-radius: 100%;
+}
+
+.authorInfo {
+  text-align: center;
+
+  h3 {
+    @extend .text-h3;
+    margin-bottom: 4px;
+  }
+
+  p {
+    @extend.text-md;
+    color: var(--c-primary-300);
+  }
+}

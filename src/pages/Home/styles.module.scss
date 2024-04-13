@@ -18,6 +18,7 @@
 
 	.block {
 		max-width: 30rem;
+    gap: 1.5rem;
 	}
 	.img {
 		margin-left: auto;
@@ -44,6 +45,10 @@
 
 	.layout {
 		@extend .six-pack-grid;
+
+    > * {
+      padding: 1.5rem;
+    }
 	}
 }
 

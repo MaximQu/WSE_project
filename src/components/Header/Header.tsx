@@ -31,6 +31,9 @@ const Header: FC<HeaderProps> = ({ theme }) => {
 
 	useEffect(() => {
     setIsBurgerOpen(false)
+    document.documentElement.style.scrollBehavior = 'unset'
+    document.documentElement.scrollTo(0,0)
+    document.documentElement.style.scrollBehavior = 'smooth'
 	}, [location]);
 
 	useEffect(() => {
