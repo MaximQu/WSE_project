@@ -84,7 +84,7 @@ export const RealTimeChartWidget = ({
 			hide_side_toolbar
 			interval="D"
 			withdateranges={false}
-			autosize
+			// autosize
 			width={"100%"}
 			height={"100%"}
 		/>
@@ -93,4 +93,4 @@ export const RealTimeChartWidget = ({
 export const SymbolInfoWidget = ({symbol}: {symbol?: string}) => (
 	<SymbolInfo copyrightStyles={styles} symbol={symbol} autosize />
 );
-export const ScreenerWidget = () => <Screener copyrightStyles={styles} />;
+export const ScreenerWidget = () => <Screener copyrightStyles={styles} autosize/>;
