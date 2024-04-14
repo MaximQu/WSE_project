@@ -19,9 +19,11 @@
 			}
 		}
 	}
+  
 	@media (width <= 768) {
     grid-template-rows: 1fr;
 	}
+
 	@media (width <= 575px) {
     grid-template-columns: 1fr;
 	}

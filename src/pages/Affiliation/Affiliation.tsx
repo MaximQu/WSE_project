@@ -28,7 +28,7 @@ const Affiliation = () => {
 				<EmailForm />
 			</UniversalSection>
 			<UniversalSection className={st.description}>
-				<Clarification className={st.wrapper} text={statement} />
+				<Clarification className={st.block} text={statement} />
 			</UniversalSection>
 			<UniversalSection
 				theme="light"

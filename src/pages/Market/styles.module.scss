@@ -12,12 +12,14 @@
 .offer {
   .wrapper {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
   }
 
   .block {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1.25rem;
     max-width: 22.5rem;
     width: 100%;
@@ -50,7 +52,6 @@
 .investments {
   .layout {
     @extend .six-pack-grid;
-    gap: 1rem;
   }
 }
 
