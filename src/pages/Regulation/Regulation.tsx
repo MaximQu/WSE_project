@@ -22,22 +22,45 @@ const Regulation = () => {
 				title="Regulations"
 			>
 				<div className={st.content}>
-					<div className={st.wrapper}>
+					<div className={`${st.wrapper} ${st.blockFirst}`}>
 						<Clarification
-							clarificationClass={st.block}
+							clarificationClass={`${st.block} `}
+							titleClass={st.title}
+							textClass={st.text}
 							theme="light"
 							{...regulations.framework1}
 						/>
 						<Clarification
+							titleClass={st.title}
+							textClass={st.text}
 							clarificationClass={st.block}
 							theme="light"
 							{...regulations.framework2}
 						/>
 					</div>
-					<AdaptiveImg className={st.img} {...regulations.papersImg} />
-					<AdaptiveImg className={st.img} {...regulations.signatureImg} />
-					<div className={st.wrapper}>
+					<AdaptiveImg
+						className={`${st.img} ${st.blockSecond}`}
+						{...regulations.papersImg}
+						switchToTabletWidth={768}
+						switchToMobileWidth={420}
+					/>
+					<AdaptiveImg
+						className={`${st.img} ${st.blockThird}`}
+						{...regulations.signatureImg}
+						switchToTabletWidth={768}
+						switchToMobileWidth={420}
+					/>
+					<div className={`${st.wrapper} ${st.blockFour}`}>
 						<Clarification
+							titleClass={st.title}
+							textClass={st.text}
+							clarificationClass={st.block}
+							theme="light"
+							{...regulations.ourPurpose}
+						/>
+						<Clarification
+							titleClass={st.title}
+							textClass={st.text}
 							clarificationClass={st.block}
 							theme="light"
 							{...regulations.ourMission}
@@ -53,6 +76,8 @@ const Regulation = () => {
 							key={item.title}
 							clarificationClass={st.block}
 							title={item.title}
+							titleClass={st.title}
+							textClass={st.text}
 							text={item.text}
 						/>
 					))}
@@ -75,6 +100,7 @@ const Regulation = () => {
 					<div className={st.wrapper}>
 						<Clarification
 							clarificationClass={st.block}
+							subtitleClass={st.subtitle}
 							theme="light"
 							{...explanations.howToSubmit}
 						/>

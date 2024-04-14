@@ -23,7 +23,11 @@ const CompanyProfile = () => {
 						clarificationClass={st.block}
 						theme="light"
 						title={hero.title}
+            subtitle={hero.subtitle}
 						text={hero.text}
+						titleClass={st.title}
+						subtitleClass={st.subTitle}
+						textClass={st.text}
 					/>
 					<img className={st.img} src={puzzleSVG} alt="Mission of WSE" />
 				</div>
@@ -39,13 +43,16 @@ const CompanyProfile = () => {
 						theme="light"
 						subtitle={history.subtitle}
 						text={history.text}
+            titleClass={st.title}
+						subtitleClass={st.subTitle}
+						textClass={st.text}
 					/>
 					<AdaptiveImg className={st.img} {...history.img} />
 				</div>
 			</UniversalSection>
-      <UniversalSection className={st.historyTimeline}>
-        <HistoryTimeline />
-      </UniversalSection>
+			<UniversalSection className={st.historyTimeline}>
+				<HistoryTimeline />
+			</UniversalSection>
 			<UniversalSection
 				theme="light"
 				className={st.values}

@@ -81,6 +81,7 @@ export const regulations: {
 	framework1: Pick<ClarificationProps, "title" | "text">;
 	framework2: Pick<ClarificationProps, "title" | "text">;
 	ourMission: Pick<ClarificationProps, "title" | "text">;
+	ourPurpose: Pick<ClarificationProps, "title" | "text">;
 	papersImg: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile" | "alt">;
 	signatureImg: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile" | "alt">;
 } = {
@@ -91,6 +92,10 @@ export const regulations: {
 	framework2: {
 		title: "Regulatory Framework",
 		text: "At World Stock Exchange, we oversee the listing of securities and supervise our exchange members. We establish, enforce, and monitor compliance with our Listing Rules and Membership Rules, including Trading and Settlement Rules.\n\nThese regulations govern the behavior of issuers and members, ensuring integrity and transparency in our marketplace.",
+	},
+	ourPurpose: {
+		title: "Our Purpose",
+		text: "At World Stock Exchange, our purpose is to facilitate global access to capital markets, empowering businesses to raise funds, investors to diversify their portfolios, and economies to thrive. We are committed to fostering transparency, integrity, and innovation in the financial industry, driving sustainable growth and creating value for all stakeholders.",
 	},
 	ourMission: {
 		title: "Our Mission",
@@ -116,10 +121,10 @@ export const explanations: {
 } = {
 	complaints: {
 		title: "Complaints",
-		text: "At World Stock Exchange (WSE), we take all complaints seriously and conduct thorough investigations in accordance with our regulations.\n\nIf you have a complaint, please clearly indicate this in your correspondence and provide detailed information to assist our investigation process.",
+		text: "At World Stock Exchange (WSE), we take all complaints seriously and conduct thorough investigations in accordance with our regulations.\nIf you have a complaint, please clearly indicate this in your correspondence and provide detailed information to assist our investigation process.",
 	},
-  howToSubmit: {
-    title: "How to Submit a Complaint",
-    subtitle: "To file a complaint regarding WSE, please follow these steps:"
-  }
+	howToSubmit: {
+		title: "How to Submit a Complaint",
+		subtitle: "To file a complaint regarding WSE, please follow these steps:",
+	},
 };

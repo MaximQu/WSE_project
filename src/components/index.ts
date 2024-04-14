@@ -10,6 +10,9 @@ export { default as Finances } from "./Finances/Finances";
 export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as Hero } from "./Hero/Hero";
+export { default as HistoryTimeline } from "./HistoryTimeline/HistoryTimeline";
 export { default as Stat } from "./Stat/Stat";
+export { default as StepByStep } from "./StepByStep/StepByStep";
 export { default as TestimonialSlider } from "./TestimonialSlider/TestimonialSlider";
 export { default as UniversalSection } from "./UniversalSection/UniversalSection";
+

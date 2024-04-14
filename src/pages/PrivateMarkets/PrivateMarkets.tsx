@@ -23,7 +23,7 @@ const PrivateMarkets = () => {
 			<UniversalSection theme="light">
 				<Clarification
 					theme="light"
-					skewed
+          type="skewed"
 					title={`Welcome to \nPrivate markets at WSE`}
 					text="Explore exclusive investment opportunities and discover the potential of private markets with World Stock Exchange. Our platform provides access to a diverse range of private investment options, allowing investors to participate in exciting ventures and unlock new avenues for portfolio growth. Whether you're seeking alternative assets, venture capital opportunities, or private equity investments, our platform offers a gateway to the world of private markets. Join us and delve into a realm of potential and opportunity."
 				/>
@@ -78,7 +78,9 @@ const PrivateMarkets = () => {
 						<SwiperSlide className={st.slide} key={item.title}>
 							<img src={item.photo} className={st.img} alt={item.title} />
 							<Clarification
-								className={st.block}
+								clarificationClass={st.block}
+                titleClass={st.title}
+                textClass={st.text}
 								title={item.title}
 								text={item.text}
 							/>

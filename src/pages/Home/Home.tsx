@@ -11,7 +11,7 @@ const Home = () => {
 			<UniversalSection className={st.confidence} theme="light">
 				<div className={st.wrapper}>
 					<Clarification
-						className={st.block}
+						clarificationClass={st.block}
 						theme="light"
 						title={confidence.title}
 						text={confidence.text}
@@ -46,10 +46,12 @@ const Home = () => {
 			<UniversalSection className={st.transformation} theme="light">
 				<div className={st.wrapper}>
 					<Clarification
-						className={st.block}
+						clarificationClass={st.block}
 						theme="light"
 						title={transformation.title}
 						text={transformation.text}
+            titleClass={st.title}
+            textClass={st.text}
 					/>
 					<MultipleButtons />
 				</div>

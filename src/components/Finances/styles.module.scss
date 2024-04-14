@@ -19,7 +19,7 @@
 			}
 		}
 	}
-  
+
 	@media (width <= 768) {
     grid-template-rows: 1fr;
 	}
@@ -37,5 +37,6 @@
 
 .text {
 	@extend .text-sm;
+  font-weight: var(--fw-med);
 	color: var(--_color-text);
 }

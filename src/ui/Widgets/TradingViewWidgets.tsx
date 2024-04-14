@@ -84,7 +84,7 @@ export const RealTimeChartWidget = ({
 			hide_side_toolbar
 			interval="D"
 			withdateranges={false}
-			// autosize
+			autosize
 			width={"100%"}
 			height={"100%"}
 		/>

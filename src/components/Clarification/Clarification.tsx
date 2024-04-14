@@ -11,7 +11,6 @@ export type ClarificationProps = {
 	textClass?: string;
 	theme?: "light" | "dark";
 	type?: "skewed" | "centered" | "default";
-	titleAsSubtitle?: boolean;
 };
 
 const Clarification: FC<ClarificationProps> = ({
@@ -24,7 +23,6 @@ const Clarification: FC<ClarificationProps> = ({
 	textClass = "",
 	theme = "dark",
 	type = "default",
-	titleAsSubtitle = false,
 }) => {
 	return (
 		<div
@@ -32,15 +30,7 @@ const Clarification: FC<ClarificationProps> = ({
 				type === "skewed" ? st.skewed : ""
 			} ${type === "centered" ? st.centered : ""} ${clarificationClass}`}
 		>
-			{title ? (
-				<h3
-					className={`${st.title} ${titleClass} ${
-						titleAsSubtitle ? st.subtitle : ""
-					}`}
-				>
-					{title}
-				</h3>
-			) : null}
+			{title ? <h3 className={`${st.title} ${titleClass}`}>{title}</h3> : null}
 			{subtitle ? (
 				<p className={`${st.subtitle} ${subtitleClass}`}>{subtitle}</p>
 			) : null}

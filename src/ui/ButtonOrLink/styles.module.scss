@@ -1,7 +1,6 @@
 @use "@st/utils";
 
 .btn {
-  @extend .text-md;
   &.fill {
     --_bg-color: var(--c-green-500);
     --_hover-bg-color: var(--c-green-600);
@@ -23,6 +22,8 @@
     --_active-bg-color: var(--c-primary-500);
   }
 
+  font-size: var(--fs-desc-sm);
+  line-height: 1.3;
   display: block;
   padding: calc(0.75rem - var(--_border-w, 0rem)) calc(1rem - var(--_border-w, 0rem));
   max-width: 12rem;

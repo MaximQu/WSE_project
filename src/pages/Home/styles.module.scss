@@ -72,12 +72,12 @@
 	.block {
 		max-width: 24rem;
 
-    h2 {
-      max-width: 17ch;
-      margin-inline: auto;
-    }
+		.title {
+			max-width: 17ch;
+			margin-inline: auto;
+		}
 
-		p {
+		.text {
 			max-width: 19rem;
 
 			@media (width <=768px) {
