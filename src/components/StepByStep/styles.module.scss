@@ -1,0 +1,55 @@
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: var(--c-green-200);
+    top: 12px;
+    left: 0;
+    border-radius: 0.75rem;
+  }
+}
+
+.step {
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: var(--c-green-200);
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      &::before {
+        animation: bim 1s #{(4 - $i) * $i / 4}s infinite;
+      }
+    }
+  }
+}
+
+@keyframes bim {
+  0% {
+    background-color: var(--c-green-200);
+  }
+  50% {
+    background-color: var(--c-green-500);
+  }
+  100% {
+    background-color: var(--c-green-200);
+  }
+}

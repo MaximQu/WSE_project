@@ -1,4 +1,10 @@
-import { Advantage, Clarification, EmailForm, UniversalSection } from "@/components";
+import {
+	Advantage,
+	Clarification,
+	EmailForm,
+	UniversalSection,
+} from "@/components";
+import StepByStep from "@/components/StepByStep/StepByStep";
 import { AdaptiveImg } from "@/ui";
 import { benefits, hero, statement } from "./content";
 import st from "./styles.module.scss";
@@ -8,9 +14,9 @@ const Affiliation = () => {
 		<main>
 			<UniversalSection theme="light" className={st.hero}>
 				<Clarification
-					skewed
+					type="skewed"
 					theme="light"
-					className={st.wrapper}
+					clarificationClass={st.wrapper}
 					title={hero.title}
 					text={hero.text}
 				/>
@@ -28,7 +34,7 @@ const Affiliation = () => {
 				<EmailForm />
 			</UniversalSection>
 			<UniversalSection className={st.description}>
-				<Clarification className={st.wrapper} text={statement} />
+				<Clarification clarificationClass={st.wrapper} text={statement} />
 			</UniversalSection>
 			<UniversalSection
 				theme="light"
@@ -46,9 +52,12 @@ const Affiliation = () => {
 				title="How to Become an Affiliate?"
 				subtitle="Join our affiliate program in just a few easy steps"
 				theme="light"
-			></UniversalSection>
-			<UniversalSection theme="light" className={st.sendEmail}>
-				<EmailForm />
+				className={st.joinUsBlock}
+			>
+				<div className={st.layout}>
+					<StepByStep />
+					<EmailForm />
+				</div>
 			</UniversalSection>
 		</main>
 	);

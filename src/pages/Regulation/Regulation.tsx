@@ -19,12 +19,12 @@ const Regulation = () => {
 				<div className={st.content}>
 					<div className={st.wrapper}>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...regulations.framework1}
 						/>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...regulations.framework2}
 						/>
@@ -33,7 +33,7 @@ const Regulation = () => {
 					<AdaptiveImg className={st.img} {...regulations.signatureImg} />
 					<div className={st.wrapper}>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...regulations.ourMission}
 						/>
@@ -46,7 +46,7 @@ const Regulation = () => {
 						<Clarification
 							theme="light"
 							key={item.title}
-							className={st.block}
+							clarificationClass={st.block}
 							title={item.title}
 							text={item.text}
 						/>
