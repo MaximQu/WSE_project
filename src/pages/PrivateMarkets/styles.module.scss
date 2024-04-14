@@ -81,6 +81,7 @@
 	@media (width <= 480px) {
 		display: none;
 	}
+
 	.swiper {
 		.slide {
 			display: flex;
@@ -94,11 +95,12 @@
 
 			.block {
 				margin-bottom: auto;
-				h2 {
+
+				.title {
 					@extend .text-h3;
 				}
 
-				p {
+				.text {
 					font-size: var(--fs-desc-md);
 				}
 			}
@@ -126,7 +128,7 @@
 		margin-bottom: 1.5rem;
 	}
 
-  .block {
-    justify-content: center;
-  }
+	.block {
+		justify-content: center;
+	}
 }

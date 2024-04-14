@@ -14,7 +14,7 @@ const WhyWSE = () => {
 		<main>
 			<UniversalSection>
 				<Clarification
-					skewed
+					type="skewed"
 					title="Why WSE?"
 					text={`At WSE, we pride ourselves on offering a comprehensive platform designed to unlock exclusive investment opportunities and empower investors to achieve their financial goals.\n\nHere are just a few reasons why you should choose WSE:`}
 				/>
@@ -65,7 +65,7 @@ const WhyWSE = () => {
 					<div className={st.wrapper}>
 						{explanations.map((item) => (
 							<Clarification
-								className={st.block}
+								clarificationClass={st.block}
 								theme="light"
 								key={item.subtitle}
 								{...item}

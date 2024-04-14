@@ -18,9 +18,10 @@ const Market = () => {
 		<main>
 			<UniversalSection className={st.introduction} theme="light">
 				<Clarification
-        className={st.block}
+					clarificationClass={st.block}
+					textClass={st.text}
 					theme="light"
-					skewed
+					type="skewed"
 					title={"Introduction \nto the Stock Market"}
 					text="The stock market is a dynamic marketplace where investors buy and sell shares of publicly traded companies, driving economic growth and wealth creation. Whether you're new to investing or a seasoned trader, understanding the fundamentals of the stock market is essential for making informed financial decisions."
 				/>
@@ -55,18 +56,22 @@ const Market = () => {
 				className={st.investments}
 			>
 				<div className={st.layout}>
+					<div className={st.wrapper}>
 						{investments.map((investment) => (
 							<Clarification
+								clarificationClass={st.block}
 								key={investment.title}
 								subtitle={investment.title}
 								text={investment.text}
+                textClass={st.text}
 							/>
 						))}
+					</div>
 					<AdaptiveImg
 						desktop={skyscraperDesktopJPG}
 						tablet={skyscraperTabletJPG}
 						mobile={skyscraperMobileJPG}
-						switchToTabletWidth={960}
+						switchToTabletWidth={991}
 						switchToMobileWidth={584}
 						alt="Investments"
 						className={st.img}

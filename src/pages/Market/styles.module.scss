@@ -2,63 +2,113 @@
 @use "@st/mix" as *;
 
 .introduction {
-  .block {
-    p {
-      max-width: 34.375rem;
-    }
-  }
+	.block {
+		.text {
+			max-width: 34.375rem;
+		}
+	}
 }
 
 .offer {
-  .wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
+	.wrapper {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
 
-  .block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.25rem;
-    max-width: 22.5rem;
-    width: 100%;
-  }
+	.block {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 1.25rem;
+		max-width: 22.5rem;
+		width: 100%;
+	}
 
-  .btn {
-    max-width: 100%;
-  }
+	.btn {
+		max-width: 100%;
+	}
 }
 
 .faq {
-  .list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-  }
+	.list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+	}
 }
 
 .startSection {
-  header {
-    margin-bottom: 1.5rem;
-  }
+	header {
+		margin-bottom: 1.5rem;
+	}
 
-  .btn {
-    margin-inline: auto;
-  }
+	.btn {
+		margin-inline: auto;
+	}
 }
 
 .investments {
-  .layout {
-    @extend .six-pack-grid;
-  }
+	.wrapper {
+		display: grid;
+		grid-template-columns: 17rem 17rem;
+		gap: clamp(1.5rem, -5.9254rem + 15.4696vw, 5rem);
+
+		@media (width <= 991px) {
+			grid-template-columns: 20rem 20rem;
+		}
+
+		@media (width <= 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (width <= 575px) {
+			grid-template-columns: 18rem;
+			padding: 0;
+		}
+	}
+
+	.block {
+		padding: 1rem;
+		// @media (width <= 575px) {
+		// 	padding: 0;
+		// }
+		@media (width <= 575px) {
+			gap: 1rem;
+		}
+	}
+
+	.text {
+		font-size: var(--fs-desc-sm);
+	}
+
+	.layout {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+
+		@media (width <= 991px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.img {
+		border-radius: 0.375rem;
+		object-fit: cover;
+
+		@media (width <= 991px) {
+			width: 100%;
+			max-height: 18.75rem;
+		}
+	}
 }
 
 .startSection {
-  padding-block: 6.25rem;
+	padding-block: 6.25rem;
 
-  @media (width <= 768px) {
-    padding-block: clamp(4.375rem, 2.1121rem + 8.6207vw, 6.25rem);
-  }
+	@media (width <= 768px) {
+		padding-block: clamp(4.375rem, 2.1121rem + 8.6207vw, 6.25rem);
+	}
 }

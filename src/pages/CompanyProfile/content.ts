@@ -26,12 +26,14 @@ export const company_values: {
 	},
 ];
 
-export const hero: Pick<ClarificationProps, "title" | "text"> & {
+export const hero: ClarificationProps & {
 	img: string;
 } = {
 	title:
 		"At World Stock Exchange (WSE), our mission is to democratize access to global financial markets and empower investors of all backgrounds to achieve their financial goals",
-	text: "We are dedicated to providing innovative and transparent financial solutions that enhance the investment experience, foster financial literacy, and drive sustainable growth.\n\nWith integrity, transparency, and client-centricity at the core of our operations, we strive to be a trusted partner for investors, offering unparalleled access to diverse investment opportunities and delivering value through cutting-edge technology, expert guidance, and unwavering commitment to excellence. Our vision is to create a more inclusive and prosperous financial ecosystem, where everyone has the opportunity to thrive and succeed in their investment journey.",
+	subtitle:
+		"We are dedicated to providing innovative and transparent financial solutions that enhance the investment experience, foster financial literacy, and drive sustainable growth.",
+	text: "With integrity, transparency, and client-centricity at the core of our operations, we strive to be a trusted partner for investors, offering unparalleled access to diverse investment opportunities and delivering value through cutting-edge technology, expert guidance, and unwavering commitment to excellence.\n Our vision is to create a more inclusive and prosperous financial ecosystem, where everyone has the opportunity to thrive and succeed in their investment journey.",
 	img: puzzleSVG,
 };
 
@@ -45,6 +47,6 @@ export const history: Pick<ClarificationProps, "subtitle" | "text"> & {
 		desktop: WSEDesktopJPG,
 		tablet: WSETabletJPG,
 		mobile: WSEMobileJPG,
-    alt: "Mission of WSE"
+		alt: "Mission of WSE",
 	},
 };

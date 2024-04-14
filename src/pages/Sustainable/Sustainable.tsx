@@ -15,7 +15,9 @@ const Sustainable = () => {
 			<UniversalSection className={st.sustainableBlock} theme="light">
 				<div className={st.wrapper}>
 					<Clarification
-						className={st.block}
+						clarificationClass={st.block}
+            titleClass={st.title}
+            textClass={st.text}
 						theme="light"
 						{...sustainable.clarification}
 					/>

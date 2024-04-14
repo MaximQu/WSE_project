@@ -45,7 +45,7 @@ const Registration = () => {
 				<p className={st.subText}>Sign up to your account</p>
 				<form className={st.form} onSubmit={handleSubmit(onSubmit)}>
 					<label className={st.label}>
-						Full name
+						<span>Full name</span>
 						<input
 							className={st.input}
 							type="text"
@@ -55,7 +55,7 @@ const Registration = () => {
 						{errors.fullName && <p>{errors.fullName?.message}</p>}
 					</label>
 					<label className={st.label}>
-						Email
+						<span>Email</span>
 						<input
 							className={st.input}
 							type="email"
@@ -65,8 +65,8 @@ const Registration = () => {
 						{errors.email && <p>{errors.email?.message}</p>}
 					</label>
 					<label className={st.label}>
-						Phone number
-						<div className="">
+						<span>Phone number</span>
+						<div>
 							<Select
 								register={register}
 								styleType="phoneCode"
@@ -76,11 +76,11 @@ const Registration = () => {
 						{errors.phoneNumber && <p>{errors.phoneNumber?.message}</p>}
 					</label>
 					<label className={st.label}>
-						Country
+						<span>Country</span>
 						<Select register={register} data={countriesData} />
 					</label>
 					<label className={st.label}>
-						Password
+						<span>Password</span>
 						<input
 							type="password"
 							className={st.input}
@@ -99,6 +99,8 @@ const Registration = () => {
 				tablet={workingProcessTabletJPG}
 				mobile={workingProcessMobileJPG}
 				alt="Sign up to your account"
+				switchToTabletWidth={768}
+				switchToMobileWidth={480}
 				className={st.img}
 			/>
 		</div>
