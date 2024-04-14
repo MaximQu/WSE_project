@@ -1,12 +1,6 @@
 @use "@st/utils";
 
 .regulationInfo {
-	.contentWrapper {
-		display: flex;
-		flex-direction: column;
-		gap: 5rem;
-	}
-
 	.content {
 		display: flex;
 		flex-wrap: wrap;
@@ -20,14 +14,14 @@
 		gap: 3.75rem;
 	}
 
-	.reversedWrapper {
-		display: flex;
-		align-items: center;
-		gap: 6rem;
-	}
-
 	.block {
 		max-width: 30rem;
+
+		h2 {
+			font-size: var(--fs-desc-h3);
+			line-height: 1.3;
+		}
+
 		p {
 			font-size: var(--fs-desc-sm);
 		}
@@ -40,6 +34,7 @@
 		grid-template-columns: 1fr 1fr;
 		gap: clamp(2.5rem, 1.0211rem + 5.6338vw, 5rem)
 			clamp(2.5rem, -2.2324rem + 18.0282vw, 10.5rem);
+
 		@media (width <= 575px) {
 			grid-template-columns: 1fr;
 		}
@@ -53,7 +48,7 @@
 		}
 
 		p {
-			@extend .text-sm;
+			font-size: var(--fs-desc-sm);
 		}
 	}
 }
@@ -72,12 +67,18 @@
 			grid-template-columns: 1fr;
 		}
 	}
+
+	.block {
+		p {
+			font-size: var(--fs-desc-sm);
+		}
+	}
 }
 
 .explanation {
 	padding-bottom: 3.125rem;
 
-	.wrapper {
+	.content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 3rem;
@@ -86,10 +87,16 @@
 		}
 	}
 
-	.block {
+	.wrapper {
 		@media (width <= 768px) {
 		}
 	}
+
+  .block {
+    & > p {
+      margin-bottom: 1rem;
+    }
+  }
 
 	.item {
 		@extend .text-md;
@@ -97,8 +104,14 @@
 		color: var(--c-primary-600);
 		margin-left: 1.5rem;
 
-		span {
-			color: var(--c-red);
+		a {
+			span {
+				color: var(--c-red);
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

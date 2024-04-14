@@ -1,5 +1,14 @@
 import { slimChart, slimHand, slimMoney } from "@/assets/img/jpg";
 
+export const explanation = [
+	{
+		text: "In private markets, investors can access unique opportunities not available in public markets, such as early-stage ventures, real estate projects, and private equity investments. While private market investments may offer higher returns, they can also be less liquid and involve greater risk. However, with careful consideration and due diligence, investors can diversify their portfolios and unlock potential growth opportunities.",
+	},
+	{
+		text: "At WSE, we provide a seamless platform for investors to explore, select, and invest in private market opportunities. From creating an account to completing transactions and monitoring portfolio performance, our user-friendly platform guides investors every step of the way. Join us at WSE and embark on a journey to discover and capitalize on the potential of private markets",
+	},
+];
+
 export const faq_content = [
 	{
 		question: "What distinguishes private markets from public markets?",
