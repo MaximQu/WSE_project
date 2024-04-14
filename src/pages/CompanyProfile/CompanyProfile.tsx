@@ -8,6 +8,7 @@ import { Advantage, Clarification, UniversalSection } from "@/components";
 import { AdaptiveImg } from "@/ui";
 import { company_values, hero, history } from "./content";
 import st from "./styles.module.scss";
+import HistoryTimeline from "@/components/HistoryTimeline/HistoryTimeline";
 
 const CompanyProfile = () => {
 	return (
@@ -19,7 +20,7 @@ const CompanyProfile = () => {
 			>
 				<div className={st.content}>
 					<Clarification
-						className={st.block}
+						clarificationClass={st.block}
 						theme="light"
 						title={hero.title}
 						text={hero.text}
@@ -34,7 +35,7 @@ const CompanyProfile = () => {
 			>
 				<div className={st.content}>
 					<Clarification
-						className={st.block}
+						clarificationClass={st.block}
 						theme="light"
 						subtitle={history.subtitle}
 						text={history.text}
@@ -42,6 +43,9 @@ const CompanyProfile = () => {
 					<AdaptiveImg className={st.img} {...history.img} />
 				</div>
 			</UniversalSection>
+      <UniversalSection className={st.historyTimeline}>
+        <HistoryTimeline />
+      </UniversalSection>
 			<UniversalSection
 				theme="light"
 				className={st.values}

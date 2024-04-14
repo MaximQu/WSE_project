@@ -5,31 +5,46 @@ export type ClarificationProps = {
 	title?: string;
 	subtitle?: string;
 	text?: string;
-	className?: string;
+	clarificationClass?: string;
+	titleClass?: string;
+	subtitleClass?: string;
+	textClass?: string;
 	theme?: "light" | "dark";
-	skewed?: boolean;
+	type?: "skewed" | "centered" | "default";
+	titleAsSubtitle?: boolean;
 };
 
 const Clarification: FC<ClarificationProps> = ({
 	title,
 	subtitle,
 	text,
-	className = "",
+	clarificationClass = "",
+	titleClass = "",
+	subtitleClass = "",
+	textClass = "",
 	theme = "dark",
-	skewed = false,
+	type = "default",
+	titleAsSubtitle = false,
 }) => {
 	return (
 		<div
-			className={`
-        ${st.clarification}
-        ${theme === "light" ? st.light : ""}
-        ${skewed ? st.skewed : ""}
-        ${className}
-      `}
+			className={`${st.clarification} ${theme === "light" ? st.light : ""} ${
+				type === "skewed" ? st.skewed : ""
+			} ${type === "centered" ? st.centered : ""} ${clarificationClass}`}
 		>
-			{title ? <h2 className={st.title}>{title}</h2> : null}
-			{subtitle ? <p className={st.subtitle}>{subtitle}</p> : null}
-			{text ? <p className={st.text}>{text}</p> : null}
+			{title ? (
+				<h3
+					className={`${st.title} ${titleClass} ${
+						titleAsSubtitle ? st.subtitle : ""
+					}`}
+				>
+					{title}
+				</h3>
+			) : null}
+			{subtitle ? (
+				<p className={`${st.subtitle} ${subtitleClass}`}>{subtitle}</p>
+			) : null}
+			{text ? <p className={`${st.text} ${textClass}`}>{text}</p> : null}
 		</div>
 	);
 };

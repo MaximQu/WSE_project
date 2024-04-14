@@ -24,12 +24,12 @@ const Regulation = () => {
 				<div className={st.content}>
 					<div className={st.wrapper}>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...regulations.framework1}
 						/>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...regulations.framework2}
 						/>
@@ -38,7 +38,7 @@ const Regulation = () => {
 					<AdaptiveImg className={st.img} {...regulations.signatureImg} />
 					<div className={st.wrapper}>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...regulations.ourMission}
 						/>
@@ -51,7 +51,7 @@ const Regulation = () => {
 						<Clarification
 							theme="light"
 							key={item.title}
-							className={st.block}
+							clarificationClass={st.block}
 							title={item.title}
 							text={item.text}
 						/>
@@ -73,7 +73,11 @@ const Regulation = () => {
 				<div className={st.content}>
 					<Clarification theme="light" {...explanations.complaints} />
 					<div className={st.wrapper}>
-						<Clarification className={st.block} theme="light" {...explanations.howToSubmit} />
+						<Clarification
+							clarificationClass={st.block}
+							theme="light"
+							{...explanations.howToSubmit}
+						/>
 						<ol className={st.list}>
 							<li className={st.item}>
 								Submit your complaint in writing to our Compliance Department at

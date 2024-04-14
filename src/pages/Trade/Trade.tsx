@@ -19,12 +19,12 @@ const Trade = () => {
 				<div className={st.content}>
 					<div className={st.wrapper}>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...wseDescription.navigating}
 						/>
 						<Clarification
-							className={st.block}
+							clarificationClass={st.block}
 							theme="light"
 							{...wseDescription.exploring}
 						/>

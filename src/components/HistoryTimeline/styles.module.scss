@@ -1,0 +1,198 @@
+@use '@st/utils';
+
+.historyTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @media (width <=930px) {
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+    margin-inline: auto;
+
+    .timeline {
+      flex: 1.5;
+    }
+
+    .eventDescriptions {
+      flex: 1;
+    }
+  }
+
+  @media (width <=480px) {
+    .timeline,
+    .eventDescriptions {
+      flex: 1;
+    }
+  }
+}
+
+.eventDescriptions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1.75rem;
+
+  >p {
+    font-size: 15px;
+    font-weight: var(--fw-med);
+    color: var(--c-primary-200);
+    line-height: 1.4;
+  }
+
+  @media (width <=930px) {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+
+  @media (width <=930px) {
+    gap: 3rem;
+  }
+}
+
+.timeline {
+  --_timeline-p-b: 7.875rem;
+  --_dot-d: 1.5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr var(--_dot-d)) 1fr;
+  grid-template-rows: 1fr 1fr var(--_timeline-p-b);
+  gap: 1rem 0.25rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background-color: var(--c-green-200);
+    bottom: 6px;
+    left: 0;
+    border-radius: 1.5rem;
+  }
+
+  @media (width <=930px) {
+    grid-template-columns: var(--_timeline-p-b) 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1.5rem;
+    &::before {
+      height: 100%;
+      width: 8px;
+      top: 0;
+      left: 8px;
+    }
+  }
+
+  @media (width <=480px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px var(--_dot-d) repeat(4, 1fr var(--_dot-d));
+    gap: 0;
+    padding-bottom: 2.4rem;
+  }
+}
+
+.event {
+  position: relative;
+  gap: 0;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  @media (width <=930px) {
+    text-align: start;
+    align-self: center;
+  }
+
+  @media (width <=480px) {
+    align-self: flex-end;
+    padding-left: 1.5rem;
+  }
+}
+
+@for $i from 1 through 5 {
+  .event:nth-of-type(#{$i}) {
+    grid-column: #{$i + (5 + ($i - 1 - 5))} / span 3;
+    grid-row: #{2 - $i % 2};
+
+    @media (width <=930px) {
+      grid-row: #{$i};
+      grid-column: 2;
+    }
+
+    @media (width <=480px) {
+      grid-row: #{$i * 2 - 1};
+    }
+  }
+
+  .dotLine:nth-of-type(#{$i}) {
+    position: relative;
+    grid-column: #{$i * 2};
+    grid-row-start: #{3 - $i % 2};
+    grid-row-end: -1;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+    }
+
+    &::before {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 100%;
+      background-color: var(--c-green-500);
+      z-index: var(--z-low);
+    }
+
+    &::after {
+      height: 100%;
+      width: 8px;
+      border-radius: 1.5rem;
+      background-color: var(--c-green-200);
+    }
+
+
+    @media (width <=930px) {
+      grid-row: #{$i};
+      grid-column: 1;
+
+      &::before,
+      &::after {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin-block: auto;
+        margin-inline: unset;
+      }
+
+      &::after {
+        width: 100%;
+        height: 6px;
+      }
+    }
+
+    @media (width <=480px) {
+      grid-row: #{$i * 2};
+
+      &::after {
+        width: 6.25rem;
+      }
+    }
+  }
+}
+
+.eventTitle {
+  @extend .text-h3;
+}
+
+.eventSubtitle {
+  @extend .text-h4;
+  color: var(--c-primary-200);
+}
