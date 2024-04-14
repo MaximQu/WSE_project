@@ -28,13 +28,9 @@ const Clarification: FC<ClarificationProps> = ({
 }) => {
 	return (
 		<div
-			className={`
-        ${st.clarification}
-        ${theme === "light" ? st.light : ""}
-        ${type === "skewed" ? st.skewed : ""}
-        ${type === "centered" ? st.centered : ""}
-        ${clarificationClass}
-      `}
+			className={`${st.clarification} ${theme === "light" ? st.light : ""} ${
+				type === "skewed" ? st.skewed : ""
+			} ${type === "centered" ? st.centered : ""} ${clarificationClass}`}
 		>
 			{title ? (
 				<h3

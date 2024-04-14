@@ -1,4 +1,9 @@
-import { Clarification, Comment, EmailForm, UniversalSection } from "@/components";
+import {
+	Clarification,
+	Comment,
+	EmailForm,
+	UniversalSection,
+} from "@/components";
 import { AdaptiveImg } from "@/ui";
 import {
 	clarification_content,
@@ -60,20 +65,27 @@ const Regulation = () => {
 			>
 				<div className={st.list}>
 					{comments.map((item) => (
-						<Comment key={item.text} data={item} />
+						<Comment className={st.block} key={item.text} data={item} />
 					))}
 				</div>
 			</UniversalSection>
 			<UniversalSection className={st.explanation} theme="light">
-				<div className={st.wrapper}>
+				<div className={st.content}>
 					<Clarification theme="light" {...explanations.complaints} />
-					<div className={st.block}>
-						<Clarification theme="light" {...explanations.howToSubmit} />
+					<div className={st.wrapper}>
+						<Clarification
+							clarificationClass={st.block}
+							theme="light"
+							{...explanations.howToSubmit}
+						/>
 						<ol className={st.list}>
 							<li className={st.item}>
 								Submit your complaint in writing to our Compliance Department at
-								<span> necesito-su-correoelectronico</span>
-								@worldstockexchange.com.
+								<a href="mailto:necesito-su-correoelectronico@worldstockexchange.com">
+									<span> necesito-su-correoelectronico</span>
+									@worldstockexchange.com
+								</a>
+								.
 							</li>
 							<li className={st.item}>
 								Provide as much information as possible to help us understand

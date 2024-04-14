@@ -15,14 +15,17 @@
 		max-width: 34.375rem;
 
 		h2 {
+      @extend .text-h1;
 			font-weight: var(--fw-bold);
 		}
+
 		@media (width <= 768px) {
 			p {
 				font-size: var(--fs-desc-md);
 			}
 		}
 	}
+
 	.img {
 		margin-inline: auto;
 	}

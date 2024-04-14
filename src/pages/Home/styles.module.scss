@@ -18,7 +18,7 @@
 
 	.block {
 		max-width: 30rem;
-    gap: 1.5rem;
+		gap: 1.5rem;
 	}
 	.img {
 		margin-left: auto;
@@ -27,6 +27,9 @@
 }
 
 .statsBlock {
+	header p {
+		max-width: 34rem;
+	}
 	.layout {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
@@ -46,9 +49,9 @@
 	.layout {
 		@extend .six-pack-grid;
 
-    > * {
-      padding: 1.5rem;
-    }
+		> * {
+			padding: 1.5rem;
+		}
 	}
 }
 
@@ -57,7 +60,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-    gap: 1rem;
+		gap: 1rem;
 
 		@media (width <=768px) {
 			flex-direction: column;
@@ -69,19 +72,17 @@
 	.block {
 		max-width: 24rem;
 
-		@media (width <=768px) {
-			text-align: center;
-		}
+    h2 {
+      max-width: 17ch;
+      margin-inline: auto;
+    }
 
 		p {
 			max-width: 19rem;
 
 			@media (width <=768px) {
 				margin-inline: auto;
-			}
-
-			@media (width <=480px) {
-				max-width: 15rem;
+				font-size: var(--fs-tab-mob-h4);
 			}
 		}
 	}

@@ -1,37 +1,36 @@
 @use "@st/utils";
 
 .clarification {
-  --_titleColor: var(--c-white);
-  --_subTitleColor: var(--c-white);
-  --_textColor: var(--c-primary-300);
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+	--_titleColor: var(--c-white);
+	--_subTitleColor: var(--c-white);
+	--_textColor: var(--c-primary-300);
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
 
-  &.light {
-    --_titleColor: var(--c-primary-800);
-    --_subTitleColor: var(--c-primary-800);
-    --_textColor: var(--c-primary-600);
-  }
+	&.light {
+		--_titleColor: var(--c-primary-800);
+		--_subTitleColor: var(--c-primary-800);
+		--_textColor: var(--c-primary-600);
+	}
 
-  &.skewed {
-    @media (width <=768px) {
-      gap: clamp(1.875rem, 1.1207rem + 2.8736vw, 2.5rem);
-    }
+	&.skewed {
+		@media (width <=768px) {
+			gap: clamp(1.875rem, 1.1207rem + 2.8736vw, 2.5rem);
+		}
 
-    .title {
-      align-self: start;
-    }
+		.title {
+			align-self: start;
+		}
 
-    .text {
-      align-self: center;
-      margin-left: 2.5rem;
-    }
-  }
+		.text {
+			align-self: center;
+			margin-left: 2.5rem;
+		}
+	}
 
   &.centered {
-    text-align: center;
-    align-items: center;
+    text-align: center
   }
 }
 
@@ -45,6 +44,10 @@
   @extend .text-h4;
   color: var(--_subTitleColor);
   white-space: pre-line;
+
+  @media (width < 768px) {
+    font-size: var(--fs-tab-mob-h3);
+  }
 }
 
 .text {
@@ -52,4 +55,8 @@
   color: var(--_textColor);
   max-width: 40.625rem;
   white-space: pre-line;
+
+  @media (width < 768px) {
+    font-size: var(--fs-tab-mob-h4);
+  }
 }

@@ -97,6 +97,7 @@
 
 	.block {
 		max-width: 360px;
+    gap: 1rem;
 
 		@media (width <= 575px) {
 			max-width: 100%;

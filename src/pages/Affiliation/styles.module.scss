@@ -21,11 +21,12 @@
 }
 
 .description {
-	.wrapper {
+	.block {
 		margin-inline: auto;
 		max-width: 37.5rem;
+
     p {
-      font-size: var(--fs-desct-tab-md);
+      font-size: var(--fs-desct-tab-h4);
     }
 	}
 }

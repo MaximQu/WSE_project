@@ -9,7 +9,12 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
-import { faq_content, slider_content, steps_content } from "./content";
+import {
+	explanation,
+	faq_content,
+	slider_content,
+	steps_content,
+} from "./content";
 import st from "./styles.module.scss";
 
 const PrivateMarkets = () => {
@@ -18,7 +23,7 @@ const PrivateMarkets = () => {
 			<UniversalSection theme="light">
 				<Clarification
 					theme="light"
-          skewed
+					skewed
 					title={`Welcome to \nPrivate markets at WSE`}
 					text="Explore exclusive investment opportunities and discover the potential of private markets with World Stock Exchange. Our platform provides access to a diverse range of private investment options, allowing investors to participate in exciting ventures and unlock new avenues for portfolio growth. Whether you're seeking alternative assets, venture capital opportunities, or private equity investments, our platform offers a gateway to the world of private markets. Join us and delve into a realm of potential and opportunity."
 				/>
@@ -30,23 +35,9 @@ const PrivateMarkets = () => {
 			>
 				<div className={st.layout}>
 					<div className={st.wrapper}>
-						<p>
-							In private markets, investors can access unique opportunities not
-							available in public markets, such as early-stage ventures, real
-							estate projects, and private equity investments. While private
-							market investments may offer higher returns, they can also be less
-							liquid and involve greater risk. However, with careful
-							consideration and due diligence, investors can diversify their
-							portfolios and unlock potential growth opportunities.
-						</p>
-						<p>
-							At WSE, we provide a seamless platform for investors to explore,
-							select, and invest in private market opportunities. From creating
-							an account to completing transactions and monitoring portfolio
-							performance, our user-friendly platform guides investors every
-							step of the way. Join us at WSE and embark on a journey to
-							discover and capitalize on the potential of private markets
-						</p>
+						{explanation.map((item) => (
+							<p key={item.text}>{item.text}</p>
+						))}
 					</div>
 					<AdaptiveImg
 						desktop={smartphoneDesktopJPG}
@@ -113,7 +104,7 @@ const PrivateMarkets = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<MultipleButtons  className={st.block}/>
+				<MultipleButtons className={st.block} />
 			</UniversalSection>
 		</main>
 	);

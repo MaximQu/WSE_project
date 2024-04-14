@@ -55,7 +55,6 @@ const Market = () => {
 				className={st.investments}
 			>
 				<div className={st.layout}>
-					<div className={st.statements}>
 						{investments.map((investment) => (
 							<Clarification
 								key={investment.title}
@@ -63,7 +62,6 @@ const Market = () => {
 								text={investment.text}
 							/>
 						))}
-					</div>
 					<AdaptiveImg
 						desktop={skyscraperDesktopJPG}
 						tablet={skyscraperTabletJPG}
