@@ -1,4 +1,10 @@
-export const countriesData = [
+export type Country = {
+	name: string;
+	icon: string;
+	dial_code: string;
+};
+
+export const countriesData: Country[] = [
 	{
 		name: "Afghanistan",
 		dial_code: "+93",
@@ -1210,3 +1216,15 @@ export const countriesData = [
 		icon: "https://country-code-au6g.vercel.app/ZW.svg",
 	},
 ];
+
+export const contriesSortedByCode = countriesData
+	.slice()
+	.sort((a, b) => +a.dial_code - +b.dial_code);
+
+export const countriesMap = countriesData.reduce(
+	(acc: { [key: string]: Country }, cur) => {
+		acc[cur.name] = cur;
+		return acc;
+	},
+	{},
+);

@@ -3,26 +3,23 @@ import {
 	workingProcessMobileJPG,
 	workingProcessTabletJPG,
 } from "@/assets/img/jpg";
-import { AdaptiveImg, ButtonOrLink, Select } from "@/ui";
+import { AdaptiveImg, ButtonOrLink } from "@/ui";
+import CustomInput from "@/ui/CustomInput/CustoInput";
+import CustomPhoneInput from "@/ui/CustomPhoneInput/CustomPhoneInput";
+import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
-import { countriesData } from "../../../countriesData";
 import st from "./styles.module.scss";
-import { LogoIcon } from "@/ui/icons";
+import CountriesSelect from "@/ui/CountriesSelect/CountriesSelect";
 
 const Registration = () => {
 	const signUpSchema = z.object({
 		fullName: z.string().min(2, "Required field. Minimum length 2"),
 		email: z.string().email().min(8, "Required field. Minimum length 8").trim(),
 		country: z.string().min(3, "Required field"),
-		phoneNumber: z.coerce
-			.number()
-			.int()
-			.min(9, "Required field. Minimum length 9")
-			.positive(),
+		phoneNumber: z.string().min(11, "Required field. Minimum length 9").trim(),
 		password: z.string().min(8, "Required field. Minimum length 8").trim(),
-		phoneCode: z.string(),
 	});
 
 	type TFormFields = z.infer<typeof signUpSchema>;
@@ -31,6 +28,7 @@ const Registration = () => {
 		register,
 		handleSubmit,
 		formState: { errors, isSubmitting },
+		setValue,
 	} = useForm<TFormFields>({ resolver: zodResolver(signUpSchema) });
 
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
@@ -44,50 +42,36 @@ const Registration = () => {
 				<LogoIcon className={st.logo} theme="dark" type="small" />
 				<p className={st.subText}>Sign up to your account</p>
 				<form className={st.form} onSubmit={handleSubmit(onSubmit)}>
-					<label className={st.label}>
-						<span>Full name</span>
-						<input
-							className={st.input}
-							type="text"
-							{...register("fullName")}
-							placeholder="Full name"
-						/>
-						{errors.fullName && <p>{errors.fullName?.message}</p>}
-					</label>
-					<label className={st.label}>
-						<span>Email</span>
-						<input
-							className={st.input}
-							type="email"
-							{...register("email")}
-							placeholder="Email"
-						/>
-						{errors.email && <p>{errors.email?.message}</p>}
-					</label>
-					<label className={st.label}>
-						<span>Phone number</span>
-						<Select
-							register={register}
-							styleType="phoneCode"
-							data={countriesData}
-						/>
-					</label>
-					<label className={st.label}>
-						<span>Country</span>
-						<Select register={register} data={countriesData} />
-					</label>
-					<label className={st.label}>
-						<span>Password</span>
-						<input
-							className={st.input}
-							type="password"
-							{...register("password")}
-							placeholder="Password"
-						/>
-						{errors.password && <p>{errors.password.message}</p>}
-					</label>
+					<CustomInput
+						label="Full name"
+						type="text"
+						{...register("fullName")}
+						placeholder="John Smith"
+						error={errors.fullName}
+					/>
+					<CustomInput
+						label="Email"
+						type="email"
+						{...register("email")}
+						placeholder="Email@gmail.com"
+						error={errors.email}
+					/>
+					<CustomPhoneInput
+						label="Phone Number"
+						type="text"
+						setValue={setValue}
+						error={errors.phoneNumber}
+					/>
+          <CountriesSelect label="Country" setValue={setValue} error={errors.country}/>
+					<CustomInput
+						label="Password"
+						type="password"
+						{...register("password")}
+						placeholder="**********************"
+						error={errors.password}
+					/>
 					<ButtonOrLink className={st.btn} type="submit">
-						{isSubmitting ? "Loading..." : "Sign Up"}
+						{isSubmitting ? "loading..." : "Sign up"}
 					</ButtonOrLink>
 				</form>
 			</div>
