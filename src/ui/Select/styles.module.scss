@@ -96,7 +96,7 @@
 .dropDown {
 	display: grid;
 	grid-template-rows: 0fr;
-	color: var(--c-primary-500);
+	color: var(--c-primary-800);
 	text-align: left;
 	transition-duration: var(--t-time);
 
@@ -171,8 +171,11 @@
 	width: 100%;
 	outline: none;
 	pointer-events: none;
-  padding-left: 1rem;
-	color: var(--c-primary-500);
+  color: var(--c-primary-500);
+
+	@media (width <= 375px) {
+		padding-left: 1rem;
+	}
 
 	&::placeholder {
 		color: var(--c-primary-300);
