@@ -1,29 +1,29 @@
 @use "@st/utils";
 
 .clarificationGroup {
-	.content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 
-		@media (width <= 768px) {
-			grid-template-columns: 1fr;
-		}
-	}
+    @media (width <=768px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
-	.text {
-		font-size: var(--fs-desc-sm);
-	}
+  .text {
+    font-size: var(--fs-desc-sm);
+  }
 
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
-		.title {
-			font-size: var(--fs-desct-tab-h3);
-		}
-	}
+    .title {
+      font-size: var(--fs-desk-tab-h3);
+    }
+  }
 }
 
 .finances {
