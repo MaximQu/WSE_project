@@ -64,7 +64,7 @@
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
       &::before {
-        animation: bim 3.5s #{$i * 2 * 1.75 / 4 }s infinite;
+        animation: bim 3.5s calc($i * 2 * 1.75s / 4) infinite;
       }
     }
   }
