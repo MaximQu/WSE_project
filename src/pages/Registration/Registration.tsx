@@ -3,15 +3,18 @@ import {
 	workingProcessMobileJPG,
 	workingProcessTabletJPG,
 } from "@/assets/img/jpg";
-import { AdaptiveImg, ButtonOrLink } from "@/ui";
-import CustomInput from "@/ui/CustomInput/CustoInput";
-import CustomPhoneInput from "@/ui/CustomPhoneInput/CustomPhoneInput";
+import {
+	AdaptiveImg,
+	ButtonOrLink,
+	CountriesSelect,
+	CustomInput,
+	CustomPhoneInput,
+} from "@/ui";
 import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import st from "./styles.module.scss";
-import CountriesSelect from "@/ui/CountriesSelect/CountriesSelect";
 
 const Registration = () => {
 	const signUpSchema = z.object({
@@ -62,7 +65,11 @@ const Registration = () => {
 						setValue={setValue}
 						error={errors.phoneNumber}
 					/>
-          <CountriesSelect label="Country" setValue={setValue} error={errors.country}/>
+					<CountriesSelect
+						label="Country"
+						setValue={setValue}
+						error={errors.country}
+					/>
 					<CustomInput
 						label="Password"
 						type="password"
