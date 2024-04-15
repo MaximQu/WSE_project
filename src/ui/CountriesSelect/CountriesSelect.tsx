@@ -32,7 +32,7 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 
 	useEffect(() => {
 		setValue("country", currCountry);
-	}, [currCountry]);
+	}, [currCountry, setValue]);
 
 	const handleSelectCountry = (country: string) => {
 		setCurrCountry(country);
