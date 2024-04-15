@@ -3,7 +3,7 @@
 .finances {
 	display: grid;
 	grid-template-columns: repeat(2, 16.5625rem);
-	grid-template-rows: repeat(2, 1fr);
+	// grid-template-rows: repeat(2, 1fr);
 	gap: 1.5rem;
 	grid-auto-flow: row;
 
@@ -20,23 +20,30 @@
 		}
 	}
 
-	@media (width <= 768) {
+  @media (width <= 991px) {
+    grid-template-columns: repeat(2, 18.75rem);
+	}
+
+	@media (width <= 768px) {
     grid-template-rows: 1fr;
 	}
 
-	@media (width <= 575px) {
+	@media (width <= 660px) {
     grid-template-columns: 1fr;
 	}
 }
 
 .title {
-	@extend .text-h4;
+  font-size: var(--fs-desc-h4);
+	line-height: 1.5;
 	color: var(--_color-title);
+  font-weight: var(--fw-med);
 	margin-bottom: 0.75rem;
 }
 
 .text {
-	@extend .text-sm;
+  font-size: var(--fs-desc-sm);
+	line-height: 1.5;
   font-weight: var(--fw-med);
 	color: var(--_color-text);
 }

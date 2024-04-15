@@ -27,46 +27,55 @@
 }
 
 .finances {
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(2rem, -0.5141rem + 9.5775vw, 6.25rem);
-  }
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: clamp(2rem, -0.5141rem + 9.5775vw, 6.25rem);
+	}
 
-    @media (width <=768px) {
-      flex-direction: column;
-    }
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: clamp(2rem, -0.3662rem + 9.0141vw, 6rem);
 
-    &:last-of-type {
-      .title {
-        text-align: left;
-      }
-    }
+		&:last-of-type {
+			.title {
+				text-align: left;
 
-    &:nth-of-type(2) {
-      flex-direction: column-reverse;
-    }
-  }
+				@media (width <= 991px) {
+					text-align: center;
+				}
+			}
+		}
 
-  .heading {
-    flex: 1 1;
-  }
+		&:nth-of-type(2) {
+			@media (width <= 991px) {
+				flex-direction: column-reverse;
+			}
+		}
 
-  .title {
-    @extend .text-h3;
-    margin-bottom: 2.8125rem;
-    text-align: center;
-  }
+		@media (width <= 991px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 
-  .img {
-    flex: 1 0;
-  }
-}
+	.heading {
+		flex: 1 1;
+	}
+
+	.title {
+		font-size: var(--fs-desc-h4);
+		font-weight: var(--fw-semi);
+		line-height: 1.5;
+		margin-bottom: clamp(1.5rem, 0.7236rem + 2.9577vw, 2.8125rem);
+		text-align: center;
+	}
+
+	.img {
+		flex: 1 0;
+	}
 
 .contacts {
   .wrapper {
