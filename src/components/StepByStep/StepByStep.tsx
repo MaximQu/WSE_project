@@ -11,7 +11,6 @@ const StepByStep = () => {
 					theme="light"
 					clarificationClass={st.step}
 					titleClass={st.title}
-          titleAsSubtitle
 				/>
 			))}
 		</div>
