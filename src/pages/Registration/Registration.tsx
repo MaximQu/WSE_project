@@ -4,24 +4,24 @@ import {
 	workingProcessTabletJPG,
 } from "@/assets/img/jpg";
 import { AdaptiveImg, ButtonOrLink, Select } from "@/ui";
-import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { countriesData } from "../../../countriesData";
 import st from "./styles.module.scss";
+import { LogoIcon } from "@/ui/icons";
 
 const Registration = () => {
 	const signUpSchema = z.object({
-		fullName: z.string().min(2, "Required field. Min length 2"),
-		email: z.string().email().min(8, "Required field.Min length 8").trim(),
-		country: z.string().min(1, "Required field"),
+		fullName: z.string().min(2, "Required field. Minimum length 2"),
+		email: z.string().email().min(8, "Required field. Minimum length 8").trim(),
+		country: z.string().min(3, "Required field"),
 		phoneNumber: z.coerce
 			.number()
 			.int()
-			.min(9, "Required field. Min length 9")
+			.min(9, "Required field. Minimum length 9")
 			.positive(),
-		password: z.string().min(8, "Required field. Min length 8").trim(),
+		password: z.string().min(8, "Required field. Minimum length 8").trim(),
 		phoneCode: z.string(),
 	});
 
@@ -66,14 +66,11 @@ const Registration = () => {
 					</label>
 					<label className={st.label}>
 						<span>Phone number</span>
-						<div>
-							<Select
-								register={register}
-								styleType="phoneCode"
-								data={countriesData}
-							/>
-						</div>
-						{errors.phoneNumber && <p>{errors.phoneNumber?.message}</p>}
+						<Select
+							register={register}
+							styleType="phoneCode"
+							data={countriesData}
+						/>
 					</label>
 					<label className={st.label}>
 						<span>Country</span>
@@ -82,8 +79,8 @@ const Registration = () => {
 					<label className={st.label}>
 						<span>Password</span>
 						<input
-							type="password"
 							className={st.input}
+							type="password"
 							{...register("password")}
 							placeholder="Password"
 						/>
@@ -106,4 +103,5 @@ const Registration = () => {
 		</div>
 	);
 };
+
 export default Registration;

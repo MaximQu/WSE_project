@@ -7,17 +7,13 @@
 	gap: clamp(2rem, 1rem + 8vw, 13.5rem);
 	padding-block: 6.25rem;
 
+  text-align: center;
 	@media (width <=768px) {
 		flex-direction: column;
 		align-items: center;
 	}
 }
 
-.wrapper {
-	max-width: 22.5rem;
-	width: 100%;
-	text-align: center;
-}
 
 .logo {
 	width: 6.875rem;
@@ -31,6 +27,8 @@
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+  max-width: 22.5rem;
+	width: 100%;
 	gap: 1.5rem;
 }
 
@@ -45,19 +43,24 @@
 }
 
 .label {
-	@extend .text-sm;
+	span {
+		font-size: var(--fs-desc-sm);
+    font-weight: var(--fw-med);
+		line-height: 1.3;
+	}
+
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.25rem;
 	color: var(--c-primary-800);
 	text-align: left;
 	width: 100%;
-	font-size: var(--fs-desc-md);
 
 	& > p {
+    @extend .text-sm;
 		color: var(--c-red);
-		font-size: var(--fs-desc-sm);
-		font-weight: var(--fw-med);
+    font-weight: var(--fw-med);
+    margin-left: .25rem;
 	}
 }
 
@@ -69,7 +72,6 @@
 	padding: 0.6875rem 0.875rem;
 	outline: none;
 	transition-duration: var(--t-time);
-	margin-bottom: 0.25rem;
 	font-size: var(--fs-desc-sm);
 
 	&:focus {

@@ -1,4 +1,11 @@
-import { ChangeEvent, ElementRef, FC, useEffect, useRef, useState } from "react";
+import {
+	ChangeEvent,
+	ElementRef,
+	FC,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 import { UseFormRegister } from "react-hook-form";
 import { ArrowIcon } from "../icons";
 import st from "./styles.module.scss";
@@ -21,8 +28,8 @@ type SelectProps = {
 };
 
 const Select: FC<SelectProps> = ({ register, styleType, data }) => {
-	const selectRef = useRef<ElementRef<'div'>>(null)
-  const [numberInputValue, setNumberInputValue] = useState<string>("");
+	const selectRef = useRef<ElementRef<"div">>(null);
+	const [numberInputValue, setNumberInputValue] = useState<string>("");
 
 	const [phoneCodeValue, setPhoneCodeValue] = useState({
 		name: "Ukraine",
@@ -54,23 +61,23 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 		setNumberInputValue(e.target.value);
 	};
 
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-        if (selectRef.current && !selectRef.current.contains(e.target as Node)) {
-          setIsActiveCountry(false);
-          setIsActivePhoneCode(false);
-        }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-    };
-}, []);
+	useEffect(() => {
+		const handleClickOutside = (e: MouseEvent) => {
+			if (selectRef.current && !selectRef.current.contains(e.target as Node)) {
+				setIsActiveCountry(false);
+				setIsActivePhoneCode(false);
+			}
+		};
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
 
 	if (styleType === "phoneCode") {
 		return (
 			<div
-      ref={selectRef}
+				ref={selectRef}
 				className={`${st.select} ${
 					styleType === "phoneCode" ? st.phoneCodeStyle : ""
 				}`}
@@ -100,7 +107,9 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 							className={`${st.dropDown} ${isActivePhoneCode ? st.active : ""}`}
 						>
 							<div className={st.dropDownList}>
-								{data.slice().sort((a, b) => eval(a.dial_code) - eval(b.dial_code))
+								{data
+									.slice()
+									.sort((a, b) => eval(a.dial_code) - eval(b.dial_code))
 									.map((item) => (
 										<button
 											type="button"
@@ -138,7 +147,7 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 						className="hide"
 						name="phoneCode"
 						value={phoneCodeValue.dial_code}
-            tabIndex={-1}
+						tabIndex={-1}
 						readOnly
 					/>
 				</div>
@@ -155,7 +164,7 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 					className="hide"
 					name="country"
 					value={countryValue}
-          tabIndex={-1}
+					tabIndex={-1}
 					readOnly
 				/>
 				<button
@@ -190,3 +199,75 @@ const Select: FC<SelectProps> = ({ register, styleType, data }) => {
 };
 
 export default Select;
+
+// import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
+// import { UseFormRegister } from "react-hook-form";
+// import { ArrowIcon } from "../icons";
+// import st from "./styles.module.scss";
+
+// type SelectProps = {
+//   register: UseFormRegister<any>;
+//   data: {
+//     name: string;
+//     dial_code: string;
+//     icon: string;
+//   }[];
+//   styleType?: "country" | "phoneCode";
+// };
+
+// const Select: FC<SelectProps> = ({ register, styleType, data }) => {
+//   const selectRef = useRef<HTMLDivElement>(null);
+//   const [isActive, setIsActive] = useState(false);
+//   const [selectedItem, setSelectedItem] = useState<{ name: string; dial_code: string }>({
+//     name: "",
+//     dial_code: "",
+//   });
+
+//   useEffect(() => {
+//     const handleClickOutside = (e: MouseEvent) => {
+//       if (selectRef.current && !selectRef.current.contains(e.target as Node)) {
+//         setIsActive(false);
+//       }
+//     };
+//     document.addEventListener("mousedown", handleClickOutside);
+//     return () => {
+//       document.removeEventListener("mousedown", handleClickOutside);
+//     };
+//   }, []);
+
+//   const handleItemClick = (item: { name: string; dial_code: string }) => {
+//     setSelectedItem(item);
+//     setIsActive(false);
+//     if (styleType === "phoneCode") {
+//       register("phoneCode").setValue(item.dial_code);
+//     } else {
+//       register("country").setValue(item.name);
+//     }
+//   };
+
+//   return (
+//     <div className={`${st.select} ${styleType === "phoneCode" ? st.phoneCodeStyle : ""}`} ref={selectRef}>
+//       <button type="button" className={st.valueBtn} onClick={() => setIsActive(!isActive)}>
+//         {styleType === "phoneCode" ? selectedItem.dial_code || "Phone Code" : selectedItem.name || "Country"}
+//         <ArrowIcon direction={isActive ? "up" : "down"} />
+//       </button>
+//       <div className={`${st.dropDown} ${isActive ? st.active : ""}`}>
+//         <div className={st.dropDownList}>
+//           {data.map((item, index) => (
+//             <button
+//               type="button"
+//               className={st.item}
+//               tabIndex={isActive ? 0 : -1}
+//               onClick={() => handleItemClick(item)}
+//               key={index}
+//             >
+//               {styleType === "phoneCode" ? item.dial_code : item.name}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Select;
