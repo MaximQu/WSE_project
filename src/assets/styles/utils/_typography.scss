@@ -2,7 +2,7 @@
 
   // Font size
   &-h1 {
-    font-size: var(--fs-desct-tab-h1);
+    font-size: var(--fs-desk-tab-h1);
 
     @media (width <=768px) {
       font-size: var(--fs-tab-mob-h1);
@@ -10,7 +10,7 @@
   }
 
   &-h2 {
-    font-size: var(--fs-desct-tab-h2);
+    font-size: var(--fs-desk-tab-h2);
 
     @media (width <=768px) {
       font-size: var(--fs-tab-mob-h2);
@@ -18,7 +18,7 @@
   }
 
   &-h3 {
-    font-size: var(--fs-desct-tab-h3);
+    font-size: var(--fs-desk-tab-h3);
 
     @media (width <=768px) {
       font-size: var(--fs-tab-mob-h3);
@@ -26,7 +26,7 @@
   }
 
   &-h4 {
-    font-size: var(--fs-desct-tab-h4);
+    font-size: var(--fs-desk-tab-h4);
 
     @media (width <=768px) {
       font-size: var(--fs-tab-mob-h4);
@@ -34,7 +34,7 @@
   }
 
   &-md {
-    font-size: var(--fs-desct-tab-md);
+    font-size: var(--fs-desk-tab-md);
 
     @media (width <=768px) {
       font-size: var(--fs-tab-mob-md);
@@ -42,7 +42,7 @@
   }
 
   &-sm {
-    font-size: var(--fs-desct-tab-sm);
+    font-size: var(--fs-desk-tab-sm);
 
     @media (width <=768px) {
       font-size: var(--fs-tab-mob-sm);
