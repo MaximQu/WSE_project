@@ -67,6 +67,7 @@ const InvestorRelations = () => {
 							desktop={statsDesktopJPG}
 							tablet={statsTabletJPG}
 							mobile={statsMobileJPG}
+              switchToTabletWidth={991}
 						/>
 					</div>
 					<div className={st.wrapper}>
@@ -75,6 +76,8 @@ const InvestorRelations = () => {
 							desktop={moneyDesktopJPG}
 							tablet={moneyTabletJPG}
 							mobile={moneyMobileJPG}
+              switchToTabletWidth={991}
+
 						/>
 						<div className={st.heading}>
 							<h3 className={st.title}>Financial Statements:</h3>
@@ -91,6 +94,8 @@ const InvestorRelations = () => {
 							desktop={chartDesktopJPG}
 							tablet={chartTabletJPG}
 							mobile={chartMobileJPG}
+              switchToTabletWidth={991}
+
 						/>
 					</div>
 				</div>
