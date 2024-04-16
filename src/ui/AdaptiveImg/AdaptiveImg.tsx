@@ -21,9 +21,9 @@ const AdaptiveImg: FC<AdaptiveImgProps> = ({
 	switchToTabletWidth = 768,
 	switchToMobileWidth = 480,
 }) => {
-	const desktopImgType = tablet?.split(".")[1];
-	const tabletImgType = tablet?.split(".")[1];
-	const mobileImgType = tablet?.split(".")[1];
+	const desktopImgType = tablet?.split(".").at(-1);
+	const tabletImgType = tablet?.split(".").at(-1);
+	const mobileImgType = tablet?.split(".").at(-1);
 	return (
 		<picture className={className}>
 			<source
