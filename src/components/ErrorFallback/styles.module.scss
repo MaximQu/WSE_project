@@ -1,0 +1,15 @@
+@use "@st/utils";
+
+.errorBlock {
+	p {
+		@extend .text-h3;
+		color: var(--c-primary-800);
+		text-align: center;
+		line-height: 1.5;
+    margin-bottom: 1.5rem;
+	}
+}
+
+.btn {
+	margin-inline: auto;
+}

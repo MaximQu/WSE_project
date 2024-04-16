@@ -15,4 +15,4 @@ export { default as Stat } from "./Stat/Stat";
 export { default as StepByStep } from "./StepByStep/StepByStep";
 export { default as TestimonialSlider } from "./TestimonialSlider/TestimonialSlider";
 export { default as UniversalSection } from "./UniversalSection/UniversalSection";
-
+export { default as ErrorFallback } from "./ErrorFallback/ErrorFallback";
