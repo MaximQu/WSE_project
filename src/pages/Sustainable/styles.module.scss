@@ -58,9 +58,13 @@
 		@media (width <=885px) {
 			grid-template-columns: 1fr 1fr;
 		}
+    @media (width <=575px) {
+      gap: 2rem;
+		}
 
 		@media (width <=480px) {
-			grid-template-columns: 1fr;
+      justify-content: center;
+			grid-template-columns: 17.5rem;
 		}
 
 		.img {

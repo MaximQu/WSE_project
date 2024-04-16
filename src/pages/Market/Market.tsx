@@ -1,3 +1,6 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/pagination";
 import { Clarification, Dropdown, UniversalSection } from "@/components";
 import { AdaptiveImg, ButtonOrLink } from "@/ui";
 import {
@@ -12,6 +15,7 @@ import {
 	skyscraperMobileJPG,
 	skyscraperTabletJPG,
 } from "@/assets/img/jpg";
+import { Pagination } from "swiper/modules";
 
 const Market = () => {
 	return (
@@ -41,14 +45,34 @@ const Market = () => {
 				subtitle="Top-3 to invest today!"
 				className={st.offer}
 			>
-				<div className={st.wrapper}>
+				<Swiper
+					className={st.swiper}
+					slidesPerView={"auto"}
+          modules={[Pagination]}
+					pagination={{ clickable: true }}
+					breakpoints={{
+						375: {
+							enabled: false,
+							slidesPerView: 1,
+							modules: [],
+						},
+						575: {
+							enabled: true,
+							slidesPerView: "auto",
+							modules: [Pagination],
+							spaceBetween: 25,
+						},
+					}}
+				>
 					{["BLACKBULL:US30", "NASDAQ:AAPL", "NYSE:BA"].map((symbol) => (
-						<div className={st.block} key={symbol}>
-							<SymbolInfoWidget symbol={symbol} />
-							<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
-						</div>
+						<SwiperSlide className={st.slide} key={symbol}>
+							<div className={st.block} key={symbol}>
+								<SymbolInfoWidget symbol={symbol} />
+								<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
+							</div>
+						</SwiperSlide>
 					))}
-				</div>
+				</Swiper>
 			</UniversalSection>
 			<UniversalSection
 				title="Investing is easy"
@@ -63,7 +87,7 @@ const Market = () => {
 								key={investment.title}
 								subtitle={investment.title}
 								text={investment.text}
-                textClass={st.text}
+								textClass={st.text}
 							/>
 						))}
 					</div>
