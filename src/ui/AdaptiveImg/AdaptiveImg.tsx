@@ -21,7 +21,6 @@ const AdaptiveImg: FC<AdaptiveImgProps> = ({
 	switchToTabletWidth = 768,
 	switchToMobileWidth = 480,
 }) => {
-	const desktopImgType = desktop?.split(".").at(-1);
 	const tabletImgType = tablet?.split(".").at(-1);
 	const mobileImgType = mobile?.split(".").at(-1);
 	return (
@@ -35,11 +34,6 @@ const AdaptiveImg: FC<AdaptiveImgProps> = ({
 				srcSet={tablet}
 				media={`(max-width: ${switchToTabletWidth}px)`}
 				type={`image/${tabletImgType}`}
-			/>
-      <source
-				srcSet={desktop}
-				media={`(min-width: ${switchToTabletWidth + 1}px)`}
-				type={`image/${desktopImgType}`}
 			/>
 			<img className={`${className} ${st.img}`} src={desktop} alt={alt} />
 		</picture>

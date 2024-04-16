@@ -1,42 +1,60 @@
 @use "@st/utils";
 
 .notFound {
-	display: flex;
-	flex-wrap: wrap;
-	gap: clamp(2rem, 1rem + 4vw, 5rem);
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .title {
-	@extend .text-h1;
-	margin-bottom: 1.75rem;
-	color: var(--c-primary-800);
+  @extend .text-h1;
+  margin-bottom: 1.75rem;
+  color: var(--c-primary-800);
 
-	span {
-		font-size: clamp(3.625rem, 3.2273rem + 1.697vw, 4.5rem);
-		display: block;
-		color: var(--c-primary-600);
-	}
+  span {
+    font-size: clamp(3.625rem, 3.2273rem + 1.697vw, 4.5rem);
+    display: block;
+    color: var(--c-primary-600);
+  }
+}
+
+.content {
+  max-width: 30rem;
+  width: 100%;
+
+  @media (width <= 991px) {
+    max-width: unset;
+  }
 }
 
 .text {
-	@extend .text-h4;
-	margin-bottom: 3.75rem;
-	color: var(--c-primary-600);
+  @extend .text-h4;
+  margin-bottom: 3.75rem;
+  color: var(--c-primary-600);
 }
 
 .wrapper {
-	display: flex;
-	// flex-wrap: wrap;
-	gap: 1.5rem;
+  display: flex;
+  // flex-wrap: wrap;
+  gap: 1.5rem;
+
+  @media (width <=500px) {
+    flex-direction: column;
+  }
 }
 
 .btn {
-	max-width: 16.5rem;
-	padding-inline: 1.25rem;
+  max-width: 16.5rem;
+  padding-inline: 1.25rem;
+
+  @media (width <=500px) {
+    max-width: unset;
+  }
+
 }
 
 .img {
-	max-width: 28.5rem;
+  max-width: 28.5rem;
 }

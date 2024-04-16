@@ -11,6 +11,7 @@ const StepByStep = () => {
 					theme="light"
 					clarificationClass={st.step}
 					titleClass={st.title}
+          textClass={st.text}
 				/>
 			))}
 		</div>
