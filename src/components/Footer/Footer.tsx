@@ -10,12 +10,12 @@ const Footer = () => {
 				<LogoIcon type="big" className={st.icon} />
 			</Link>
 			<nav className={`${st.nav}`}>
-				<Link to="/" className="text-md">
+				<ButtonOrLink as="a" to="/contacts" styleType="dark" className="text-md">
 					Location
-				</Link>
-				<Link to="/contacts" className="text-md">
+				</ButtonOrLink>
+				<ButtonOrLink as="a" to="/contacts" styleType="dark" className="text-md">
 					Contacts
-				</Link>
+				</ButtonOrLink>
 				<div className={`${st.list}`}>
 					<ButtonOrLink
 						as="a"

@@ -8,6 +8,10 @@
 	border-radius: 0.375rem;
 	box-shadow: var(--shadow);
 
+  @media(width <= 480px) {
+    padding: 1rem;
+  }
+
 	&:has(> *:active) {
 		background-color: var(--c-green-100);
 	}

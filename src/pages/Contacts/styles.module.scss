@@ -1,62 +1,65 @@
 @use "@st/utils";
 
 .contact {
-  .content {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 1rem;
-    margin-bottom: 5rem;
+	.content {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 1rem;
+		margin-bottom: 5rem;
 
-    @media (width <=768px) {
-      flex-direction: column;
-      align-items: center;
-      gap: 5rem;
-      margin-bottom: 3.75rem;
+		@media (width <=768px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 5rem;
+			margin-bottom: 3.75rem;
+		}
+	}
 
+	.list {
+		max-width: 22.5rem;
+		width: 100%;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		max-width: 19.5rem;
+
+		.learnMore {
+			background-color: var(--c-primary-200);
+			color: var(--c-primary-800);
+			font-size: var(--fs-tab-h4);
+			font-weight: var(--fw-semi);
+			padding-block: 0.5rem;
+			max-width: unset;
+
+			&:hover {
+				background-color: var(--c-primary-300);
+			}
+
+			&:active {
+				background-color: var(--c-primary-400);
+			}
+
+			@media (width <=768px) {
+				width: 90%;
+			}
+		}
+
+		.btn {
+			max-width: unset;
+			margin-top: 1rem;
+		}
+	}
+
+	.img {
+		max-width: 37.5rem;
+		margin-inline: auto;
+    
+    @media (width <=991px) {
+      max-width: 28.625rem;
     }
-  }
-
-  .list {
-    max-width: 22.5rem;
-    width: 100%;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 19.5rem;
-
-    .learnMore {
-      background-color: var(--c-primary-200);
-      color: var(--c-primary-800);
-      font-size: var(--fs-tab-h4);
-      font-weight: var(--fw-semi);
-      padding-block: .5rem;
-      max-width: unset;
-
-      &:hover {
-        background-color: var(--c-primary-300);
-      }
-
-      &:active {
-        background-color: var(--c-primary-400);
-      }
-
-      @media (width <=768px) {
-        width: 90%;
-      }
-    }
-
-    .btn {
-      max-width: unset;
-      margin-top: 1rem;
-    }
-  }
-
-  .img {
-    max-width: 41.875rem;
-    margin-inline: auto;
-  }
+	}
 }
