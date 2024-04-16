@@ -45,6 +45,7 @@ const PNGIcon: FC<PNGIconProps> = ({ img, className = "" }) => {
 			height={40}
 			style={{ width: "40px", height: "40px" }}
 			className={styles}
+      alt="Icon"
 		/>
 	);
 };
