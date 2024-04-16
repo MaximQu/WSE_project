@@ -13,7 +13,7 @@ const NotFound = () => {
 				<p className={st.text}>Something went wrong, so this page is broken.</p>
 				<div className={st.wrapper}>
 					<ButtonOrLink as="a" to='/' className={st.btn}>Go back to Homepage</ButtonOrLink>
-					<ButtonOrLink as="a" to='/' styleType="frame">Try Again</ButtonOrLink>
+					<ButtonOrLink as="a" to='/' styleType="frame" className={st.btn}>Try Again</ButtonOrLink>
 				</div>
 			</div>
       <img src={analyticsSVG} className={st.img} alt="Page not found" />
