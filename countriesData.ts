@@ -1217,7 +1217,7 @@ export const countriesData: Country[] = [
 	},
 ];
 
-export const contriesSortedByCode = countriesData
+export const countriesSortedByCode = countriesData
 	.slice()
 	.sort((a, b) => +a.dial_code - +b.dial_code);
 

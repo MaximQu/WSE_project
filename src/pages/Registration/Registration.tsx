@@ -21,7 +21,7 @@ const Registration = () => {
 		fullName: z.string().min(2, "Required field. Minimum length 2"),
 		email: z.string().email().min(8, "Required field. Minimum length 8").trim(),
 		country: z.string().min(3, "Required field"),
-		phoneNumber: z.string().min(11, "Required field. Minimum length 9").trim(),
+		phoneNumber: z.string().min(9, "Required field. Minimum length 9").trim(),
 		password: z.string().min(8, "Required field. Minimum length 8").trim(),
 	});
 
@@ -78,7 +78,7 @@ const Registration = () => {
 						error={errors.password}
 					/>
 					<ButtonOrLink className={st.btn} type="submit">
-						{isSubmitting ? "loading..." : "Sign up"}
+						{isSubmitting ? "Loading..." : "Sign up"}
 					</ButtonOrLink>
 				</form>
 			</div>

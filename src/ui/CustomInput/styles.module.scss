@@ -35,7 +35,7 @@
 }
 
 .error {
-  @extend .text-sm;
+  font-size: .8rem;
   color: var(--c-red);
   font-weight: var(--fw-med);
   margin-left: .25rem;
