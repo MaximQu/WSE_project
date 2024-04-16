@@ -39,8 +39,11 @@ const Registration = () => {
 		console.log(data);
 	};
 
+  const setPhoneNumberValue = (value: string) => setValue('phoneNumber', value)
+  const setCountryValue = (value: string) => setValue('country', value)
+
 	return (
-		<div className={`${st.registration} container`}>
+		<main className={`${st.registration} container`}>
 			<div className={st.wrapper}>
 				<LogoIcon className={st.logo} theme="dark" type="small" />
 				<p className={st.subText}>Sign up to your account</p>
@@ -62,12 +65,12 @@ const Registration = () => {
 					<CustomPhoneInput
 						label="Phone Number"
 						type="text"
-						setValue={setValue}
+						setValue={setPhoneNumberValue}
 						error={errors.phoneNumber}
 					/>
 					<CountriesSelect
 						label="Country"
-						setValue={setValue}
+						setValue={setCountryValue}
 						error={errors.country}
 					/>
 					<CustomInput
@@ -91,7 +94,7 @@ const Registration = () => {
 				switchToMobileWidth={480}
 				className={st.img}
 			/>
-		</div>
+		</main>
 	);
 };
 
