@@ -1,3 +1,4 @@
+import useClickOutside from "@/hooks/useClickOutside";
 import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { FieldError, UseFormSetValue } from "react-hook-form";
 import { Country, countriesSortedByCode } from "../../../countriesData";
@@ -12,12 +13,12 @@ type CustomPhoneInputProps = {
 	errorClass?: string;
 	labelTextClass?: string;
 	setValue: UseFormSetValue<{
-    fullName: string;
-    email: string;
-    country: string;
-    phoneNumber: string;
-    password: string;
-}>;
+		fullName: string;
+		email: string;
+		country: string;
+		phoneNumber: string;
+		password: string;
+	}>;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 const PhoneCodeOption = ({ country }: { country: Country }) => (
@@ -44,6 +45,7 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 		dial_code: "+380",
 		icon: "https://country-code-au6g.vercel.app/UA.svg",
 	});
+	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
 
 	useEffect(() => {
 		setValue("phoneNumber", currCountry.dial_code + phoneNumber);
@@ -62,10 +64,13 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 	};
 
 	return (
-		<label className={`${st.label} ${labelClass}`}>
+		<label
+			className={`${st.label} ${labelClass}`}
+			onClick={(e) => e.preventDefault()}
+		>
 			<span className={`${st.labelText} ${labelTextClass}`}>{label}</span>
 			<div className={st.wrapper}>
-				<div className={st.select}>
+				<div className={st.select} ref={selectRef}>
 					<button
 						className={st.currOption}
 						type="button"

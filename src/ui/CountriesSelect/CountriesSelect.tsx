@@ -1,3 +1,4 @@
+import useClickOutside from "@/hooks/useClickOutside";
 import { FC, useEffect, useState } from "react";
 import { FieldError, UseFormSetValue } from "react-hook-form";
 import { countriesData } from "../../../countriesData";
@@ -29,6 +30,7 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 }) => {
 	const [isSelectOpen, setIsSelectOpen] = useState(false);
 	const [currCountry, setCurrCountry] = useState("");
+	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
 
 	useEffect(() => {
 		setValue("country", currCountry);
@@ -36,13 +38,16 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 
 	const handleSelectCountry = (country: string) => {
 		setCurrCountry(country);
-    setIsSelectOpen(false)
+		setIsSelectOpen(false);
 	};
 
 	return (
-		<label className={`${st.label} ${labelClass}`}>
+		<label
+			className={`${st.label} ${labelClass}`}
+			onClick={(e) => e.preventDefault()}
+		>
 			<span className={`${st.labelText} ${labelTextClass}`}>{label}</span>
-			<div className={st.select}>
+			<div className={st.select} ref={selectRef}>
 				<button
 					className={st.currOption}
 					type="button"
