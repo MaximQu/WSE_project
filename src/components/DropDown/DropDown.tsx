@@ -13,7 +13,12 @@ const Dropdown: FC<DropdownProps> = ({ data }) => {
 	const [isActive, setIsActive] = useState<boolean>(false);
 	return (
 		<div className={st.dropdown}>
-			<button className={st.trigger} onClick={() => setIsActive((prev) => !prev)}>
+			<button
+				onClick={() => setIsActive((prev) => !prev)}
+				aria-label="trigger dropdown"
+        className={st.trigger}
+			></button>
+			<button className={st.btn}>
 				<span className={st.question}>{data?.question}</span>
 				<ArrowIcon type="circle" direction={isActive ? "up" : "down"} />
 			</button>
