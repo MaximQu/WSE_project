@@ -1,3 +1,4 @@
+import useClickOutside from "@/hooks/useClickOutside";
 import { FC, useEffect, useState } from "react";
 import { FieldError, UseFormSetValue } from "react-hook-form";
 import { countriesData } from "../../../countriesData";
@@ -29,6 +30,7 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 }) => {
 	const [isSelectOpen, setIsSelectOpen] = useState(false);
 	const [currCountry, setCurrCountry] = useState("");
+	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
 
 	useEffect(() => {
 		setValue("country", currCountry);

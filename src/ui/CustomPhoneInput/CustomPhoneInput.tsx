@@ -1,3 +1,4 @@
+import useClickOutside from "@/hooks/useClickOutside";
 import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { FieldError, UseFormSetValue } from "react-hook-form";
 import { Country, countriesSortedByCode } from "../../../countriesData";
@@ -44,6 +45,7 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 		dial_code: "+380",
 		icon: "https://country-code-au6g.vercel.app/UA.svg",
 	});
+	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
 
 	useEffect(() => {
 		setValue("phoneNumber", currCountry.dial_code + phoneNumber);
