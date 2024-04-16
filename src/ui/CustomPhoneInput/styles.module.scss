@@ -12,7 +12,7 @@
 .wrapper {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: .25rem;
   border: 1px solid var(--c-primary-300);
   border-radius: 0.5rem;
@@ -32,6 +32,8 @@
 
 .input {
   padding-inline: .5rem;
+  max-width: 11ch;
+
   &:focus {
     border-color: var(--c-primary-500);
   }
@@ -42,7 +44,7 @@
 }
 
 .error {
-  @extend .text-sm;
+  font-size: .8rem;
   color: var(--c-red);
   font-weight: var(--fw-med);
   margin-left: .25rem;
@@ -61,7 +63,7 @@
   transition-duration: var(--t-time);
   background-color: var(--c-white);
   z-index: var(--z-high);
-  border: solid black;
+  border: solid var(--c-primary-300);
   border-width: 0px;
 
   &.open {
@@ -73,7 +75,6 @@
       flex-direction: column;
       gap: .25rem;
       overflow-y: auto;
-
     }
   }
 
@@ -92,7 +93,6 @@
 
       &:focus-within {
         background-color: var(--c-primary-200);
-
       }
     }
 

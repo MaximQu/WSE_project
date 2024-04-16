@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { FieldError, UseFormSetValue } from "react-hook-form";
-import { Country, contriesSortedByCode } from "../../../countriesData";
+import { Country, countriesSortedByCode } from "../../../countriesData";
 import { ArrowIcon } from "../icons";
 import st from "./styles.module.scss";
 
@@ -56,7 +56,7 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 		}
 	};
 
-	const handleSelectCountrie = (country: Country) => {
+	const handleSelectCountries = (country: Country) => {
 		setCurrCountry(country);
 		setIsSelectOpen(false);
 	};
@@ -76,11 +76,11 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 					</button>
 					<div className={`${st.dropdown} ${isSelectOpen ? st.open : ""}`}>
 						<ul className={st.dropdownList}>
-							{contriesSortedByCode.map((country) => (
+							{countriesSortedByCode.map((country) => (
 								<li key={country.name}>
 									<button
 										type="button"
-										onClick={() => handleSelectCountrie(country)}
+										onClick={() => handleSelectCountries(country)}
 										tabIndex={isSelectOpen ? 0 : -1}
 										className={`${st.optionBtn} ${inputClass}`}
 									>

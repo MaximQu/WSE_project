@@ -27,9 +27,13 @@
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.wrapper {
   max-width: 22.5rem;
 	width: 100%;
-	gap: 1.5rem;
 }
 
 .title {
