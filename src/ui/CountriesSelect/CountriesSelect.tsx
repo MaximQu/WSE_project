@@ -1,6 +1,6 @@
 import useClickOutside from "@/hooks/useClickOutside";
 import { FC, useEffect, useState } from "react";
-import { FieldError, UseFormSetValue } from "react-hook-form";
+import { FieldError } from "react-hook-form";
 import { countriesData } from "../../../countriesData";
 import { ArrowIcon } from "../icons";
 import st from "./styles.module.scss";
@@ -11,13 +11,7 @@ type CountriesSelectProps = {
 	labelClass?: string;
 	errorClass?: string;
 	labelTextClass?: string;
-	setValue: UseFormSetValue<{
-		fullName: string;
-		email: string;
-		country: string;
-		phoneNumber: string;
-		password: string;
-	}>;
+	setValue: (value: string) => void;
 };
 
 const CountriesSelect: FC<CountriesSelectProps> = ({
@@ -33,7 +27,7 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
 
 	useEffect(() => {
-		setValue("country", currCountry);
+		setValue(currCountry);
 	}, [currCountry, setValue]);
 
 	const handleSelectCountry = (country: string) => {

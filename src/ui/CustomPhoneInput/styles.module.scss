@@ -32,7 +32,7 @@
 
 .input {
   padding-inline: .5rem;
-
+  width: 100%;
   &:focus {
     border-color: var(--c-primary-500);
   }
