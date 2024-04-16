@@ -38,13 +38,16 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 
 	const handleSelectCountry = (country: string) => {
 		setCurrCountry(country);
-    setIsSelectOpen(false)
+		setIsSelectOpen(false);
 	};
 
 	return (
-		<label className={`${st.label} ${labelClass}`}>
+		<label
+			className={`${st.label} ${labelClass}`}
+			onClick={(e) => e.preventDefault()}
+		>
 			<span className={`${st.labelText} ${labelTextClass}`}>{label}</span>
-			<div className={st.select}>
+			<div className={st.select} ref={selectRef}>
 				<button
 					className={st.currOption}
 					type="button"

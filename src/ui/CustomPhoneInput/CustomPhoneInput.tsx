@@ -13,12 +13,12 @@ type CustomPhoneInputProps = {
 	errorClass?: string;
 	labelTextClass?: string;
 	setValue: UseFormSetValue<{
-    fullName: string;
-    email: string;
-    country: string;
-    phoneNumber: string;
-    password: string;
-}>;
+		fullName: string;
+		email: string;
+		country: string;
+		phoneNumber: string;
+		password: string;
+	}>;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 const PhoneCodeOption = ({ country }: { country: Country }) => (
@@ -64,10 +64,13 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 	};
 
 	return (
-		<label className={`${st.label} ${labelClass}`}>
+		<label
+			className={`${st.label} ${labelClass}`}
+			onClick={(e) => e.preventDefault()}
+		>
 			<span className={`${st.labelText} ${labelTextClass}`}>{label}</span>
 			<div className={st.wrapper}>
-				<div className={st.select}>
+				<div className={st.select} ref={selectRef}>
 					<button
 						className={st.currOption}
 						type="button"
