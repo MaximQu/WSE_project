@@ -39,9 +39,6 @@ const Contacts = () => {
 			<UniversalSection theme="light" className={st.contact} title="Contacts">
 				<div className={st.content}>
 					<form className={st.form} onSubmit={handleSubmit(onSubmit)}>
-						<ButtonOrLink as="a" to={"/"} className={st.learnMore}>
-							Learn more
-						</ButtonOrLink>
 						<CustomInput
 							label="Full name"
 							type="text"
