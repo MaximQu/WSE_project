@@ -28,7 +28,7 @@ const Advantage: FC<AdvantageProps> = ({
 			<div className={st.icon}>
 				<PNGIcon img={data.icon} />
 			</div>
-			<div className="">
+			<div>
 				<h3 className={st.title}>{data.title}</h3>
 				<p className={st.text}>{data.text}</p>
 			</div>
