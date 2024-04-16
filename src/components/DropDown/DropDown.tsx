@@ -24,7 +24,7 @@ const Dropdown: FC<DropdownProps> = ({ data }) => {
 			</button>
 			<div className={`${st.wrapper} ${isActive ? st.active : ""}`}>
 				<div>
-					<p className={st.answer}>{data?.answer}</p>
+					<p className={st.answer}>{data?.answer}</p> 
 				</div>
 			</div>
 		</div>
