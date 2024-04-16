@@ -16,7 +16,7 @@ const Hero = () => {
 						private companies
 					</p>
 					<ButtonOrLink className={st.btn}>Start trading</ButtonOrLink>
-					<video autoPlay loop muted className={st.video}>
+					<video autoPlay loop muted preload="none" className={st.video}>
 						<source src="hero-video.mp4" type="video/mp4" />
 						Your browser does not support the video tag.
 					</video>
