@@ -10,10 +10,34 @@
 }
 
 .offer {
-	.wrapper {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
+	.swiper {
+		& > * {
+			@media (width <= 575px) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2rem;
+
+				& > * {
+					margin-right: 0 !important;
+				}
+			}
+		}
+	}
+
+	.slide {
+		width: min-content;
+		height: auto;
+
+		iframe {
+			min-height: 19.6875rem !important;
+		}
+
+		@media (width <= 575px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	.block {
@@ -21,8 +45,20 @@
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 1.25rem;
-		max-width: 22.5rem;
-		width: 100%;
+		width: 21.4375rem;
+		height: 100%;
+
+		@media (width <= 575px) {
+			width: 21rem;
+		}
+
+		& > * {
+			& > * {
+				& > * {
+					min-height: 19.6875rem !important;
+				}
+			}
+		}
 	}
 
 	.btn {
