@@ -92,6 +92,14 @@
 	.block {
 		max-width: 30rem;
 
+    @media (width <= 768px) {
+      gap: 1rem;
+		}
+
+    @media (width <= 575px) {
+      gap: .75rem;
+		}
+
 		.title {
 			@extend .text-h3;
 		}

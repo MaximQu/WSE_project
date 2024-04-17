@@ -9,7 +9,7 @@
 	box-shadow: var(--shadow);
 
   @media(width <= 480px) {
-    padding: 1rem;
+    padding-block: 1.5rem;
   }
 
 	&:has(> *:active) {

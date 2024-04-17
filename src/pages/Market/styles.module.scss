@@ -23,6 +23,11 @@
 				}
 			}
 		}
+    @media (width <= 575px) {
+      & > div:nth-last-of-type() {
+        display: none !important;
+      }
+    }
 	}
 
 	.slide {
