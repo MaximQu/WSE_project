@@ -11,7 +11,11 @@
 
 .offer {
 	.swiper {
-		& > * {
+		@media (575px < width <= 1110px) {
+      padding-bottom: 3.125rem;
+    }
+    
+    & > * {
 			@media (width <= 575px) {
 				display: flex;
 				flex-direction: column;
@@ -24,6 +28,11 @@
 			}
 		}
     @media (width <= 575px) {
+      :global {
+        .swiper-pagination-bullets {
+          display: none;
+        }
+      }
       & > div:nth-last-of-type() {
         display: none !important;
       }

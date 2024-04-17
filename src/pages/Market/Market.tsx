@@ -59,7 +59,6 @@ const Market = () => {
 						575: {
 							enabled: true,
 							slidesPerView: "auto",
-							modules: [Pagination],
 							spaceBetween: 25,
 						},
 					}}
