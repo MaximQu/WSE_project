@@ -1,0 +1,20 @@
+{
+  "name": "wse",
+  "version": "1.0.0",
+  "description": "A fullStack app",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "",
+  "type": "module",
+  "scripts": {
+    "server": "cd backend && npm run dev",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {}
+}
