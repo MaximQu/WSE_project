@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import st from "./styles.module.scss";
+import axios from "axios";
 
 const Contacts = () => {
 	const signUpSchema = z.object({
@@ -30,6 +31,21 @@ const Contacts = () => {
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		console.log(data);
+		axios
+			.get("http://localhost:3000/emailForm", {
+				params: {
+					fullName: data.fullName,
+					email: data.email,
+					phoneNumber: data.phoneNumber,
+					summary: data.summary,
+				},
+			})
+			.then(() => {
+				console.log("Success");
+			})
+			.catch((e) => {
+				console.log(e);
+			});
 	};
 
 	const setPhoneNumberValue = (value: string) => setValue("phoneNumber", value);
