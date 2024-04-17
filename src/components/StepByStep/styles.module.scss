@@ -1,96 +1,101 @@
-@use '@st/utils';
+@use "@st/utils";
 
 .steps {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding-top: 2.5rem;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+	padding-top: 2.5rem;
 
-  &::before {
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    background-color: var(--c-green-200);
-    top: 12px;
-    left: 0;
-    border-radius: 0.75rem;
-  }
+	&::before {
+		content: "";
+		position: absolute;
+		height: 5px;
+		width: 100%;
+		background-color: var(--c-green-200);
+		top: 12px;
+		left: 0;
+		border-radius: 0.75rem;
+	}
 
-  @media (width <=800px) {
-    grid-template-columns: 1fr;
-    grid-auto-rows: fit-content;
-    gap: 3.125rem;
-    padding-block: 1rem;
-    width: fit-content;
-    margin-inline: auto;
-    &::before {
-      left: 6px;
-      height: 100%;
-      width: 5px;
-    }
-  }
+	@media (width <=800px) {
+		grid-template-columns: 1fr;
+		grid-auto-rows: fit-content;
+		gap: 3.125rem;
+		padding-block: 1rem;
+		width: fit-content;
+		margin-inline: auto;
+
+		&::before {
+			left: 6px;
+			height: 100%;
+			width: 5px;
+		}
+	}
 }
 
 .title {
-  @extend .text-h4;
+	font-size: var(--fs-desc-h4);
+
+	@media (width <=575px) {
+		font-size: var(--fs-desc-md);
+	}
 }
 
 .text {
-  @extend .text-sm;
+	font-size: var(--fs-desc-sm);
 }
 
 .step {
-  gap: 1rem;
-  text-align: center;
-  align-items: center;
-  gap: 1rem;
+	gap: 1rem;
+	text-align: center;
+	align-items: center;
+	gap: 1rem;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    background-color: var(--c-green-200);
-  }
+	&::before {
+		content: "";
+		position: absolute;
+		top: 6px;
+		width: 1rem;
+		height: 1rem;
+		border-radius: 100%;
+		background-color: var(--c-green-200);
+	}
 
-  @media (width <=800px) {
-    position: relative;
-    height: 100%;
-    max-width: 19.5rem;
-    padding-left: 3.25rem; 
+	@media (width <=800px) {
+		position: relative;
+		height: 100%;
+		max-width: 19.5rem;
+		padding-left: 3.25rem;
 
-    &::before {
-      left: 0;
-      top: 0;
-      bottom: 0;
-      margin-block: auto;
-    }
-  }
+		&::before {
+			left: 0;
+			top: 0;
+			bottom: 0;
+			margin-block: auto;
+		}
+	}
 
-  @for $i from 1 through 4 {
-    &:nth-child(#{$i}) {
-      &::before {
-        animation: bim 3.5s calc($i * 2 * 1.75s / 4) infinite;
-      }
-    }
-  }
+	@for $i from 1 through 4 {
+		&:nth-child(#{$i}) {
+			&::before {
+				animation: bim 3.5s calc($i * 2 * 1.75s / 4) infinite;
+			}
+		}
+	}
 }
 
 @keyframes bim {
-  0% {
-    background-color: var(--c-green-200);
-  }
-  25% {
-    background-color: var(--c-green-500);
-  }
-  50% {
-    background-color: var(--c-green-200);
-  }
-  100% {
-    background-color: var(--c-green-200);
-  }
+	0% {
+		background-color: var(--c-green-200);
+	}
+	25% {
+		background-color: var(--c-green-500);
+	}
+	50% {
+		background-color: var(--c-green-200);
+	}
+	100% {
+		background-color: var(--c-green-200);
+	}
 }
