@@ -37,7 +37,7 @@ const Market = () => {
 				title="Market Data"
 				subtitle="Browse or search the securities listed on The International Stock Exchange"
 			>
-				<ScreenerWidget />
+				<ScreenerWidget className={st.screenerWidget}/>
 			</UniversalSection>
 			<UniversalSection
 				theme="light"
@@ -59,7 +59,6 @@ const Market = () => {
 						575: {
 							enabled: true,
 							slidesPerView: "auto",
-							modules: [Pagination],
 							spaceBetween: 25,
 						},
 					}}

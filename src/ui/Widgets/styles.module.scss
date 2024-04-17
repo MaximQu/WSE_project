@@ -64,3 +64,10 @@
 .realtime {
   height: clamp(13.125rem, -2.3558rem + 58.9744vw, 41.875rem);
 }
+
+.screener {
+  height: clamp(35rem, 29.6961rem + 11.0497vw, 37.5rem);
+  @media (width <= 768px) {
+    height: clamp(18.75rem, -0.8621rem + 74.7126vw, 35rem);
+  }
+}

@@ -1,10 +1,10 @@
 import {
+	AdvancedRealTimeChart,
 	CopyrightStyles,
+	Screener,
+	SymbolInfo,
 	Ticker,
 	TickerTape,
-	AdvancedRealTimeChart,
-	SymbolInfo,
-	Screener,
 } from "react-ts-tradingview-widgets";
 
 import st from "./styles.module.scss";
@@ -90,7 +90,12 @@ export const RealTimeChartWidget = ({
 		/>
 	</div>
 );
-export const SymbolInfoWidget = ({symbol}: {symbol?: string}) => (
+export const SymbolInfoWidget = ({ symbol }: { symbol?: string }) => (
 	<SymbolInfo copyrightStyles={styles} symbol={symbol} autosize />
 );
-export const ScreenerWidget = () => <Screener copyrightStyles={styles} autosize/>;
+export const ScreenerWidget = ({ className = "" }: { className?: string }) => (
+	<div className={`${className} ${st.screener}`}>
+		<Screener copyrightStyles={styles} width={"100%"}
+			height={"100%"} autosize />
+	</div>
+);
