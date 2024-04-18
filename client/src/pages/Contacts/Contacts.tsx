@@ -1,16 +1,17 @@
 import { contactsSVG } from "@/assets/img/svg";
 import { ContactInfo, UniversalSection } from "@/components";
 import {
-	ButtonOrLink,
-	CustomInput,
-	CustomPhoneInput,
-	CustomTextArea,
+  ButtonOrLink,
+  CustomInput,
+  CustomPhoneInput,
+  CustomTextArea,
 } from "@/ui";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import st from "./styles.module.scss";
-import axios from "axios";
 
 const Contacts = () => {
 	const signUpSchema = z.object({
@@ -24,15 +25,25 @@ const Contacts = () => {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors, isSubmitting },
+		reset,
+		formState: { errors, isSubmitting, isSubmitSuccessful },
 		setValue,
 	} = useForm<TFormFields>({ resolver: zodResolver(signUpSchema) });
+
+	useEffect(() => {
+		reset({
+			email: "",
+			fullName: "",
+			phoneNumber: "",
+			summary: "",
+		});
+	}, [isSubmitSuccessful, reset]);
 
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		console.log(data);
 		axios
-			.get("http://localhost:3000/emailForm", {
+			.get("http://localhost:3000/contactUsForm", {
 				params: {
 					fullName: data.fullName,
 					email: data.email,
@@ -42,6 +53,8 @@ const Contacts = () => {
 			})
 			.then(() => {
 				console.log("Success");
+        alert('Your form has been successfully sent!')
+
 			})
 			.catch((e) => {
 				console.log(e);
@@ -73,6 +86,7 @@ const Contacts = () => {
 							label="Phone Number"
 							type="text"
 							setValue={setPhoneNumberValue}
+							isSubmitSuccessful={isSubmitSuccessful}
 							error={errors.phoneNumber}
 						/>
 						<CustomTextArea label="Summary" {...register("summary")} />

@@ -68,7 +68,7 @@ const Header: FC<HeaderProps> = ({ theme }) => {
 					) : null}
 				</>
 				<Link
-					to="#"
+					to="/"
 					className={st.logo}
 					aria-label="Logo icon button which leads to main page"
 				>

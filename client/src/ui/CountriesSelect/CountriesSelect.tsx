@@ -11,6 +11,7 @@ type CountriesSelectProps = {
 	labelClass?: string;
 	errorClass?: string;
 	labelTextClass?: string;
+  isSubmitSuccessful?: boolean;
 	setValue: (value: string) => void;
 };
 
@@ -20,11 +21,18 @@ const CountriesSelect: FC<CountriesSelectProps> = ({
 	labelClass = "",
 	errorClass = "",
 	labelTextClass = "",
+  isSubmitSuccessful,
 	setValue,
 }) => {
 	const [isSelectOpen, setIsSelectOpen] = useState(false);
 	const [currCountry, setCurrCountry] = useState("");
 	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
+
+  useEffect(() => {
+		if (isSubmitSuccessful) {
+			setCurrCountry("");
+		}
+	}, [isSubmitSuccessful]);
 
 	useEffect(() => {
 		setValue(currCountry);

@@ -12,6 +12,8 @@ import {
 } from "@/ui";
 import { LogoIcon } from "@/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import st from "./styles.module.scss";
@@ -30,17 +32,45 @@ const Registration = () => {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors, isSubmitting },
+		formState: { errors, isSubmitting, isSubmitSuccessful },
+		reset,
 		setValue,
 	} = useForm<TFormFields>({ resolver: zodResolver(signUpSchema) });
+
+	useEffect(() => {
+		reset({
+			country: "",
+			email: "",
+			fullName: "",
+			password: "",
+			phoneNumber: "",
+		});
+	}, [isSubmitSuccessful, reset]);
 
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		console.log(data);
+		axios
+			.get("http://localhost:3000/registerForm", {
+				params: {
+					fullName: data.fullName,
+					email: data.email,
+					country: data.country,
+					phoneNumber: data.phoneNumber,
+					password: data.password,
+				},
+			})
+			.then(() => {
+				console.log("Success");
+				alert("Your form has been successfully sent!");
+			})
+			.catch((e) => {
+				console.log(e);
+			});
 	};
 
-  const setPhoneNumberValue = (value: string) => setValue('phoneNumber', value)
-  const setCountryValue = (value: string) => setValue('country', value)
+	const setPhoneNumberValue = (value: string) => setValue("phoneNumber", value);
+	const setCountryValue = (value: string) => setValue("country", value);
 
 	return (
 		<main className={`${st.registration} container`}>
@@ -67,11 +97,13 @@ const Registration = () => {
 						type="text"
 						setValue={setPhoneNumberValue}
 						error={errors.phoneNumber}
+						isSubmitSuccessful={isSubmitSuccessful}
 					/>
 					<CountriesSelect
 						label="Country"
 						setValue={setCountryValue}
 						error={errors.country}
+						isSubmitSuccessful={isSubmitSuccessful}
 					/>
 					<CustomInput
 						label="Password"

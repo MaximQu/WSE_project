@@ -12,6 +12,7 @@ type CustomPhoneInputProps = {
 	inputClass?: string;
 	errorClass?: string;
 	labelTextClass?: string;
+	isSubmitSuccessful?: boolean;
 	setValue: (value: string) => void;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
@@ -30,6 +31,7 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 	errorClass = "",
 	labelTextClass = "",
 	setValue,
+	isSubmitSuccessful,
 	...props
 }) => {
 	const [isSelectOpen, setIsSelectOpen] = useState(false);
@@ -40,6 +42,12 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 		icon: "https://country-code-au6g.vercel.app/UA.svg",
 	});
 	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
+
+	useEffect(() => {
+		if (isSubmitSuccessful) {
+			setPhoneNumber("");
+		}
+	}, [isSubmitSuccessful]);
 
 	useEffect(() => {
 		setValue(currCountry.dial_code + phoneNumber);
