@@ -18,6 +18,7 @@ const sendEmail = ({ email, subject, message }) => {
   return new Promise((resolve, reject) => {
     const transporter = nodeMailer.createTransport({
       service: 'gmail',
+      host: 'smtp.gmail.com',
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD,
@@ -25,10 +26,10 @@ const sendEmail = ({ email, subject, message }) => {
     });
 
     const mail_configs = {
-      from: '',
-      to: email,
-      subject: subject,
-      text: message,
+      from: 'test123@gmail.com',
+      to: 'damvtech@gmail.com',
+      subject: 'subject test',
+      text: email,
     };
 
     transporter.sendMail(mail_configs, (error, info) => {
@@ -43,6 +44,7 @@ const sendEmail = ({ email, subject, message }) => {
 };
 
 app.get('/emailForm', (req, res) => {
+  console.log(req.query)
   sendEmail(req.query)
     .then((response) => response.send(response.message))
     .catch((error) => res.send(error.message));
