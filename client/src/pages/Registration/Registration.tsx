@@ -49,7 +49,6 @@ const Registration = () => {
 
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
-		console.log(data);
 		axios
 			.get("https://wse-project-server.vercel.app/registerForm", {
 				params: {
