@@ -14,6 +14,10 @@ app.use((req, res, next) => {
 	next();
 });
 
+app.get('/', (req,res) => {
+  res.send('Server is running.')
+})
+
 const sendEmail = (fields, subject) => {
 	return new Promise((resolve, reject) => {
 		const transporter = nodeMailer.createTransport({
