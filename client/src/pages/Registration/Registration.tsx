@@ -51,7 +51,7 @@ const Registration = () => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		console.log(data);
 		axios
-			.get("http://localhost:3000/registerForm", {
+			.get("https://wse-project-server.vercel.app/registerForm", {
 				params: {
 					fullName: data.fullName,
 					email: data.email,
