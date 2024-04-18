@@ -67,7 +67,6 @@ const Market = () => {
 						<SwiperSlide className={st.slide} key={symbol}>
 							<div className={st.block} key={symbol}>
 								<SymbolInfoWidget symbol={symbol} />
-								<ButtonOrLink className={st.btn}>Trade</ButtonOrLink>
 							</div>
 						</SwiperSlide>
 					))}
