@@ -1,13 +1,24 @@
-import { Advantage, Clarification, Hero, Stat, UniversalSection } from "@/components";
-import { MultipleButtons } from "@/ui";
+import {
+	Advantage,
+	Clarification,
+	Hero,
+	Stat,
+	UniversalSection,
+} from "@/components";
+import { ButtonOrLink, MultipleButtons } from "@/ui";
 import { TickerTapeWidget } from "@/ui/Widgets/TradingViewWidgets";
 import { advantages, confidence, stats, transformation } from "./content";
 import st from "./styles.module.scss";
+const getPong = async () => {
+	const res = await fetch("https://wse-project-server.vercel.app/ping");
+	console.log(await res.json());
+};
 
 const Home = () => {
 	return (
 		<main>
 			<Hero />
+			<ButtonOrLink onClick={getPong}>click</ButtonOrLink>
 			<UniversalSection className={st.confidence} theme="light">
 				<div className={st.wrapper}>
 					<Clarification
@@ -50,8 +61,8 @@ const Home = () => {
 						theme="light"
 						title={transformation.title}
 						text={transformation.text}
-            titleClass={st.title}
-            textClass={st.text}
+						titleClass={st.title}
+						textClass={st.text}
 					/>
 					<MultipleButtons />
 				</div>
