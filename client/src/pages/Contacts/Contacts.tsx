@@ -43,7 +43,7 @@ const Contacts = () => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		console.log(data);
 		axios
-			.get("http://localhost:3000/contactUsForm", {
+			.get("https://wse-project-server.vercel.app/contactUsForm", {
 				params: {
 					fullName: data.fullName,
 					email: data.email,

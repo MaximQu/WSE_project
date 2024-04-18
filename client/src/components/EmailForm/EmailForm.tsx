@@ -35,7 +35,7 @@ const EmailForm: FC<EmailFormProps> = ({ btnText = "Join us", className }) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		console.log(data);
 		axios
-			.get("http://localhost:3000/subscriptionForm", {
+			.get("https://wse-project-server.vercel.app/subscriptionForm", {
 				params: {
 					email: data.email,
 				},
