@@ -38,25 +38,30 @@ export const TickerTapeWidget = ({
 export const TickerWidget = ({ className = "" }: { className?: string }) => {
 	const content = [
 		{
-			proName: "FOREXCOM:SPXUSD",
-			title: "S&P 500",
+			proName: "CAPITALCOM:BRKB",
+			title: "BRK-B",
 			id: 1,
 		},
 		{
-			proName: "FOREXCOM:SPXUSD",
-			title: "S&P 500",
+			proName: "NASDAQ:AAPL",
+			title: "AAPL",
 			id: 2,
 		},
 		{
-			proName: "FOREXCOM:SPXUSD",
-			title: "S&P 500",
+			proName: "NYSE:BA	",
+			title: "BA (The boeing Company)",
 			id: 3,
 		},
 		{
-			proName: "FOREXCOM:SPXUSD",
+			proName: "CAPITALCOM:BRKB",
 			title: "S&P 500",
 			id: 4,
 		},
+		// {
+		// 	proName: "BLACKBULL:DJ30.F",
+		// 	title: "S&P 500",
+		// 	id: 4,
+		// },
 	];
 	return (
 		<div className={`${className} ${st.ticker}`}>
@@ -95,7 +100,11 @@ export const SymbolInfoWidget = ({ symbol }: { symbol?: string }) => (
 );
 export const ScreenerWidget = ({ className = "" }: { className?: string }) => (
 	<div className={`${className} ${st.screener}`}>
-		<Screener copyrightStyles={styles} width={"100%"}
-			height={"100%"} autosize />
+		<Screener
+			copyrightStyles={styles}
+			width={"100%"}
+			height={"100%"}
+			autosize
+		/>
 	</div>
 );
