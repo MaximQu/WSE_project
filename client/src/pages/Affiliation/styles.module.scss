@@ -35,13 +35,17 @@
 	.wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		gap: clamp(1.25rem, -0.9683rem + 8.4507vw, 5rem);
+		gap: 2rem;
 
     @media (width <=768px) {
       grid-template-columns: 1fr;
       place-items: center;
 		}
 	}
+
+  .advantage {
+    max-width: 22.5rem;
+  }
 }
 
 .joinUsBlock {

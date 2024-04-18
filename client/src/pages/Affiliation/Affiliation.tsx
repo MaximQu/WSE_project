@@ -44,7 +44,7 @@ const Affiliation = () => {
 			>
 				<div className={st.wrapper}>
 					{benefits.map((item) => (
-						<Advantage key={item.icon} theme="light" data={item} />
+						<Advantage className={st.advantage} key={item.icon} theme="light" data={item} />
 					))}
 				</div>
 			</UniversalSection>
