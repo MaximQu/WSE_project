@@ -90,7 +90,7 @@ const Contacts = () => {
 						/>
 						<CustomTextArea label="Summary" {...register("summary")} />
 						<ButtonOrLink className={st.btn} type="submit">
-							{isSubmitting ? "Loading..." : "Sign up"}
+							{isSubmitting ? "Loading..." : "Send"}
 						</ButtonOrLink>
 					</form>
 					<ContactInfo className={st.list} />

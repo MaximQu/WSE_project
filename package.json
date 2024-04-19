@@ -8,7 +8,7 @@
   "main": "",
   "type": "module",
   "scripts": {
-    "server": "cd backend && npm run dev",
+    "server": "cd backend && npm run start",
     "client": "cd client && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
