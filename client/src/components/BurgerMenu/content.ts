@@ -24,11 +24,11 @@ export const navList = [
 		url: "/private-markets",
 	},
 	{
-		link: "Why WSE?",
-		url: "/why-wse",
+		link: "Why GSM?",
+		url: "/why-gsm",
 	},
 	{
-		link: "About WSE ",
+		link: "About GSM ",
 		dropdown: [
 			{
 				link: "Company profile",

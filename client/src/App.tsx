@@ -6,6 +6,7 @@ import { Loading } from "./ui";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./components";
 
+
 const InvestorRelations = lazy(() =>
 	import("./pages").then((module) => {
 		return { default: module.InvestorRelations };
@@ -81,30 +82,11 @@ const Trade = lazy(() =>
 		return { default: module.Trade };
 	}),
 );
-const WhyWSE = lazy(() =>
+const WhyGSM = lazy(() =>
 	import("./pages").then((module) => {
-		return { default: module.WhyWSE };
+		return { default: module.WhyGSM };
 	}),
 );
-
-// import {
-// 	Affiliation,
-// 	CompanyProfile,
-// 	Contacts,
-// 	Copyright,
-// 	Home,
-// 	InvestorRelations,
-// 	LegalDisclaimer,
-// 	Market,
-// 	NotFound,
-// 	PrivacyStatement,
-// 	PrivateMarkets,
-// 	Registration,
-// 	Regulation,
-// 	Sustainable,
-// 	Trade,
-// 	WhyWSE,
-// } from "./pages";
 
 const App = () => {
 	const navigate = useNavigate();
@@ -144,7 +126,7 @@ const App = () => {
 					}
 				>
 					<Route index element={<Home />} />
-					<Route path="why-wse" element={<WhyWSE />} />
+					<Route path="why-gsm" element={<WhyGSM />} />
 				</Route>
 			</Route>
 			<Route path="about-us">

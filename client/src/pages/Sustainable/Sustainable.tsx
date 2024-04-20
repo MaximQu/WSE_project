@@ -50,7 +50,7 @@ const Sustainable = () => {
 				className={st.faq}
 				theme="light"
 				title="Frequently Asked Questions"
-				subtitle="Exploring common queries: Your comprehensive guide to frequently asked questions about sustainability and investing with world stock exchange"
+				subtitle="Exploring common queries: Your comprehensive guide to frequently asked questions about sustainability and investing with global stock market"
 			>
 				<div className={st.list}>
 					{faq_content.map((item) => (

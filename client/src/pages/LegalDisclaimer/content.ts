@@ -1,7 +1,7 @@
 export const content = [
 	{
 		title: "Responsibility",
-		text: "This website is owned and operated by World Stock Exchange. By accessing and using this website, you agree to comply with the terms and conditions set out in this legal notice. We reserve the right to modify these terms at any time without prior notice. Your continued use of the website after any such changes constitutes your acceptance of such changes.",
+		text: "This website is owned and operated by Global Stock Market. By accessing and using this website, you agree to comply with the terms and conditions set out in this legal notice. We reserve the right to modify these terms at any time without prior notice. Your continued use of the website after any such changes constitutes your acceptance of such changes.",
 	},
 	{
 		title: "Site Content",
@@ -9,6 +9,6 @@ export const content = [
 	},
 	{
 		title: "Intellectual property",
-		text: "All intellectual property rights in the content of this website are the property of World Stock Exchange or third-party licensors. Reproduction, distribution or modification of any part of the content is prohibited without the express written consent of World Stock Exchange.",
+		text: "All intellectual property rights in the content of this website are the property of Global Stock Market or third-party licensors. Reproduction, distribution or modification of any part of the content is prohibited without the express written consent of Global Stock Market.",
 	},
 ];

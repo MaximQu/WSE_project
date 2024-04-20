@@ -107,9 +107,8 @@ const Regulation = () => {
 						<ol className={st.list}>
 							<li className={st.item}>
 								Submit your complaint in writing to our Compliance Department at
-								<a href="mailto:necesito-su-correoelectronico@worldstockexchange.com">
-									<span> necesito-su-correoelectronico</span>
-									@worldstockexchange.com
+								<a href="mailto:info@globalstockmarket.org">
+									<span> info@globalstockmarket.org</span>
 								</a>
 								.
 							</li>

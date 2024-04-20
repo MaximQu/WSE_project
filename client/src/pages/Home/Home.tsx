@@ -38,7 +38,7 @@ const Home = () => {
 				</div>
 			</UniversalSection>
 			<UniversalSection
-				title="Why Choose WSE?"
+				title="Why Choose GSM?"
 				subtitle="Your gateway to Global Markets: trust, expertise, and security combined"
 				className={st.advantagesBlock}
 			>

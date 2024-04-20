@@ -9,12 +9,12 @@ type ContactInfoProps = {
 const ContactInfo: FC<ContactInfoProps> = ({ className }) => {
 	return (
 		<div className={`${st.contactList} ${className}`}>
-			<a href="mailto:" className={st.block}>
+			<a href="mailto:info@globalstockmarket.org" className={st.block}>
 				<div className={st.icon}>
 					<EmailIcon />
 				</div>
 				<h2 className={st.heading}>Email</h2>
-				<span className={st.value}>email@gmail.com</span>
+				<span className={st.value}>info@globalstockmarket.org </span>
 			</a>
 			<a href="tel:+" className={st.block}>
 				<div className={st.icon}>

@@ -5,7 +5,7 @@ export const explanation = [
 		text: "In private markets, investors can access unique opportunities not available in public markets, such as early-stage ventures, real estate projects, and private equity investments. While private market investments may offer higher returns, they can also be less liquid and involve greater risk. However, with careful consideration and due diligence, investors can diversify their portfolios and unlock potential growth opportunities.",
 	},
 	{
-		text: "At WSE, we provide a seamless platform for investors to explore, select, and invest in private market opportunities. From creating an account to completing transactions and monitoring portfolio performance, our user-friendly platform guides investors every step of the way. Join us at WSE and embark on a journey to discover and capitalize on the potential of private markets",
+		text: "At GSM, we provide a seamless platform for investors to explore, select, and invest in private market opportunities. From creating an account to completing transactions and monitoring portfolio performance, our user-friendly platform guides investors every step of the way. Join us at GSM and embark on a journey to discover and capitalize on the potential of private markets",
 	},
 ];
 
@@ -13,7 +13,7 @@ export const faq_content = [
 	{
 		question: "What distinguishes private markets from public markets?",
 		answer:
-			"Private markets offer a unique investment landscape separate from the public markets. Unlike publicly traded securities, investments in private markets involve direct transactions between investors and companies. At WSE, we specialize in connecting investors with exclusive private market opportunities, providing a platform for you to explore and invest in innovative ventures and projects. ",
+			"Private markets offer a unique investment landscape separate from the public markets. Unlike publicly traded securities, investments in private markets involve direct transactions between investors and companies. At GSM, we specialize in connecting investors with exclusive private market opportunities, providing a platform for you to explore and invest in innovative ventures and projects. ",
 	},
 	{
 		question: "What types of investments are available in private markets?",
@@ -23,7 +23,7 @@ export const faq_content = [
 	{
 		question: "How do I invest in private markets?",
 		answer:
-			"Investing in private markets begins with joining WSE. Once onboard, you can explore investment options, conduct thorough due diligence, and invest in projects or companies aligned with your investment objectives.",
+			"Investing in private markets begins with joining GSM. Once onboard, you can explore investment options, conduct thorough due diligence, and invest in projects or companies aligned with your investment objectives.",
 	},
 	{
 		question: "What are the advantages of investing in private markets?",
@@ -34,7 +34,7 @@ export const faq_content = [
 		question:
 			"Are there any risks associated with investing in private markets?",
 		answer:
-			"Yes, investing in private markets entails risks, including limited liquidity, higher investment thresholds, potential capital losses, and reduced transparency compared to publicly traded securities. It's crucial for investors to carefully evaluate and comprehend these risks before venturing into the realm of private market investing. Join WSE for guidance and support as you navigate these opportunities.",
+			"Yes, investing in private markets entails risks, including limited liquidity, higher investment thresholds, potential capital losses, and reduced transparency compared to publicly traded securities. It's crucial for investors to carefully evaluate and comprehend these risks before venturing into the realm of private market investing. Join GSM for guidance and support as you navigate these opportunities.",
 	},
 ];
 export const steps_content = [
@@ -74,7 +74,7 @@ export const slider_content = [
 	{
 		photo: slimChart,
 		title: "Diverse Investment Options",
-		text: "At WSE, we offer a curated selection of private market opportunities, spanning various industries and asset classes.\n\nFrom innovative startups to established companies and real estate projects, our platform provides access to a diverse range of investment options tailored to your preferences and risk appetite.",
+		text: "At GSM, we offer a curated selection of private market opportunities, spanning various industries and asset classes.\n\nFrom innovative startups to established companies and real estate projects, our platform provides access to a diverse range of investment options tailored to your preferences and risk appetite.",
 	},
 	{
 		photo: slimMoney,
@@ -84,6 +84,6 @@ export const slider_content = [
 	{
 		photo: slimHand,
 		title: "Exclusivity and Access",
-		text: "By joining WSE, investors gain access to exclusive investment opportunities not available on public stock exchanges.\n\nOur platform connects investors with promising ventures seeking funding, offering a unique opportunity to participate in the growth and success of innovative businesses and projects.",
+		text: "By joining GSM, investors gain access to exclusive investment opportunities not available on public stock exchanges.\n\nOur platform connects investors with promising ventures seeking funding, offering a unique opportunity to participate in the growth and success of innovative businesses and projects.",
 	},
 ];

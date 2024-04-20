@@ -7,12 +7,12 @@ const Hero = () => {
 		<section className={st.hero}>
 			<div className={`${st.wrapper} container`}>
 				<div className={st.contentBlock}>
-					<h1 className={st.title}>WORLD STOCK EXCHANGE</h1>
+					<h1 className={st.title}>GLOBAL STOCK MARKET</h1>
 					<p className={st.text}>
 						Control and supervision of all stock exchanges in the world
 					</p>
 					<p className={st.text}>
-						WSE provides financial markets and security services to public and
+						GSE provides financial markets and security services to public and
 						private companies
 					</p>
 					<ButtonOrLink className={st.btn}>Start trading</ButtonOrLink>

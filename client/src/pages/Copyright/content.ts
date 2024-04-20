@@ -1,7 +1,7 @@
 export const content = [
 	{
 		title: "Property rights",
-		text: "All copyright and other intellectual property rights in the content of this website are the property of World Stock Exchange or third-party licensors. These rights are protected by copyright laws and international treaties. Reproduction, distribution or modification of any part of the content is prohibited without the express written consent of World Stock Exchange.",
+		text: "All copyright and other intellectual property rights in the content of this website are the property of Global Stock Market or third-party licensors. These rights are protected by copyright laws and international treaties. Reproduction, distribution or modification of any part of the content is prohibited without the express written consent of Global Stock Market.",
 	},
 	{
 		title: "Permitted Use",

@@ -9,14 +9,14 @@ import {
 	laptopTabletJPG,
 } from "@/assets/img/jpg";
 
-const WhyWSE = () => {
+const WhyGSM = () => {
 	return (
 		<main>
 			<UniversalSection>
 				<Clarification
 					type="skewed"
-					title="Why WSE?"
-					text={`At WSE, we pride ourselves on offering a comprehensive platform designed to unlock exclusive investment opportunities and empower investors to achieve their financial goals.\n\nHere are just a few reasons why you should choose WSE:`}
+					title="Why GSM?"
+					text={`At GSM, we pride ourselves on offering a comprehensive platform designed to unlock exclusive investment opportunities and empower investors to achieve their financial goals.\n\nHere are just a few reasons why you should choose GSM:`}
 				/>
 			</UniversalSection>
 			<UniversalSection className={st.advantagesBlock}>
@@ -28,7 +28,7 @@ const WhyWSE = () => {
 						desktop={laptopDesktopJPG}
 						tablet={laptopTabletJPG}
 						mobile={laptopMobileJPG}
-						alt={"Why WSE?"}
+						alt={"Why GSM?"}
 						switchToTabletWidth={885}
 						className={st.img}
 					/>
@@ -59,7 +59,7 @@ const WhyWSE = () => {
 				theme="light"
 				className={st.explanation}
 				title="Our strength"
-				subtitle="At World Stock Exchange (WSE), we pride ourselves on our robust foundation built upon several key strengths"
+				subtitle="At Global Stock Market (GSM), we pride ourselves on our robust foundation built upon several key strengths"
 			>
 				<div className={st.content}>
 					<div className={st.wrapper}>
@@ -79,4 +79,4 @@ const WhyWSE = () => {
 	);
 };
 
-export default WhyWSE;
+export default WhyGSM;
