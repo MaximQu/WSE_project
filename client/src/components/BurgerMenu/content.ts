@@ -32,11 +32,11 @@ export const navList = [
 		dropdown: [
 			{
 				link: "Company profile",
-				url: "/about-us/company-profile",
+				url: "/company-profile",
 			},
 			{
 				link: "Investor relations",
-				url: "/about-us/investor-relations",
+				url: "/investor-relations",
 			},
 		],
 	},
@@ -47,4 +47,4 @@ export const navList = [
 ];
 
 export const logoLink = '/'
-export const buttonLink = '/auth/sign-up'
+export const buttonLink = '/sign-up'

@@ -117,7 +117,7 @@ const Market = () => {
 				title="Ready to start?"
 				subtitle="Easy way to Great benefits!"
 			>
-				<ButtonOrLink className={st.btn} as="a" to="/auth/sign-up">
+				<ButtonOrLink className={st.btn} as="a" to="/sign-up">
 					Register account
 				</ButtonOrLink>
 			</UniversalSection>

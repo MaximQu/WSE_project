@@ -40,7 +40,7 @@ const WhyGSM = () => {
 				title="Create your account today!"
 				subtitle="Easy way to Great benefits!"
 			>
-				<ButtonOrLink className={st.btn} as="a" to="/auth/sign-up">
+				<ButtonOrLink className={st.btn} as="a" to="/sign-up">
 					Register account
 				</ButtonOrLink>
 			</UniversalSection>

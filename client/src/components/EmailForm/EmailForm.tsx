@@ -34,7 +34,7 @@ const EmailForm: FC<EmailFormProps> = ({ btnText = "Join us", className }) => {
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		axios
-			.get("https://wse-project-server.vercel.app/subscriptionForm", {
+			.get("https://node-app.globalstockmarket.org/subscriptionForm", {
 				params: {
 					email: data.email,
 				},
