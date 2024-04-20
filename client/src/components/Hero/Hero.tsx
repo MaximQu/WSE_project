@@ -12,7 +12,7 @@ const Hero = () => {
 						Control and supervision of all stock exchanges in the world
 					</p>
 					<p className={st.text}>
-						GSE provides financial markets and security services to public and
+						GSM provides financial markets and security services to public and
 						private companies
 					</p>
 					<ButtonOrLink className={st.btn}>Start trading</ButtonOrLink>
