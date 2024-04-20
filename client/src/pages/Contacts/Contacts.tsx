@@ -42,7 +42,7 @@ const Contacts = () => {
 	const onSubmit: SubmitHandler<TFormFields> = async (data) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		axios
-			.get("https://wse-project-server.vercel.app/contactUsForm", {
+			.get("https://node-app.globalstockmarket.org/contactUsForm", {
 				params: {
 					fullName: data.fullName,
 					email: data.email,

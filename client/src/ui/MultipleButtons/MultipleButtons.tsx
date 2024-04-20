@@ -15,7 +15,7 @@ const MultipleButtons: FC<MultipleButtonsProps> = ({
 }) => {
 	return (
 		<div className={`${st.block} ${className}`}>
-			<ButtonOrLink className={st.btn} as="a" to="/auth/sign-up">
+			<ButtonOrLink className={st.btn} as="a" to="/sign-up">
 				{firstBtnText}
 			</ButtonOrLink>
 			<ButtonOrLink className={st.btn} as="a" to="/contacts" styleType="frame">

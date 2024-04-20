@@ -1,11 +1,8 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 import MainLayout from "./layouts/MainLayout";
 import { Suspense } from "react";
 import { Loading } from "./ui";
-import { ErrorBoundary } from "react-error-boundary";
-import { ErrorFallback } from "./components";
-
 
 const InvestorRelations = lazy(() =>
 	import("./pages").then((module) => {
@@ -89,20 +86,14 @@ const WhyGSM = lazy(() =>
 );
 
 const App = () => {
-	const navigate = useNavigate();
 	return (
 		<Routes>
 			<Route path="/">
 				<Route
 					element={
-						<ErrorBoundary
-							FallbackComponent={ErrorFallback}
-							onReset={() => navigate("/")}
-						>
-							<Suspense fallback={<Loading />}>
-								<MainLayout headerTheme="light" />
-							</Suspense>
-						</ErrorBoundary>
+						<Suspense fallback={<Loading />}>
+							<MainLayout headerTheme="light" />
+						</Suspense>
 					}
 				>
 					<Route path="trade" element={<Trade />} />
@@ -112,7 +103,8 @@ const App = () => {
 					<Route path="private-markets" element={<PrivateMarkets />} />
 					<Route path="affiliation" element={<Affiliation />} />
 					<Route path="contacts" element={<Contacts />} />
-					<Route path="auth/sign-up" element={<Registration />} />
+					<Route path="sign-up" element={<Registration />} />
+					<Route path="company-profile" element={<CompanyProfile />} />
 					<Route path="legal-notice" element={<LegalDisclaimer />} />
 					<Route path="privacy-statement" element={<PrivacyStatement />} />
 					<Route path="copyright" element={<Copyright />} />
@@ -120,42 +112,13 @@ const App = () => {
 				</Route>
 				<Route
 					element={
-						<Suspense fallback={<p>Loading ...</p>}>
+						<Suspense fallback={<Loading />}>
 							<MainLayout />
 						</Suspense>
 					}
 				>
 					<Route index element={<Home />} />
 					<Route path="why-gsm" element={<WhyGSM />} />
-				</Route>
-			</Route>
-			<Route path="about-us">
-				<Route
-					element={
-						<ErrorBoundary
-							FallbackComponent={ErrorFallback}
-							onReset={() => navigate("/")}
-						>
-							<Suspense fallback={<Loading />}>
-								<MainLayout headerTheme="light" />
-							</Suspense>
-						</ErrorBoundary>
-					}
-				>
-					<Route path="company-profile" element={<CompanyProfile />} />
-				</Route>
-				<Route
-					element={
-						<ErrorBoundary
-							FallbackComponent={ErrorFallback}
-							onReset={() => navigate("/")}
-						>
-							<Suspense fallback={<Loading />}>
-								<MainLayout />
-							</Suspense>
-						</ErrorBoundary>
-					}
-				>
 					<Route path="investor-relations" element={<InvestorRelations />} />
 				</Route>
 			</Route>
