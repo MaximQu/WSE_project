@@ -13,8 +13,8 @@ const Trade = () => {
 			<UniversalSection
 				className={st.wseDescription}
 				theme="light"
-				title="Trading with WSE"
-				subtitle="Embark on an exciting journey into the world of stock trading with WSE"
+				title="Trading with GSM"
+				subtitle="Embark on an exciting journey into the world of stock trading with GSM"
 			>
 				<div className={st.content}>
 					<div className={st.wrapper}>

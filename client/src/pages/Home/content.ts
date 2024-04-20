@@ -68,7 +68,7 @@ export const confidence: Pick<ClarificationProps, "title" | "text"> & {
 	};
 } = {
 	title: "Invest with Confidence",
-	text: "At World Stock Exchange, we believe in democratizing access to global financial markets.\n\nWhether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives.",
+	text: "At Global Stock Market, we believe in democratizing access to global financial markets.\n\nWhether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives.",
 	img: {
 		src: confidenceSVG,
 		alt: "Invest with Confidence",
@@ -77,5 +77,5 @@ export const confidence: Pick<ClarificationProps, "title" | "text"> & {
 
 export const transformation: Pick<ClarificationProps, "title" | "text"> = {
 	title: "Transform your idea into reality",
-	text: "Discover the Difference with WSE. Create your account!",
+	text: "Discover the Difference with GSM. Create your account!",
 };

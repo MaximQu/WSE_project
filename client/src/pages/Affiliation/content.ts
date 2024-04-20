@@ -36,8 +36,8 @@ export const hero: Pick<ClarificationProps, "title" | "text"> & {
 	img1: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile">;
 	img2: Pick<AdaptiveImgProps, "desktop" | "tablet" | "mobile">;
 } = {
-	title: "Welcome to\nWorld Stock Exchange (WSE),",
-	text: "where collaboration and partnership are integral to our success. Affiliation plays a crucial role in shaping our interactions within the financial ecosystem, driving innovation, and fostering growth opportunities. At WSE, we believe in the power of strategic relationships to enhance our services, expand our reach, and deliver value to our clients and stakeholders.",
+	title: "Welcome to\nGlobal Stock Market (GSM),",
+	text: "where collaboration and partnership are integral to our success. Affiliation plays a crucial role in shaping our interactions within the financial ecosystem, driving innovation, and fostering growth opportunities. At GSM, we believe in the power of strategic relationships to enhance our services, expand our reach, and deliver value to our clients and stakeholders.",
 	img1: {
 		desktop: conversationDesktopJPG,
 		tablet: conversationTabletJPG,
@@ -50,4 +50,4 @@ export const hero: Pick<ClarificationProps, "title" | "text"> & {
 	},
 };
 
-export const statement = 'At World Stock Exchange (WSE), we understand the value of collaboration in expanding our reach and connecting with traders and investors worldwide.\n\nOur affiliation with marketing affiliates is a key component of our strategy to promote our platform, attract new clients, and drive engagement within the financial community.'
+export const statement = 'At Global Stock Market (GSM), we understand the value of collaboration in expanding our reach and connecting with traders and investors worldwide.\n\nOur affiliation with marketing affiliates is a key component of our strategy to promote our platform, attract new clients, and drive engagement within the financial community.'

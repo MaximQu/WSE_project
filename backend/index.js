@@ -31,8 +31,8 @@ const sendEmail = (fields, subject) => {
 
     const mail_configs = {
       from: {
-        name: 'WSE Project',
-        address: 'WSE.Project@gmail.com',
+        name: 'GSM Project',
+        address: 'GSM.Project@gmail.com',
       },
       to: process.env.EMAIL,
       subject: subject,

@@ -14,9 +14,9 @@ export const faq_content = [
 			"Sustainable investing integrates environmental, social, and governance (ESG) factors into investment decisions to generate long-term value.",
 	},
 	{
-		question: "How can I invest sustainably with World Stock Exchange?",
+		question: "How can I invest sustainably with Global Stock Market?",
 		answer:
-			"World Stock Exchange offers a range of sustainable investment options, including green bonds, socially responsible funds, and ESG-rated companies.",
+			"Global Stock Market offers a range of sustainable investment options, including green bonds, socially responsible funds, and ESG-rated companies.",
 	},
 	{
 		question: "What are the benefits of sustainable investing?",
@@ -30,9 +30,9 @@ export const faq_content = [
 	},
 	{
 		question:
-			"How does World Stock Exchange measure sustainability performance?",
+			"How does Global Stock Market measure sustainability performance?",
 		answer:
-			"World Stock Exchange measures sustainability performance using key metrics and indicators, ensuring transparency and accountability.",
+			"Global Stock Market measures sustainability performance using key metrics and indicators, ensuring transparency and accountability.",
 	},
 ];
 
@@ -69,7 +69,7 @@ export const sustainable: {
 } = {
 	clarification: {
 		title: "Sustainable",
-		text: "At World Stock Exchange, we are committed to promoting sustainability in the financial sector.\n\nWe recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions",
+		text: "At Global Stock Market, we are committed to promoting sustainability in the financial sector.\n\nWe recognize the importance of integrating environmental, social, and governance (ESG) considerations into our business practices and investment decisions",
 	},
 	img: {
 		desktop: windFarmDesktopJPG,

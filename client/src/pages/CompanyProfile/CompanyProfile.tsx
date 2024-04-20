@@ -16,7 +16,7 @@ const CompanyProfile = () => {
 			<UniversalSection
 				className={st.mission}
 				theme="light"
-				title="Mission of WSE"
+				title="Mission of GSM"
 			>
 				<div className={st.content}>
 					<Clarification
@@ -29,7 +29,7 @@ const CompanyProfile = () => {
 						subtitleClass={st.subTitle}
 						textClass={st.text}
 					/>
-					<img className={st.img} src={puzzleSVG} alt="Mission of WSE" />
+					<img className={st.img} src={puzzleSVG} alt="Mission of GSM" />
 				</div>
 			</UniversalSection>
 			<UniversalSection

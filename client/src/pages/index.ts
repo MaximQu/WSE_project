@@ -13,5 +13,4 @@ export { default as Registration } from "./Registration/Registration";
 export { default as Regulation } from "./Regulation/Regulation";
 export { default as Sustainable } from "./Sustainable/Sustainable";
 export { default as Trade } from "./Trade/Trade";
-export { default as WhyWSE } from "./WhyWSE/WhyWSE";
-
+export { default as WhyGSM } from "./WhyGSM/WhyGSM";

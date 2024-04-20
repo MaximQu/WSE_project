@@ -44,7 +44,7 @@ const Footer = () => {
 				</div>
 			</nav>
 			<p className="text-copyright">
-				© 2024 WORLD STOCK EXCHANGE. All Rights Reserved.
+				© 2024 GLOBAL STOCK MARKET. All Rights Reserved.
 			</p>
 		</footer>
 	);
