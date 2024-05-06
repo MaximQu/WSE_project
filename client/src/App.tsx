@@ -64,6 +64,11 @@ const Registration = lazy(() =>
 		return { default: module.Registration };
 	}),
 );
+const LogIn = lazy(() =>
+	import("./pages").then((module) => {
+		return { default: module.LogIn };
+	}),
+);
 const Regulation = lazy(() =>
 	import("./pages").then((module) => {
 		return { default: module.Regulation };
@@ -104,6 +109,7 @@ const App = () => {
 					<Route path="affiliation" element={<Affiliation />} />
 					<Route path="contacts" element={<Contacts />} />
 					<Route path="sign-up" element={<Registration />} />
+					<Route path="log-in" element={<LogIn />} />
 					<Route path="company-profile" element={<CompanyProfile />} />
 					<Route path="legal-notice" element={<LegalDisclaimer />} />
 					<Route path="privacy-statement" element={<PrivacyStatement />} />
