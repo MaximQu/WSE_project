@@ -74,7 +74,7 @@ const Header: FC<HeaderProps> = ({ theme }) => {
 				>
 					<LogoIcon type="big" theme={getOppositeTheme(theme)} />
 				</Link>
-				<ButtonOrLink className={st.btn}>My account</ButtonOrLink>
+				<ButtonOrLink as="a" to='/log-in' className={st.btn}>My account</ButtonOrLink>
 			</div>
 		</header>
 	);
