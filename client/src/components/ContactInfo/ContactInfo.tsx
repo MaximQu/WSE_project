@@ -16,19 +16,19 @@ const ContactInfo: FC<ContactInfoProps> = ({ className }) => {
 				<h2 className={st.heading}>Email</h2>
 				<span className={st.value}>info@globalstockmarket.org </span>
 			</a>
-			<a href="tel:+" className={st.block}>
+			<a href="tel:+4591987737" className={st.block}>
 				<div className={st.icon}>
 					<PhoneIcon />
 				</div>
 				<h2 className={st.heading}>Phone</h2>
-				<span className={st.value}>+00-000-000-00</span>
+				<span className={st.value}>+45-919-877-37</span>
 			</a>
 			<a href="#" className={st.block}>
 				<div className={st.icon}>
 					<MarkerIcon />
 				</div>
 				<h2 className={st.heading}>Office</h2>
-				<address className={st.value}>Address</address>
+				<address className={st.value}>Skovvej 93, 2920 Charlottenlund, Denmark</address>
 			</a>
 		</div>
 	);
