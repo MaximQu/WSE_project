@@ -6,6 +6,10 @@
   padding-block: clamp(1.875rem, 1.5385rem + 1.2821vw, 2.5rem) clamp(3.75rem, 2.4038rem + 5.1282vw, 6.25rem);
 }
 
+.wrapper {
+  margin-bottom: 2rem;
+}
+
 .contentBlock {
   position: relative;
   display: flex;
@@ -69,6 +73,7 @@
 .btn {
   @extend .text-md;
   max-width: 13.5rem;
+  margin-inline: auto;
 
   @media (width <=425px) {
     max-width: unset;

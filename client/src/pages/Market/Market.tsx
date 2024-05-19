@@ -71,6 +71,8 @@ const Market = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
+			  <ButtonOrLink as="a" to={'/contacts'} className={st.btn}>Buy stocks</ButtonOrLink>
+
 			</UniversalSection>
 			<UniversalSection
 				title="Investing is easy"

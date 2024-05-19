@@ -37,9 +37,9 @@ const CustomPhoneInput: FC<CustomPhoneInputProps> = ({
 	const [isSelectOpen, setIsSelectOpen] = useState(false);
 	const [phoneNumber, setPhoneNumber] = useState<string>("");
 	const [currCountry, setCurrCountry] = useState<Country>({
-		name: "Ukraine",
-		dial_code: "+380",
-		icon: "https://country-code-au6g.vercel.app/UA.svg",
+		name: "Spain",
+		dial_code: "+34",
+		icon: "https://country-code-au6g.vercel.app/ES.svg",
 	});
 	const selectRef = useClickOutside("div", () => setIsSelectOpen(false));
 
