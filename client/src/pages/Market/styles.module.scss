@@ -18,6 +18,7 @@
 
 .offer {
   .swiper {
+    margin-bottom: 2rem;
     @media (575px < width <=1110px) {
       padding-bottom: 3.125rem;
     }
@@ -167,4 +168,8 @@
   @media (width <=768px) {
     padding-block: clamp(4.375rem, 2.1121rem + 8.6207vw, 6.25rem);
   }
+}
+
+.btn {
+  margin-inline: auto;
 }

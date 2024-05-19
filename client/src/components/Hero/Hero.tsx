@@ -23,6 +23,7 @@ const Hero = () => {
 				</div>
 				<TickerWidget />
 			</div>
+			<ButtonOrLink as="a" to={'/contacts'} className={st.btn}>Buy stocks</ButtonOrLink>
 		</section>
 	);
 };

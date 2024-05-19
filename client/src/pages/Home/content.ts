@@ -68,7 +68,7 @@ export const confidence: Pick<ClarificationProps, "title" | "text"> & {
 	};
 } = {
 	title: "Invest with Confidence",
-	text: "At Global Stock Market, we believe in democratizing access to global financial markets.\n\nWhether you're an individual investor or a corporate entity, our platform offers a diverse array of investment opportunities to help you achieve your financial objectives.",
+	text: "At Global Stock Market, we create security for all users who wish to invest in the stock market.\n\n We control and verify all brokerage firms worldwide, granting and revoking authorizations for new companies seeking to enter the financial markets. As a global entity, we are responsible for: establishing, maintaining, and dissolving investment companies, examining and publishing company information, and promoting transparency and growth in the global economy.",
 	img: {
 		src: confidenceSVG,
 		alt: "Invest with Confidence",

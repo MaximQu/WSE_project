@@ -87,7 +87,7 @@ export const regulations: {
 } = {
 	framework1: {
 		title: "Regulatory Framework",
-		text: "Global Stock Market is authorized by the Guernsey Financial Services Commission to operate as an investment exchange in compliance with the Protection of Investors (Bailiwick of Guernsey)Law, 2020.",
+		text: "Global Stock Market (registration: AGMM ApS) is authorized by the Danish Central Business Register, which grants it the right to manage, control, and supervise the Danish Financial Supervisory Authority and global regulators according to the international agreements signed in 1965.\n\nThis makes Global Stock Market the global regulator of financial markets and also grants it the right to offer investment services to operate as an investment exchange according to the Investment Control Act. This act was implemented to prevent foreign direct investments and special financial agreements from posing a threat to national and global security or public order in Denmark and worldwide.",
 	},
 	framework2: {
 		title: "Regulatory Framework",
